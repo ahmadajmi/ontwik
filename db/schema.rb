@@ -15,6 +15,9 @@ ActiveRecord::Schema.define(version: 20140704122259) do
 
   create_table "users", force: true do |t|
     t.string   "name"
+    t.string   "nickname"
+    t.string   "location"
+    t.string   "description"
     t.string   "provider"
     t.string   "uid"
     t.datetime "created_at"

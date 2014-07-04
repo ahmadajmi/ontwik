@@ -6,6 +6,9 @@ class User < ActiveRecord::Base
       user.uid = auth['uid']
       if auth['info']
          user.name = auth['info']['name'] || ""
+         user.nickname = auth["info"]["nickname"]
+         user.location = auth["info"]["location"]
+         user.description = auth["info"]["description"]
       end
     end
   end
