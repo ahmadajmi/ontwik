@@ -14,10 +14,15 @@
 ActiveRecord::Schema.define(version: 20140704122259) do
 
   create_table "users", force: true do |t|
-    t.string   "name"
     t.string   "nickname"
+    t.string   "name"
     t.string   "location"
+    t.string   "image"
     t.string   "description"
+    t.string   "website_url"
+    t.string   "twitter_url"
+    t.string   "profile_background_image_url"
+    t.string   "profile_background_image_url_https"
     t.string   "provider"
     t.string   "uid"
     t.datetime "created_at"

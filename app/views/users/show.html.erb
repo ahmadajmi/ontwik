@@ -5,3 +5,12 @@
 <p>location: <%= @user.location if @user.name %></p>
 <p>description: <%= @user.description if @user.nickname %></p>
 
+<img src="<%= @user.image if @user.image %>">
+
+<p>website_url: <%= @user.website_url %></p>
+
+<p>twitter_url: <%= @user.twitter_url %></p>
+
+<p>profile_background_image_url_https: <%= @user.profile_background_image_url_https if @user.nickname %></p>
+
+<p>profile_background_image_url: <%= @user.profile_background_image_url if @user.nickname %></p>

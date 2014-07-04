@@ -5,10 +5,16 @@ class User < ActiveRecord::Base
       user.provider = auth['provider']
       user.uid = auth['uid']
       if auth['info']
-         user.name = auth['info']['name'] || ""
-         user.nickname = auth["info"]["nickname"]
-         user.location = auth["info"]["location"]
-         user.description = auth["info"]["description"]
+        user.nickname       = auth["info"]["nickname"]
+        user.name           = auth['info']['name'] || ""
+        user.location       = auth["info"]["location"]
+        user.description    = auth["info"]["description"]
+        user.image          = auth["info"]["image"]
+
+        user.website_url    = auth["info"]["urls"]["Website"]
+        user.twitter_url    = auth["info"]["urls"]["Twitter"]
+        user.profile_background_image_url = auth["extra"]["raw_info"]["profile_background_image_url"]
+        user.profile_background_image_url_https = auth["extra"]["raw_info"]["profile_background_image_url_https"]
       end
     end
   end
