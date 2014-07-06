@@ -1,0 +1,13 @@
+<h1>Videos#New</h1>
+<p>Find me in app/views/videos/new.html.erb</p>
+
+<%= form_for :video, url: videos_path do |f| %>
+  <p>
+    <%= f.label :url %><br>
+    <%= f.text_field :url %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
