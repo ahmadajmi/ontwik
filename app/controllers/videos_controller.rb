@@ -5,6 +5,10 @@ class VideosController < ApplicationController
   require 'net/http'
   require 'json'
 
+  def index
+    @videos = Video.all
+  end
+
   def new
   end
 

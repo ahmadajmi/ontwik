@@ -1,13 +1,16 @@
-<h1>Videos#New</h1>
-<p>Find me in app/views/videos/new.html.erb</p>
-
 <%= form_for :video, url: videos_path do |f| %>
-  <p>
-    <%= f.label :url %><br>
-    <%= f.text_field :url %>
-  </p>
+<div class="row">
+  <div class="large-12 columns">
+    <div class="row collapse">
+      <div class="small-10 columns">
+        <%= f.text_field :url %>
+      </div>
+      <div class="small-2 columns">
+        <%= f.submit 'Add', :class => 'button postfix' %>
 
-  <p>
-    <%= f.submit %>
-  </p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <% end %>

@@ -1,6 +1,9 @@
-<h3><%= @video.title %></h3>
-<%= @video.html.html_safe %>
-
-<p><%= @video.description %></p>
-
-<img src="<%= @video.thumbnail_url %>">
+<div class="row">
+  <div class="large-12 column small-12 medium-12">
+    <div class="flex-video widescreen">
+      <%= @video.html.html_safe %>
+    </div>
+    <h3><%= @video.title %></h3>
+    <p><%= @video.description %></p>
+  </div>
+</div>
