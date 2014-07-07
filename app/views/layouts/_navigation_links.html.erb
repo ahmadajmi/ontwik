@@ -14,8 +14,8 @@
 <% end %>
 
 <% if user_signed_in? %>
-<%= link_to(t(:Add), {
+<li><%= link_to(t(:Add), {
   :controller => 'videos',
   :action => 'new'
-}) %>
+}) %></li>
 <% end %>

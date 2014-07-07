@@ -1,11 +1,6 @@
-<h1>Videos#show</h1>
-<p>Find me in app/views/videos/show.html.erb</p>
+<h3><%= @video.title %></h3>
+<%= @video.html.html_safe %>
 
-
-<%= @video.url %>
-
-<%= @video.title %>
-
-<%= @video.html %>
+<p><%= @video.description %></p>
 
 <img src="<%= @video.thumbnail_url %>">

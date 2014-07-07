@@ -11,7 +11,6 @@ class VideosController < ApplicationController
   def create
     # render plain: params[:video].inspect
     # debugger
-    # render plain: params[:video].inspect
     # https://www.youtube.com/watch?v=AzIQjwcJcVE
 
     @url = params[:video][:url].to_s
@@ -22,7 +21,8 @@ class VideosController < ApplicationController
     res = Net::HTTP.start(req_url.host, req_url.port) {|http|
         http.request(req)
     }
-    puts JSON.parse(res.body)
+
+    # puts JSON.parse(res.body)
 
     @json = JSON.parse(res.body)
 
@@ -61,7 +61,6 @@ class VideosController < ApplicationController
     def video_params
       params.require(:video).permit(:url)
     end
-
 
   # def edit
   # end
