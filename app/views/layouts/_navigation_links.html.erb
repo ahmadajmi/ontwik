@@ -1,4 +1,14 @@
 <%# add navigation links to this file %>
-<li><%= link_to 'About', page_path('about') %></li>
+<li>
+  <%= link_to 'About', page_path('about') %>
+</li>
 
-<li><%= link_to 'About', page_path('about') %></li>
+<li>
+  <%=link_to "Videos", :controller => :videos, :action => :index %>
+</li>
+
+<li>
+<%=link_to "Add", :controller => :videos, :action => :new %>
+</li>
+
+
