@@ -1,0 +1,23 @@
+<ul class="right">
+  <% if user_signed_in? %>
+
+  <li>
+    <%=link_to "Add", :controller => :videos, :action => :new %>
+  </li>
+
+  <li class="has-dropdown">
+    <%= link_to current_user.name, current_user %>
+    <ul class="dropdown">
+      <li><%= link_to 'Signout', '/signout' %></li>
+    </ul>
+  </li>
+
+  <% else %>
+
+  <li class="active">
+    <%= link_to 'Sign in with Twitter', '/signin' %>
+  </li>
+
+  <% end %>
+</ul>
+
