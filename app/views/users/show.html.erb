@@ -14,3 +14,12 @@
 <p>profile_background_image_url_https: <%= @user.profile_background_image_url_https if @user.nickname %></p>
 
 <p>profile_background_image_url: <%= @user.profile_background_image_url if @user.nickname %></p>
+
+<ul>
+  <% @user.videos.each do |video| %>
+  <li>
+    <%= video.url %>
+  </li>
+  <% end %>
+</ul>
+

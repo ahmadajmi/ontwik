@@ -45,8 +45,11 @@ ActiveRecord::Schema.define(version: 20140704175312) do
     t.string   "thumbnail_url"
     t.string   "thumbnail_width"
     t.string   "thumbnail_height"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "videos", ["user_id", "created_at"], name: "index_videos_on_user_id_and_created_at"
 
 end

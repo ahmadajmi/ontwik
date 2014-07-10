@@ -20,7 +20,13 @@ class CreateVideos < ActiveRecord::Migration
       t.string :thumbnail_url
       t.string :thumbnail_width
       t.string :thumbnail_height
+
+      t.integer :user_id
+
       t.timestamps
     end
+
+    add_index :videos, [:user_id, :created_at]
+
   end
 end
