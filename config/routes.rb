@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :videos
+  # resources :users
   # get 'videos/index'
 
   # get 'videos/show'

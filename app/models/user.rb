@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 
-  has_many :video
+  has_many :videos
 
   def self.create_with_omniauth(auth)
     create! do |user|
