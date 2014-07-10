@@ -1,25 +1,36 @@
-<h3>User</h3>
-<p>Name: <%= @user.name if @user.name %></p>
-<p>nickname: <%= @user.nickname if @user.nickname %></p>
+<div class="row">
 
-<p>location: <%= @user.location if @user.name %></p>
-<p>description: <%= @user.description if @user.nickname %></p>
+  <div class="large-3 column">
+    <img src="<%= @user.image if @user.image %>">
+    <h4><%= @user.name if @user.name %></h4>
+    <p><%= @user.description if @user.description %></p>
+  </div>
 
-<img src="<%= @user.image if @user.image %>">
+  <div class="large-9 column">
+    <div class="row">
 
-<p>website_url: <%= @user.website_url %></p>
+      <% @user.videos.each do |video| %>
 
-<p>twitter_url: <%= @user.twitter_url %></p>
+      <div class="large-4 column end">
+        <img src="<%= video.thumbnail_url %>">
+        <%= video.title %>
+      </div>
 
-<p>profile_background_image_url_https: <%= @user.profile_background_image_url_https if @user.nickname %></p>
+      <% end %>
 
-<p>profile_background_image_url: <%= @user.profile_background_image_url if @user.nickname %></p>
+    </div>
+  </div>
 
-<ul>
-  <% @user.videos.each do |video| %>
-  <li>
-    <%= video.url %>
-  </li>
-  <% end %>
-</ul>
+</div>
 
+
+
+<div class="hide">
+  <p><%= @user.website_url %></p>
+
+  <p><%= @user.twitter_url %></p>
+
+  <p><%= @user.profile_background_image_url_https if @user.nickname %></p>
+
+  <p><%= @user.profile_background_image_url if @user.nickname %></p>
+</div>
