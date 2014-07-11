@@ -1,9 +1,14 @@
 <div class="row">
 
   <div class="large-3 column">
-    <img src="<%= @user.image if @user.image %>">
-    <h4><%= @user.name if @user.name %></h4>
-    <p><%= @user.description if @user.description %></p>
+    <div class="gray-bg">
+      <img src="<%= @user.image if @user.image %>">
+      <div class="">
+        <h4><%= @user.name if @user.name %></h4>
+        <p><%= @user.description if @user.description %></p>
+        <a href="" title="" class="alert button tiny expand">Follow</a>
+      </div>
+    </div>
   </div>
 
   <div class="large-9 column">
