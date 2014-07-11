@@ -3,8 +3,8 @@
   <% @videos.each do |video| %>
 
   <div class="large-4 column">
-    <img src="<%= video.thumbnail_url %>">
-    <%= link_to video.title, video %>
+    <img src="<%= video.thumbnail_url %>" class="block">
+    <%= link_to video.title, video, :class=> 'ell block' %>
   </div>
 
   <% end %>
