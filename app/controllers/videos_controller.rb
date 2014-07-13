@@ -6,7 +6,9 @@ class VideosController < ApplicationController
   require 'json'
 
   def index
-    if params[:tag]
+    if params[:search]
+      @videos = Video.search(params[:search])
+    elsif params[:tag]
       @videos = Video.tagged_with(params[:tag])
     else
       @videos = Video.all
