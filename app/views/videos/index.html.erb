@@ -14,6 +14,8 @@
   <div class="large-4 column end">
     <img src="<%= video.thumbnail_url %>" class="block">
     <%= link_to video.title, video, :class=> 'ell block' %>
+    <%= link_to video.tag_list, tag_path(video.tag_list)%>
+
   </div>
 
   <% end %>

@@ -7,5 +7,6 @@
 
     <h3><%= @video.title %></h3>
     <p><%= @video.description %></p>
+    <%= link_to @video.tag_list, tag_path(@video.tag_list)%>
   </div>
 </div>
