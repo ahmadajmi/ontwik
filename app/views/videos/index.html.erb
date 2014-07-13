@@ -1,5 +1,14 @@
 <div class="row">
 
+
+  <div class="large-12 column mbl">
+    <div id="row">
+      <% tag_cloud Video.tag_counts, %w{s m l} do |tag| %>
+        <div class="large-2 column end"><%= link_to tag.name, tag_path(tag.name)%></div>
+      <% end %>
+    </div>
+  </div>
+
   <% @videos.each do |video| %>
 
   <div class="large-4 column end">
@@ -10,3 +19,6 @@
   <% end %>
 
 </div>
+
+
+

@@ -6,7 +6,11 @@ class VideosController < ApplicationController
   require 'json'
 
   def index
-    @videos = Video.all
+    if params[:tag]
+      @videos = Video.tagged_with(params[:tag])
+    else
+      @videos = Video.all
+    end
   end
 
   def new
@@ -14,10 +18,6 @@ class VideosController < ApplicationController
 
   def create
     # render plain: params[:video].inspect
-
-    @video = current_user.videos.build(video_params)
-
-    @url = params[:video][:url].to_s
 
     req_url = URI.parse('http://api.embed.ly/1/oembed?key=a7716080853c4d6d945624885ceb9ab9&url=' + params[:video][:url].to_s)
     req = Net::HTTP::Get.new(req_url.to_s)
@@ -27,7 +27,7 @@ class VideosController < ApplicationController
 
     @json = JSON.parse(res.body)
 
-    @video = Video.new#(video_params)
+    @video = Video.new(video_params)
 
     @video.url              = @json['provider_url']
     @video.url_type         = @json['type']
@@ -62,12 +62,7 @@ class VideosController < ApplicationController
 
   private
     def video_params
-      params.require(:video).permit(:url)
+      params.require(:video).permit(:url, :tag_list)
     end
 
-  # def edit
-  # end
-
-  # def destroy
-  # end
 end

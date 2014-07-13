@@ -5,11 +5,12 @@
       <div class="small-10 columns">
         <%= f.text_field :url, :type => 'url', :required => 'true' %>
       </div>
+
+    <%= f.text_field :tag_list, placeholder: 'Tags', class: 'new-article article-title'  %>
       <div class="small-2 columns">
         <%= f.submit 'Add', :class => 'button postfix' %>
       </div>
     </div>
   </div>
 </div>
-
 <% end %>
