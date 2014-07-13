@@ -1,17 +1,13 @@
 Rails.application.routes.draw do
   resources :videos
   # resources :users
-  # get 'videos/index'
 
-  # get 'videos/show'
+  get 'follow' => 'users#follow'
+  get 'unfollow' => 'users#unfollow'
 
   get 'videos/new'
 
   get 'videos/create'
-
-  # get 'videos/edit'
-
-  # get 'videos/destroy'
 
   resources :users, :only => [:index, :show]
   root to: 'visitors#index'

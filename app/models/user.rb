@@ -2,6 +2,10 @@ class User < ActiveRecord::Base
 
   has_many :videos
 
+  acts_as_follower
+  acts_as_followable 
+  acts_as_liker
+
   def self.create_with_omniauth(auth)
     create! do |user|
       user.provider = auth['provider']

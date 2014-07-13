@@ -18,6 +18,7 @@ gem 'simple_form'
 gem 'thin'
 gem 'foundation-rails'
 gem 'acts-as-taggable-on'
+gem "socialization"
 # gem 'ruby-debug'
 group :development do
   gem 'better_errors'
