@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 
   get 'follow' => 'users#follow'
   get 'unfollow' => 'users#unfollow'
-
+  get 'like' => 'users#like'
+  get 'unlike' => 'users#unlike'
   get 'videos/new'
 
   get 'videos/create'

@@ -58,6 +58,7 @@ class VideosController < ApplicationController
 
   def show
     @video = Video.find(params[:id])
+    @likeable = @video
   end
 
   private

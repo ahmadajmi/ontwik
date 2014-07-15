@@ -1,8 +1,9 @@
 <div class="row">
   <div class="large-12 column small-12 medium-12">
-
+    <%= render 'shared/like_form', likeable: @video %>
+    <div class="likes"><%= pluralize(@video.likers(User).count, '')%></div>
     <div class="flex-video widescreen">
-      <%= @video.html.html_safe %>
+      <%#= @video.html.html_safe %>
     </div>
 
     <h3><%= @video.title %></h3>
