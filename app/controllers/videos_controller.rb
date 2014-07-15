@@ -1,6 +1,4 @@
 class VideosController < ApplicationController
-  # def index
-  # end
 
   require 'net/http'
   require 'json'
