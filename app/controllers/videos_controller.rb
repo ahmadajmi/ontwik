@@ -59,6 +59,7 @@ class VideosController < ApplicationController
   def show
     @video = Video.find(params[:id])
     @likeable = @video
+    @likers = @video.likers(User)
   end
 
   private
