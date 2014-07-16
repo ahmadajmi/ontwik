@@ -4,11 +4,14 @@
   <div class="medium-3 large-3 column">
     <div class="gray-bg">
       <img src="<%= @user.image if @user.image %>">
-      <div class="padlx">
+      <div class="padlx padly">
         <h4><%= @user.name if @user.name %></h4>
         <p><%= @user.description if @user.description %></p>
         <p>
         Followers: <strong><%= @user.followers(User).count %></strong>
+        </p>
+        <p>
+        Videos: <strong><%= @user.videos.count %></strong>
         </p>
         <%= render 'shared/follow_form' , user: @user%>
       </div>
