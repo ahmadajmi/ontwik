@@ -1,29 +1,32 @@
-<nav class="top-bar" data-topbar>
+<%# navigation styled for Bootstrap 3.0 %>
+<nav class="navbar navbar-default">
+  <div class="container">
 
-<ul class="title-area">
-  <li class="name"><%= link_to 'Home', root_path %></li>
-  <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
-</ul>
-
-<div class="top-bar-section">
-  <ul class="left">
-    <!-- Search | has-form wrapper -->
-    <li class="has-form">
-    <div class="row collapse">
-      <%= form_tag videos_path, :method => 'get' do %>
-      <div class="large-8 small-9 columns">
-        <%= text_field_tag :search, params[:search] %>
-      </div>
-      <div class="large-4 small-3 columns">
-        <%= submit_tag "Search", :name => nil, :class => 'alert expand button' %>
-      </div>
-    <% end %>
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to 'Home', root_path, class: 'navbar-brand' %>
     </div>
-    </li>
-  </ul>
-  <ul>
-    <%= render 'layouts/navigation_links' %>
-  </ul>
-  <%= render 'layouts/profile_navigation_links' %>
-</div>
+
+    <div class="collapse navbar-collapse">
+      <%= form_tag videos_path, :method => 'get', :class => "navbar-form navbar-left" do %>
+      <div class="form-group">
+        <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: "Search"%>
+      </div>     
+      <button type="submit" class="btn btn-default">Submit</button>
+      <% end %>
+
+      <ul class="nav navbar-nav">
+        <%= render 'layouts/navigation_links' %>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <%= render 'layouts/profile_navigation_links' %>
+      </ul>
+    </div>
+  </div>
 </nav>

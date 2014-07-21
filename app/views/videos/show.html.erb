@@ -1,20 +1,22 @@
 <div class="row">
-  <div class="large-12 column small-12 medium-12">
-    <div class="flex-video widescreen">
-      <%#= @video.html.html_safe %>
+  <div class="col-sm-12">
+
+    <div class="embed-responsive embed-responsive-16by9">
+      <div class="embed-responsive-item">
+        <%= @video.html.html_safe %>
+      </div>
     </div>
 
     <h3><%= @video.title %></h3>
     <p><%= @video.description %></p>
   </div>
 
-  <div class="large-3 column end">
+  <div class="col-sm-12">
     <%= render 'shared/like_form', likeable: @video %>
     <div class="likes"><%= pluralize(@video.likers(User).count, '')%></div>
     <% @likers.each do |user|%>
       <%= link_to user.name, user %>
     <% end %>
-    <p><%= link_to @video.tag_list, tag_path(@video.tag_list)%>
-    </p>
+    <p><%= link_to @video.tag_list, tag_path(@video.tag_list)%></p>
   </div>
 </div>
