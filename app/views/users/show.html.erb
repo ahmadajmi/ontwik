@@ -5,10 +5,10 @@
       <img src="<%= @user.image if @user.image %>">
       <div class="padlx padly">
         <div class="text-center">
-        <h4><%= @user.name if @user.name %></h4>
-        <p><%= @user.description if @user.description %></p>
-      </div>
-        <div class="row">
+          <h4><%= @user.name if @user.name %></h4>
+          <p><%= @user.description if @user.description %></p>
+        </div>
+        <div class="row mb1">
           <div class="col-md-4 text-center">
             <strong class="block"><%= @user.videos.count %></strong>
             Videos
@@ -22,7 +22,9 @@
             Following
           </div>
         </div>
-        <%= render 'shared/follow_form' , user: @user%>
+        <div class="text-center">
+          <%= render 'shared/follow_form' , user: @user%>
+        </div>
       </div>
     </div>
   </div>
