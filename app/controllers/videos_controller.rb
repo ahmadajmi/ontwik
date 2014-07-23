@@ -3,6 +3,10 @@ class VideosController < ApplicationController
   require 'net/http'
   require 'json'
 
+  def home
+    @videos = Video.order('created_at DESC').all
+  end
+
   def index
     if params[:search]
       @videos = Video.search(params[:search])
