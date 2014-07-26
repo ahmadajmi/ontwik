@@ -21,15 +21,13 @@ class VideosController < ApplicationController
   end
 
   def create
-    # render plain: params[:video].inspect
-
     req_url = URI.parse('http://api.embed.ly/1/oembed?key=a7716080853c4d6d945624885ceb9ab9&url=' + params[:video][:url].to_s)
     req = Net::HTTP::Get.new(req_url.to_s)
     res = Net::HTTP.start(req_url.host, req_url.port) {|http|
         http.request(req)
     }
 
-    @json = JSON.parse(res.body)
+    @json  = JSON.parse(res.body)
 
     @video = Video.new(video_params)
 
@@ -56,14 +54,13 @@ class VideosController < ApplicationController
     @video.user_id = current_user.id
 
     @video.save
-
     redirect_to @video
   end
 
   def show
-    @video = Video.find(params[:id])
+    @video    = Video.find(params[:id])
     @likeable = @video
-    @likers = @video.likers(User)
+    @likers   = @video.likers(User)
   end
 
   private

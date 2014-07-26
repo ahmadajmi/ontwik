@@ -6,11 +6,6 @@ img {
   @extend .img-responsive;
   margin: 0 auto;
   }
-// override for the 'Home' navigation link
-.navbar-brand {
-  font-size: inherit;
-  }
-
 // THESE ARE EXAMPLES YOU CAN MODIFY
 // create your own classes
 // to make views framework-neutral
@@ -24,11 +19,6 @@ img {
 .form-centered {
   @extend .col-md-6;
   @extend .text-center;
-  }
-.submit {
-  @extend .btn;
-  @extend .btn-primary;
-  @extend .btn-lg;
   }
 // apply styles to HTML elements
 // to make views framework-neutral
@@ -84,4 +74,22 @@ body {
 
 .navbar-default {
   background-color: #fff;
+}
+
+.form-control {
+  border-radius: 0;
+  box-shadow: none;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.btn-search {
+  border-radius: 0;
+  margin-left: -5px;
+}
+
+.btn-twitter {
+  color: #40D1F5 !important;
 }
