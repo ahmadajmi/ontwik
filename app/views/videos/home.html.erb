@@ -1,14 +1,4 @@
 <div class="row">
-  <% @videos.each do |video| %>
-    <div class="col-sm-6 col-md-3 mb2">
-      <div class="white-bg">
-        <img src="<%= video.thumbnail_url %>" class="block">
-        <div class="padlx padly">
-          <%= link_to video.title, video, :class=> 'ell block' %>
-          <%= link_to video.tag_list, tag_path(video.tag_list)%>
-        </div>
-      </div>
-    </div>
-  <% end %>
+  <%= render 'shared/video_card' %>
 </div>
 

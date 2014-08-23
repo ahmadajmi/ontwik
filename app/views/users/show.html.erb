@@ -33,17 +33,18 @@
     <div class="row">
 
       <% @user.videos.each do |video| %>
+      <div class="col-sm-6 col-md-4 mb2">
 
-        <div class="col-sm-6 col-md-4 mb2">
-          <div class="white-bg">
-            <img src="<%= video.thumbnail_url %>" class="block">
-            <div class="padlx padly">
-              <%= link_to video.title, video, :class=> 'ell block' %>
-              <%= link_to video.tag_list, tag_path(video.tag_list), :class => 'gray' %>
-            </div>
+        <%= link_to video, :class=> "ell block" do %>
+        <div class="cover" style="background-image: url(<%= video.thumbnail_url %>)"></div>
+        <div class="white-bg">
+          <div class="padlx padly ell">
+            <%= video.title %>
           </div>
         </div>
+        <% end %>
 
+      </div>
       <% end %>
 
     </div>

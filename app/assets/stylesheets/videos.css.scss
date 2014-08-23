@@ -9,3 +9,14 @@
 .navbar-brand {
   color: #00bf8f;
 }
+
+.cover {
+ background-color: #ecf0f4;
+ background-position: center center;
+ background-size: cover;
+ display: block;
+ height: 0;
+ overflow: hidden;
+ padding-top: 55%;
+ position: relative;
+}
