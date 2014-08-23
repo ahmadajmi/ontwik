@@ -1,21 +1,21 @@
 <%= form_for :video, url: videos_path do |f| %>
-  <div class="row">
+<div class="row">
 
-    <div class="col-sm-5">
-      <div class="form-group">
-        <%= f.text_field :url, :type => 'url', :placeholder => 'Video URL', :required => 'true', :class => 'form-control' %>
-      </div>
+  <div class="col-sm-5">
+    <div class="form-group">
+      <%= f.text_field :url, :type => 'url', :placeholder => 'Video URL', :class => 'form-control', :required => 'true' %>
     </div>
-
-    <div class="col-sm-5">
-      <div class="form-group">
-        <%= f.text_field :tag_list, placeholder: 'Tags', class: 'new-article article-title form-control'  %>
-      </div>
-    </div>
-
-    <div class="col-sm-1">
-      <%= f.submit 'Add', :class => 'btn btn-primary btn-sm' %>
-    </div>
-
   </div>
+
+  <div class="col-sm-5">
+    <div class="form-group">
+      <%= f.text_field :tag_list, :type => 'text', :placeholder => 'Tags', :class => 'new-article article-title form-control', :required => 'true' %>
+    </div>
+  </div>
+
+  <div class="col-sm-1">
+    <%= f.submit 'Add', :class => 'btn btn-primary btn-sm' %>
+  </div>
+
+</div>
 <% end %>
