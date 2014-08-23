@@ -43,6 +43,24 @@
           </div>
         </div><!-- row -->
 
+        <div class="row">
+
+          <% Video.tagged_with([@video.tag_list]).each do |video| %>
+          <div class="col-sm-6 col-md-3 mb2">
+
+            <%= link_to video, :class=> "ell block" do %>
+            <div class="cover" style="background-image: url(<%= video.thumbnail_url %>)"></div>
+            <div class="gray-bg">
+              <div class="padlx padly ell">
+                <%= video.title %>
+              </div>
+            </div>
+            <% end %>
+
+          </div>
+          <% end %>
+        </div><!-- row -->
+
       </div>
     </div>
 
