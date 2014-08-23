@@ -358,3 +358,85 @@ $anchor-visited-color: #C23699; // purple
 // Other
 
 .pointer        { cursor: pointer; }
+
+
+//
+// Functions for calcluating spaces
+//
+// .css {
+//  margin-top: quarter($base-space-unit); // => margin-top: 0.25em;
+// }
+
+@function quarter($value) {
+  @return $value / 4;
+}
+
+@function halve($value) {
+  @return $value / 2;
+}
+
+@function halve($value) {
+  @return $value / 2;
+}
+
+@function double($value) {
+  @return $value * 2;
+}
+
+@function threefold($value) {
+  @return $value * 3;
+}
+
+@function quadruple($value) {
+  @return $value * 4;
+}
+
+//
+// Margin
+//
+
+//
+// Top Margin
+
+.margin-top-quarter     { margin-top: quarter($base-space-unit); }
+.margin-top-half        { margin-top: halve($base-space-unit); }
+.margin-top-one         { margin-top: $base-space-unit; }
+.margin-top-two         { margin-top: double($base-space-unit); }
+.margin-top-three       { margin-top: threefold($base-space-unit); }
+.margin-top-four        { margin-top: quadruple($base-space-unit); }
+
+//
+// Bottom Margin
+
+.margin-bottom-quarter  { margin-bottom: quarter($base-space-unit); }
+.margin-bottom-half     { margin-bottom: halve($base-space-unit); }
+.margin-bottom-one      { margin-bottom: $base-space-unit; }
+.margin-bottom-two      { margin-bottom: double($base-space-unit); }
+.margin-bottom-three    { margin-bottom: threefold($base-space-unit); }
+.margin-bottom-four     { margin-bottom: quadruple($base-space-unit); }
+
+
+
+//
+// Padding
+//
+
+//
+// Top Padding
+
+.padding-top-quarter    { padding-top: quarter($base-space-unit); }
+.padding-top-halve      { padding-top: halve($base-space-unit); }
+.padding-top-one        { padding-top: $base-space-unit; }
+.padding-top-two        { padding-top: double($base-space-unit); }
+.padding-top-three      { padding-top: threefold($base-space-unit); }
+.padding-top-four       { padding-top: quadruple($base-space-unit); }
+
+//
+// Bottom Padding
+
+.padding-bottom-quarter { padding-bottom: quarter($base-space-unit); }
+.padding-bottom-halve   { padding-bottom: halve($base-space-unit); }
+.padding-bottom-one     { padding-bottom: $base-space-unit; }
+.padding-bottom-two     { padding-bottom: double($base-space-unit); }
+.padding-bottom-three   { padding-bottom: threefold($base-space-unit); }
+.padding-bottom-four    { padding-bottom: quadruple($base-space-unit); }
