@@ -3,16 +3,18 @@
   <div class="col-sm-3 col-md-3">
     <ul class="list-group">
       <% tag_cloud Video.tag_counts, %w{s m l} do |tag| %>
-      <li class="list-group-item"><%= link_to tag.name, tag_path(tag.name)%></li>
-      <% end %>
-    </ul>
-  </div>
+      <li class="list-group-item"><%= link_to tag.name, tag_path(tag.name) %>
+       <span class="badge"><%= tag.count %></span>
+     </li>
+     <% end %>
+   </ul>
+ </div>
 
-  <div class="col-sm-9 col-md-9">
-    <div class="row">
-      <%= render 'shared/video_card' %>
-    </div>
+ <div class="col-sm-9 col-md-9">
+  <div class="row">
+    <%= render 'shared/video_card' %>
   </div>
+</div>
 
 </div>
 
