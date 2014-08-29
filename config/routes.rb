@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :videos
-  # resources :users
+  resources :users
 
   get 'follow' => 'users#follow'
   get 'unfollow' => 'users#unfollow'
