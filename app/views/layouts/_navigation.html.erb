@@ -16,14 +16,9 @@
       <%= form_tag videos_path, :method => 'get', :class => "navbar-form navbar-left" do %>
       <div class="form-group">
         <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: "Search"%>
-      </div>     
+      </div>
       <button type="submit" class="btn btn-default btn-search">Search</button>
       <% end %>
-
-      <ul class="nav navbar-nav hide">
-        <%= render 'layouts/navigation_links' %>
-      </ul>
-
       <ul class="nav navbar-nav navbar-right">
         <%= render 'layouts/profile_navigation_links' %>
       </ul>
