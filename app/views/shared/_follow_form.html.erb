@@ -1,6 +1,5 @@
 <% if current_user!= user %>
   <div class="user-<%= user.id %>">
-
     <div id="follow_form">
       <% if current_user.follows?(user) %>
         <%= render 'shared/unfollow' %>

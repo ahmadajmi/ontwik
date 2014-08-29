@@ -1,2 +1,12 @@
 <!-- Tag list in the video grid -->
 <%= link_to video.tag_list, tag_path(video.tag_list) %>
+
+<div class="hide">
+  <p><%= @user.website_url %></p>
+
+  <p><%= @user.twitter_url %></p>
+
+  <p><%= @user.profile_background_image_url_https if @user.nickname %></p>
+
+  <p><%= @user.profile_background_image_url if @user.nickname %></p>
+</div>
