@@ -13,9 +13,9 @@ $base-space-unit:       1em !default;
 $primary-color:         #D71921;
 $secondary-color:       #00a1cb;
 $secondary-color-dark:  #008db2;
-$body-bg:               #fff;
 $white:                 #fff;
 $gray:                  #F6F5F6;
+$body-bg:               $gray;
 $border-color:          #ecf0f1;
 $text-muted:            #95a5a6;
 $text-dark:             #333;
@@ -143,7 +143,17 @@ $anchor-visited-color: #C23699; // purple
 
 .fw             { width: 100%; }
 .full-min-height{ min-height: 100%; }
+.full-height {
+  min-height: 100%;
+  height: 100%;
+}
 
+.vertical-align {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 
 // TODO:
 // Convert margins and padding to small, medium and large as padding blew
@@ -404,6 +414,17 @@ $anchor-visited-color: #C23699; // purple
 .margin-top-three       { margin-top: threefold($base-space-unit); }
 .margin-top-four        { margin-top: quadruple($base-space-unit); }
 
+
+//
+// Right Margin
+
+.margin-right-quarter   { margin-right: quarter($base-space-unit); }
+.margin-right-half      { margin-right: halve($base-space-unit); }
+.margin-right-one       { margin-right: $base-space-unit; }
+.margin-right-two       { margin-right: double($base-space-unit); }
+.margin-right-three     { margin-right: threefold($base-space-unit); }
+.margin-right-four      { margin-right: quadruple($base-space-unit); }
+
 //
 // Bottom Margin
 
@@ -439,3 +460,14 @@ $anchor-visited-color: #C23699; // purple
 .padding-bottom-two     { padding-bottom: double($base-space-unit); }
 .padding-bottom-three   { padding-bottom: threefold($base-space-unit); }
 .padding-bottom-four    { padding-bottom: quadruple($base-space-unit); }
+
+
+.media-cover {
+  background-position: bottom;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.media-cover--user {
+  background-image: url(user-cover.jpg);
+}

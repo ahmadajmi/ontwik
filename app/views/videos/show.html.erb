@@ -39,15 +39,13 @@
             <% @likers.each do |user|%>
             <%= link_to user.name, user %>
             <% end %>
+
             <p><%= link_to @video.tag_list, tag_path(@video.tag_list)%></p>
 
             <% if @video.user.id == current_user.id %>
             <%= link_to 'Delete', video_path(@video), method: :delete, data: { confirm: 'Are you sure you want to delete this video?' } %>
             <% end %>
 
-            <p>
-
-            </p>
           </div>
         </div><!-- row -->
 

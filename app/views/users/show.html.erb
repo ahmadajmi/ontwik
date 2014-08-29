@@ -1,6 +1,6 @@
 <div class="row">
 
-  <div class="col-sm-3 col-md-3">
+  <div class="col-sm-3 col-md-3 hide">
     <div class="white-bg">
       <img src="<%= @user.image if @user.image %>">
       <div class="padlx padly">
@@ -29,11 +29,11 @@
     </div>
   </div>
 
-  <div class="col-sm-9 col-md-9">
+  <div class="col-sm-12 col-md-12">
     <div class="row">
 
       <% @user.videos.each do |video| %>
-      <div class="col-sm-6 col-md-4 mb2">
+      <div class="col-sm-6 col-md-4 margin-bottom-two">
 
         <%= link_to video, :class=> "ell block" do %>
         <div class="cover" style="background-image: url(<%= video.thumbnail_url %>)"></div>

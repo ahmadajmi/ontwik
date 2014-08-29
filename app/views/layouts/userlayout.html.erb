@@ -1,0 +1,49 @@
+<%= render 'shared/head' %>
+
+<header class="full-height media-cover media-cover--user margin-bottom-three">
+  <%= render 'layouts/navigation' %>
+
+  <div class="container vertical-align">
+    <div class="col-sm-6 col-md-3">
+      <div class="white text-center">
+        <div class="padlx padly">
+
+          <div class="text-center margin-bottom-one">
+            <h1><%= @user.name if @user.name %></h1>
+            <p><%= @user.description if @user.description %></p>
+          </div>
+
+          <div class="row margin-bottom-one">
+            <div class="col-sm-4 col-md-4">
+              <strong class="block"><%= @user.videos.count %></strong>
+              Videos
+            </div>
+            <div class="col-sm-4 col-md-4">
+              <strong class="block"><%= @user.followers(User).count %></strong>
+              Followers
+            </div>
+            <div class="col-sm-4 col-md-4">
+              <strong class="block"><%= @user.followees(User).count %></strong>
+              Following
+            </div>
+          </div>
+
+          <div class="text-center">
+            <%= render 'shared/follow_form' , user: @user %>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+<main role="main">
+  <div class="container">
+    <%= render 'layouts/messages' %>
+    <%= yield %>
+  </div>
+</main>
+
+<%= render 'shared/footer' %>
