@@ -18,6 +18,7 @@ gem 'simple_form'
 gem 'thin'
 # gem 'foundation-rails'
 gem 'bootstrap-sass'
+gem "autoprefixer-rails"
 gem 'acts-as-taggable-on'
 gem "socialization"
 # gem 'ruby-debug'

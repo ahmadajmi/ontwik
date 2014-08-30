@@ -30,6 +30,8 @@ GEM
     acts-as-taggable-on (3.3.0)
       activerecord (>= 3, < 5)
     arel (5.0.1.20140414130214)
+    autoprefixer-rails (3.0.1.20140826)
+      execjs
     better_errors (1.1.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -158,6 +160,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts-as-taggable-on
+  autoprefixer-rails
   better_errors
   binding_of_caller
   bootstrap-sass
