@@ -9,9 +9,9 @@ class VideosController < ApplicationController
 
   def index
     if params[:search]
-      @videos = Video.search(params[:search])
+      @videos = Video.search(params[:search]).order('created_at DESC')
     elsif params[:tag]
-      @videos = Video.tagged_with(params[:tag])
+      @videos = Video.tagged_with(params[:tag]).order('created_at DESC')
     else
       @videos = Video.all
     end
