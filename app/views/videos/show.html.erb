@@ -44,6 +44,7 @@
 
             <% if @video.user.id == current_user.id %>
             <%= link_to 'Delete', video_path(@video), method: :delete, data: { confirm: 'Are you sure you want to delete this video?' } %>
+            <%= link_to 'Edit', edit_video_path(@video) %>
             <% end %>
 
           </div>

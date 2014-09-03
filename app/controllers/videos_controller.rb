@@ -31,7 +31,7 @@ class VideosController < ApplicationController
 
     @video = Video.new(video_params)
 
-    @video.url              = @json['provider_url']
+    @video.url              = params[:video][:url].to_s
     @video.url_type         = @json['type']
     @video.version          = @json['version']
     @video.provider_url     = @json['provider_url']
@@ -63,6 +63,20 @@ class VideosController < ApplicationController
     @likers   = @video.likers(User)
   end
 
+  def edit
+    @video = Video.find(params[:id])
+  end
+
+  def update
+    @video = Video.find(params[:id])
+
+    if @video.update(update_params)
+      redirect_to @video
+    else
+      render 'edit'
+    end
+  end
+
   def destroy
     @video = Video.find(params[:id])
     @video.destroy
@@ -73,6 +87,10 @@ class VideosController < ApplicationController
   private
     def video_params
       params.require(:video).permit(:url, :tag_list)
+    end
+
+    def update_params
+      params.require(:video).permit(:url, :title, :description, :tag_list)
     end
 
 end
