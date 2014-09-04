@@ -90,7 +90,7 @@ class VideosController < ApplicationController
     end
 
     def update_params
-      params.require(:video).permit(:url, :title, :description, :tag_list)
+      params.require(:video).permit(:title, :description, :tag_list)
     end
 
 end

@@ -3,11 +3,6 @@
     <%= form_for :video, url: video_path(@video), method: :patch do |f| %>
 
     <div class="form-group">
-      <%= f.label :url %>
-      <%= f.text_field :url, :type => 'url', :placeholder => 'Video URL', :class => 'form-control', :required => 'true' %>
-    </div>
-
-    <div class="form-group">
       <%= f.label :title %>
       <%= f.text_field :title, :type => 'text', :placeholder => 'Video URL', :class => 'form-control', :required => 'true' %>
     </div>
@@ -25,6 +20,8 @@
     <div class="form-group">
       <%= f.submit class:'btn btn-primary'%>
     </div>
+
+    <%= link_to 'Delete', video_path(@video), method: :delete, data: { confirm: 'Are you sure you want to delete this video?' } %>
 
     <% end %>
   </div>
