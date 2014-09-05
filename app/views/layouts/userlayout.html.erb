@@ -5,10 +5,11 @@
   <div class="gradient gradient--hero"></div>
   <div class="container vertical-align">
     <div class="col-sm-6 col-md-3">
-      <div class="white text-shadow text-center">
+      <div class="text-center white-bg">
         <div class="padlx padly">
 
-          <div class="text-center margin-bottom-one">
+          <div class="text-center margin-bottom-one ">
+            <img src="<%= @user.image if @user.image %>">
             <h1><%= @user.name if @user.name %></h1>
             <p><%= @user.description if @user.description %></p>
           </div>
