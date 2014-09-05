@@ -1,6 +1,8 @@
 <%= render 'shared/head' %>
 
-<header class="full-height media-cover relative media-cover--user margin-bottom-three">
+<header class="full-height media-cover relative margin-bottom-three"
+style="background-image: url(<%= @user.profile_banner_url if @user.profile_banner.present? %>)">
+
   <%= render 'layouts/navigation' %>
   <div class="gradient gradient--hero"></div>
   <div class="container vertical-align">

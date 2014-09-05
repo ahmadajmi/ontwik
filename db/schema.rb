@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140713074745) do
+ActiveRecord::Schema.define(version: 20140905064940) do
 
   create_table "follows", force: true do |t|
     t.string   "follower_type"
@@ -80,6 +80,7 @@ ActiveRecord::Schema.define(version: 20140713074745) do
     t.string   "uid"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "profile_banner"
   end
 
   create_table "videos", force: true do |t|

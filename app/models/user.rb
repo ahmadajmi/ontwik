@@ -1,9 +1,11 @@
 class User < ActiveRecord::Base
 
+  mount_uploader :profile_banner, ProfileBannerUploader
+
   has_many :videos
 
   acts_as_follower
-  acts_as_followable 
+  acts_as_followable
   acts_as_liker
 
   def self.create_with_omniauth(auth)
