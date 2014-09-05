@@ -1,5 +1,7 @@
 class VideosController < ApplicationController
 
+  # before_filter :correct_user?, :only => :edit
+
   require 'net/http'
   require 'json'
 
@@ -64,7 +66,12 @@ class VideosController < ApplicationController
   end
 
   def edit
+    @user = Video.find(params[:id]).user
     @video = Video.find(params[:id])
+    unless current_user == @user
+      redirect_to root_url, :alert => "Access denied."
+    end
+
   end
 
   def update
