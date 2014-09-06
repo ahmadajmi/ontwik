@@ -22,7 +22,11 @@ gem 'acts-as-taggable-on'
 gem "socialization"
 gem 'carrierwave'
 
+# Markdown
 gem 'redcarpet'
+
+# Stntax hilight
+gem 'pygments.rb', '~> 0.6.0'
 
 group :development do
   gem 'better_errors'
