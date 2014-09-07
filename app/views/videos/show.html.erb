@@ -12,12 +12,12 @@
     <div class="white-bg p1 padding-top-two mt0">
 
       <div class="row">
-        <div class="col-sm-8">
+        <div class="col-sm-9">
           <h3 class="mt0"><%= @video.title %></h3>
           <p><%= markdown(@video.description) %></p>
         </div>
 
-        <div class="col-sm-4">
+        <div class="col-sm-3">
           <%= link_to @video.user, :class=> "ell block" do %>
           <div class="media">
             <div class="pull-left">
