@@ -32,6 +32,8 @@ gem 'redcarpet'
 # Stntax hilight
 gem 'pygments.rb', '~> 0.6.0'
 
+gem 'rails_12factor', group: :production
+
 group :development do
   gem 'sqlite3'
   gem 'better_errors'
