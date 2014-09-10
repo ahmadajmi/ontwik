@@ -39,8 +39,6 @@ GEM
       erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bootstrap-sass (3.2.0.0)
-      sass (~> 3.2)
     builder (3.2.2)
     carrierwave (0.10.0)
       activemodel (>= 3.2.0)
@@ -188,7 +186,6 @@ DEPENDENCIES
   autosize-rails
   better_errors
   binding_of_caller
-  bootstrap-sass
   carrierwave
   coffee-rails (~> 4.0.0)
   compass-rails (~> 1.1.2)
