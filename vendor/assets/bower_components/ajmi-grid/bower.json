@@ -1,0 +1,20 @@
+{
+  "name": "ajmi-grid",
+  "version": "0.0.1",
+  "homepage": "https://github.com/ahmadajmi/ajmi-grid",
+  "authors": [
+    "λhmad λjmi <ahmadajmi@outlook.com>"
+  ],
+  "description": "A very simple CSS grid system inspired and simplified version of Foundation",
+  "main": "ajmi-grid.scss",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "css",
+    "grid",
+    "responsive",
+    "mobile-first"
+  ],
+  "license": "MIT"
+}
