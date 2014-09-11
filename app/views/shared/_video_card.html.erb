@@ -1,14 +1,12 @@
 <% @videos.each do |video| %>
-<div class="col-sm-6 col-md-4 margin-bottom-two">
-
+<div class="column large-3 margin-bottom-two">
   <%= link_to video, :class=> "ell block" do %>
-  <div class="cover" style="background-image: url(<%= video.thumbnail_url %>)"></div>
+  <div class="cover margin-bottom-one" style="background-image: url(<%= video.thumbnail_url %>)"></div>
   <div class="white-bg">
-    <div class="padlx padly ell">
+    <div class="ell">
       <%= video.title %>
     </div>
   </div>
   <% end %>
-
 </div>
 <% end %>

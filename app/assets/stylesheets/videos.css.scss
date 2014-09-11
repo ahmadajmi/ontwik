@@ -1,11 +1,3 @@
-// Place all the styles related to the Videos controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-.navbar-brand {
-  color: #00bf8f;
-}
-
 .cover {
  background-color: #ecf0f4;
  background-position: center center;
@@ -15,50 +7,4 @@
  overflow: hidden;
  padding-top: 55%;
  position: relative;
-}
-
-.navbar-default {
-  background-color: #fff;
-  border: 0;
-  height: 40px;
-  min-height: 40px;
-}
-
-.navbar-brand {
-  height: auto;
-  margin-top: -2px;
-  padding: 10px;
-}
-
-.navbar-nav > li > a {
-  padding-bottom: 9px;
-  padding-top: 9px;
-}
-
-.navbar-form {
-  margin-top: 2px;
-}
-
-.navbar-form .form-control {
-  background-color: #f2f2f2;
-  border-color: #fff;
-}
-
-.btn-search {
-  background: none repeat scroll 0 0 #fff;
-  border: 0 none;
-  border-radius: 0;
-  margin-left: -5px;
-}
-
-//
-// CSS highlight
-//
-
-.highlight {
-  padding: 0;
-}
-
-pre {
-  border: 0;
 }

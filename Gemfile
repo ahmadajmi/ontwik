@@ -5,7 +5,6 @@ gem 'rails', '4.1.2'
 gem 'uglifier', '>= 1.3.0'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
-gem 'spring',        group: :developmen
 gem 'high_voltage'
 gem 'omniauth'
 gem 'omniauth-twitter'
@@ -17,7 +16,6 @@ gem 'carrierwave'
 
 # Front-end
 gem 'bower-rails'
-gem 'compass-rails', '~> 1.1.2'
 gem 'sass-rails', '~> 4.0.3'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
@@ -32,10 +30,12 @@ gem 'redcarpet'
 # Stntax hilight
 gem 'pygments.rb', '~> 0.6.0'
 
+# For making assets working on deployment
 gem 'rails_12factor', group: :production
 
 group :development do
   gem 'sqlite3'
+  gem 'spring'
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
   gem 'quiet_assets'

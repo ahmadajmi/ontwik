@@ -1,0 +1,33 @@
+body, html {
+  height: 100%;
+}
+
+body {
+  font-family: $base-font-family;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s ease 0s;
+}
+
+a:hover {
+  color: #555;
+}
+
+a:active, a:hover {
+  outline: 0 none;
+}
+
+//
+// CSS highlight
+//
+
+.highlight {
+  padding: 0;
+}
+
+pre {
+  border: 0;
+}
