@@ -2,11 +2,8 @@
 
 <%= render 'shared/header' %>
 
-<main role="main">
-  <div class="container">
-    <%= render 'layouts/messages' %>
-    <%= yield %>
-  </div>
-</main>
+<%= render 'layouts/messages' %>
+
+<%= yield %>
 
 <%= render 'shared/footer' %>

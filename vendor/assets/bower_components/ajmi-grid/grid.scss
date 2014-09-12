@@ -13,7 +13,7 @@ $row-max-width:         60em !default;
 // gridCalc(1, 12) => 8.33333%
 
 @function gridCalc($columnNumber, $totalColumns) {
-  @return percentage($columnNumber / $totalColumns);
+  @return percentage($columnNumber / $totalColumns); 
 }
 
 

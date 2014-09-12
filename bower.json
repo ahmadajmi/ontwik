@@ -9,7 +9,8 @@
   "vendor": {
     "name": "bower-rails generated vendor assets",
     "dependencies": {
-      "ajmi-grid": "*"
+      "ajmi-grid": "*",
+      "normalize-css": "3.0.1"
       // "three.js"    : "https://raw.github.com/mrdoob/three.js/master/build/three.js"
     }
   }

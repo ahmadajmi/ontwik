@@ -1,45 +1,12 @@
 //
-// We uses theses helpers extensivly through in the project for common styles
-// This makes stle consistent and the important thing is that we don't need to write more css :)
-//
-
-// Space unit
-$base-space-unit:       1em !default;
-
-//
-// Colors
-//
-
-$primary-color:         #D71921;
-$secondary-color:       #00a1cb;
-$secondary-color-dark:  #008db2;
-$white:                 #fff;
-$gray:                  #F6F5F6;
-$body-bg:               $gray;
-$border-color:          #ecf0f1;
-$text-muted:            #95a5a6;
-$text-dark:             #333;
-
-
-
-
-//
-// Anchors Style
-//
-
-$anchor-color: #428bca;
-$anchor-color-hover: #2a6496;
-$anchor-color-focus: $anchor-color-hover;
-$anchor-visited-color: #C23699; // purple
-//
 // Layout
 //
 
 //
 // Floats
 
-.left           { float: left; }
-.right          { float: right; }
+.left { float: left; }
+.right { float: right; }
 
 .clearfix:before,
 .clearfix:after {
@@ -54,294 +21,62 @@ $anchor-visited-color: #C23699; // purple
 //
 // Positions
 
-.fixed          { position: fixed; }
-.relative       { position: relative; }
-.absolute       { position: absolute; }
-.static         { position: static; }
+.fixed    { position: fixed; }
+.relative { position: relative; }
+.absolute { position: absolute; }
+.static   { position: static; }
 
-.pin-top,
-.pin-right,
-.pin-bottom,
-.pin-left,
-.pin-top--left,
-.pin-top--right,
-.pin-bottom--left,
-.pin-bottom--right {
-  position:absolute;
-}
 
-.pin-bottom {
-  bottom: 0;
-  right: 0;
-  left: 0;
-}
-
-.pin-top {
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-.pin-right {
-  top: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.pin-left {
-  top: 0;
-  left: 0;
-  bottom: 0;
-}
-
-.pin-bottom--right {
-  bottom: 0;
-  right: 0;
-}
-
-.pin-bottom--left {
-  bottom: 0;
-  left: 0;
-}
-
-.pin-top--right {
-  top: 0;
-  right: 0;
-}
-
-.pin-top--left {
-  top: 0;
-  left: 0;
-}
-
-.vertical-align {
-  top: 50%;
-  // @include vendor(transform, translateY(-50%));
-}
-
-.vertical-align--right {
-  right: 0;
-}
-
-.vertical-align--left {
-  left: 0;
-}
 
 //
 // Align
 
-.text-left      { text-align: left; }
-.text-right     { text-align: right; }
-.text-center    { text-align: center; }
-.text-just      { text-align: justify; }
+.text-left   { text-align: left; }
+.text-right  { text-align: right; }
+.text-center { text-align: center; }
+.text-just   { text-align: justify; }
 
-.v-middle       { vertical-align: middle; }
-.v-bottom       { vertical-align: bottom; }
+.v-middle    { vertical-align: middle; }
+.v-bottom    { vertical-align: bottom; }
+
+
 
 //
 // Width && Height
 
-.fw             { width: 100%; }
-.full-min-height{ min-height: 100%; }
+.fw               { width: 100%; }
+.full-min-height  { min-height: 100%; }
 .full-height {
   min-height: 100%;
   height: 100%;
 }
-
-.vertical-align {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-// TODO:
-// Convert margins and padding to small, medium and large as padding blew
-//
-// Margins
-//
-
-.m0             { margin: 0; }
-.mt0            { margin-top: 0; }
-.mr0            { margin-right: 0; }
-.mb0            { margin-bottom: 0; }
-.ml0            { margin-left: 0; }
-
-.ms            { margin: .25em; }
-.mts           { margin-top: .25em; }
-.mbs           { margin-bottom: .25em; }
-.mrs           { margin-right: .25em; }
-.mls           { margin-left: .25em; }
-
-.mm            { margin: .5em; }
-.mtm           { margin-top: .5em; }
-.mbm           { margin-bottom: .5em; }
-.mrm           { margin-right: .5em; }
-.mlm           { margin-left: .5em; }
-
-.m1            { margin: $base-space-unit; }
-.mt1           { margin-top: $base-space-unit; }
-.mb1           { margin-bottom: $base-space-unit; }
-.mr1           { margin-right: $base-space-unit; }
-.ml1           { margin-left: $base-space-unit; }
-
-.m2            { margin: $base-space-unit*2; }
-.mt2           { margin-top: $base-space-unit*2; }
-.mb2           { margin-bottom: $base-space-unit*2; }
-.mr2           { margin-right: $base-space-unit*2; }
-.ml2           { margin-left: $base-space-unit*2; }
-
-//
-// Padding
-
-.p0             { padding: 0; }
-.pt0            { padding-top: 0; }
-.pr0            { padding-right: 0; }
-.pb0            { padding-bottom: 0; }
-.pl0            { padding-left: 0; }
-
-.ps             { padding: .25em; }
-.pts            { padding-top: .25em; }
-.pbs            { padding-bottom: .25em; }
-.prs            { padding-right: .25em; }
-.pls            { padding-left: .25em; }
-
-.pm             { padding: .5em; }
-.ptm            { padding-top: .5em; }
-.pbm            { padding-bottom: .5em; }
-.prm            { padding-right: .5em; }
-.plm            { padding-left: .5em; }
-
-.p1             { padding: $base-space-unit; }
-.pt1            { padding-top: $base-space-unit; }
-.pr1            { padding-right: $base-space-unit; }
-.pb1            { padding-bottom: $base-space-unit; }
-.pl1            { padding-left: $base-space-unit; }
-
-.p2             { padding: $base-space-unit*2; }
-.pt2            { padding-top: $base-space-unit*2; }
-.pr2            { padding-right: $base-space-unit*2; }
-.pb2            { padding-bottom: $base-space-unit*2; }
-.pl2            { padding-left: $base-space-unit*2; }
-
-
-//
-// target/context = result
-// Exp:
-// 5/16 = 0.3125em
-//
-
-//
-// Conventions:
-// pad  => padding
-// s    => small
-// m    => medium
-// l    => large
-// x    => left and right
-// y    => top and bottom
-//
-
-
-// Padding small
-.pads           { padding: .25em; }
-
-// Padding medium
-.padm           { padding: .5em; }
-
-// Padding large
-.padl           { padding: 1em; }
-
-// Padding small left :: right
-.padsx {
-  padding-left: .25em;
-  padding-right: .25em;
-}
-
-// Padding medium left :: right
-.padmx {
-  padding-left: .5em;
-  padding-right: .5em;
-}
-
-// Padding large left :: right
-.padlx {
-  padding-left: $base-space-unit;
-  padding-right: $base-space-unit;
-}
-
-
-// Padding small top :: bottom
-.padsy {
-  padding-top: .25em;
-  padding-bottom: .25em;
-}
-
-// Padding medium top :: bottom
-.padmy {
-  padding-top: .5em;
-  padding-bottom: .5em;
-}
-
-// Padding large top :: bottom
-.padly {
-  padding-top: $base-space-unit;
-  padding-bottom: $base-space-unit;
-}
-
 
 
 //
 // Display
 //
 
-.inline         { display: inline; }
-.block          { display: block; }
-.inline-block   { display: inline-block; }
-.hide           { display: none; }
+.inline       { display: inline; }
+.block        { display: block; }
+.inline-block { display: inline-block; }
+.hide         { display: none; }
+.flex         { display: flex; }
 
-
-//
-// Borders
-//
-
-.border         { border: 1px solid $border-color; }
-.border-top     { border-top: 1px solid $border-color; }
-.border-right   { border-right: 1px solid $border-color; }
-.border-bottom  { border-bottom: 1px solid $border-color; }
-.border-left    { border-left: 1px solid $border-color; }
-
-.border--white         { border: 1px solid $white; }
-.border-top--white     { border-top: 1px solid $white; }
-.border-right--white   { border-right: 1px solid $white; }
-.border-bottom--white  { border-bottom: 1px solid $white; }
-.border-left--white    { border-left: 1px solid $white; }
-
-.border-shadow-on-hover {
-  padding: $base-space-unit/3;
-
-  &:hover {
-    border: 1px solid rgba(82, 168, 236, 0.8);
-    box-shadow: 0 0 8px rgba(82, 168, 236, 0.6);
-
-    // @include transition(all, 0.2s, ease-out);
-  }
+.pin-all {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 
 //
-// Typography
+// Z-index
 //
 
-.fwb            { font-weight: bold; }
+.zindex-1 { z-index: 1; }
+.zindex-2 { z-index: 2; }
 
-//
-// ellipsis
-
-.ell {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 
 
 //
@@ -350,55 +85,12 @@ $anchor-visited-color: #C23699; // purple
 
 .no-bullets     { list-style: none; }
 .bullets-inside { list-style: inside; }
-
-
-//
-// Colors
-//
-
-.white          { color: $white; }
-.white-bg       { background-color: $white; }
-.gray           { color: $gray; }
-.gray-bg        { background-color: $gray; }
-.white-bg--trans{ background-color: rgba(255, 255, 255, .5) }
-.dark-bg--trans { background-color: rgba(000, 000, 000, .5) }
-
-//
-// Other
-
-.pointer        { cursor: pointer; }
-
-
-//
-// Functions for calcluating spaces
-//
-// .css {
-//  margin-top: quarter($base-space-unit); // => margin-top: 0.25em;
-// }
-
-@function quarter($value) {
-  @return $value / 4;
+.list-bare {
+  margin: 0;
+  padding: 0;
+  @extend .no-bullets;
 }
 
-@function halve($value) {
-  @return $value / 2;
-}
-
-@function halve($value) {
-  @return $value / 2;
-}
-
-@function double($value) {
-  @return $value * 2;
-}
-
-@function threefold($value) {
-  @return $value * 3;
-}
-
-@function quadruple($value) {
-  @return $value * 4;
-}
 
 //
 // Margin
@@ -416,6 +108,17 @@ $anchor-visited-color: #C23699; // purple
 
 
 //
+// Bottom Margin
+
+.margin-bottom-quarter  { margin-bottom: quarter($base-space-unit); }
+.margin-bottom-half     { margin-bottom: halve($base-space-unit); }
+.margin-bottom-one      { margin-bottom: $base-space-unit; }
+.margin-bottom-two      { margin-bottom: double($base-space-unit); }
+.margin-bottom-three    { margin-bottom: threefold($base-space-unit); }
+.margin-bottom-four     { margin-bottom: quadruple($base-space-unit); }
+
+
+//
 // Right Margin
 
 .margin-right-quarter   { margin-right: quarter($base-space-unit); }
@@ -425,15 +128,16 @@ $anchor-visited-color: #C23699; // purple
 .margin-right-three     { margin-right: threefold($base-space-unit); }
 .margin-right-four      { margin-right: quadruple($base-space-unit); }
 
-//
-// Bottom Margin
 
-.margin-bottom-quarter  { margin-bottom: quarter($base-space-unit); }
-.margin-bottom-half     { margin-bottom: halve($base-space-unit); }
-.margin-bottom-one      { margin-bottom: $base-space-unit; }
-.margin-bottom-two      { margin-bottom: double($base-space-unit); }
-.margin-bottom-three    { margin-bottom: threefold($base-space-unit); }
-.margin-bottom-four     { margin-bottom: quadruple($base-space-unit); }
+//
+// Left Margin
+
+.margin-left-quarter   { margin-left: quarter($base-space-unit); }
+.margin-left-half      { margin-left: halve($base-space-unit); }
+.margin-left-one       { margin-left: $base-space-unit; }
+.margin-left-two       { margin-left: double($base-space-unit); }
+.margin-left-three     { margin-left: threefold($base-space-unit); }
+.margin-left-four      { margin-left: quadruple($base-space-unit); }
 
 
 
@@ -451,6 +155,7 @@ $anchor-visited-color: #C23699; // purple
 .padding-top-three      { padding-top: threefold($base-space-unit); }
 .padding-top-four       { padding-top: quadruple($base-space-unit); }
 
+
 //
 // Bottom Padding
 
@@ -462,37 +167,23 @@ $anchor-visited-color: #C23699; // purple
 .padding-bottom-four    { padding-bottom: quadruple($base-space-unit); }
 
 
-.media-cover {
-  background-position: bottom;
-  background-size: cover;
-  background-repeat: no-repeat;
-  overflow: hidden;
-}
+//
+// Right Padding
 
-.media-cover--user {
-  // background-image: url(user-cover.jpg);
-}
+.padding-right-quarter    { padding-right: quarter($base-space-unit); }
+.padding-right-halve      { padding-right: halve($base-space-unit); }
+.padding-right-one        { padding-right: $base-space-unit; }
+.padding-right-two        { padding-right: double($base-space-unit); }
+.padding-right-three      { padding-right: threefold($base-space-unit); }
+.padding-right-four       { padding-right: quadruple($base-space-unit); }
 
-.gradient:after {
-  background-image: linear-gradient(to bottom, rgba(23, 23, 23, 0) 0%, rgba(0,0,0,0.1) 100%);
-  background-repeat: repeat-x;
-  bottom: 0;
-  content: "";
-  display: block;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
 
-.gradient--hero:after {
- top: 80px;
-}
+//
+// Left Padding
 
-.text-shadow {
-  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
-}
-
-.hero-content {
-  z-index: 1;
-}
+.padding-left-quarter    { padding-left: quarter($base-space-unit); }
+.padding-left-halve      { padding-left: halve($base-space-unit); }
+.padding-left-one        { padding-left: $base-space-unit; }
+.padding-left-two        { padding-left: double($base-space-unit); }
+.padding-left-three      { padding-left: threefold($base-space-unit); }
+.padding-left-four       { padding-left: quadruple($base-space-unit); }
