@@ -1,5 +1,4 @@
-<% @videos.each do |video| %>
-<div class="column large-3 margin-bottom-two">
+<div class="column large-3 margin-bottom-one">
   <%= link_to video, :class=> "ell block" do %>
   <div class="cover margin-bottom-one" style="background-image: url(<%= video.thumbnail_url %>)"></div>
   <div class="white-bg">
@@ -9,4 +8,3 @@
   </div>
   <% end %>
 </div>
-<% end %>

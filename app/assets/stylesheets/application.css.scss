@@ -4,5 +4,10 @@
 @import 'helpers';
 @import 'highlights';
 @import 'ajmi-grid/grid';
+
+// Sections
+
+@import 'sections/header';
+@import 'flex-embed';
 @import 'videos';
 @import 'base';

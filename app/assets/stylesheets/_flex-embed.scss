@@ -1,0 +1,55 @@
+// Flexible embeds
+//
+// If you want to embed responsive maps, video or responsive section with a background image, this is what you will actually need.
+// Inspired by http://nicolasgallagher.com/flexible-css-cover-images/
+//
+// Note that `flex-embed` is used for empty section with a background image, video or maps.
+//
+// For empty section with background image use `media-cover` class & `media-cover--` modifier for adding the background as in the examples below.
+//
+// .flex-embed--3by1      - Modifier: 3:1 aspect ratio / 30%
+// .flex-embed--2by1      - Modifier: 2:1 aspect ratio / 50%
+// .flex-embed--16by9     - Modifier: 16:9 aspect ratio / 56.25%
+// .flex-embed--4by3      - Modifier: 4:3 aspect ratio  / 70%
+//
+// Markup:
+// <div class="flex-embed {$modifiers} media-cover media-cover--careers"></div>
+//
+// Styleguide 2.0
+
+
+.flex-embed {
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+  }
+}
+
+// Modifier: 3:1 aspect ratio
+
+.flex-embed--3by1 { padding-bottom: 30%; }
+
+// Modifier: 2:1 aspect ratio
+
+.flex-embed--2by1 { padding-bottom: 50%; }
+
+// Modifier: 16:9 aspect ratio
+
+.flex-embed--16by9 { padding-bottom: 56.25%; }
+
+// Modifier: 4:3 aspect ratio
+
+.flex-embed--4by3 { padding-bottom: 75%; }
+
+.flex-embed iframe,
+.flex-embed__object {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

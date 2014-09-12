@@ -1,14 +1,16 @@
 <% if user_signed_in? %>
 
-<li>
+<li class="inline-block">
 	<%=link_to "Add", :controller => :videos, :action => :new %>
 </li>
 
-<li>
+<li class="inline-block padding-right-one padding-left-one">
 	<%= link_to current_user.name, current_user %>
 </li>
 
-<li><%= link_to 'Signout', '/signout' %></li>
+<li class="inline-block">
+  <%= link_to 'Signout', '/signout' %>
+</li>
 
 <% else %>
 

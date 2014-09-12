@@ -1,78 +1,55 @@
+<div class="flex-embed flex-embed--2by1">
+  <%= @video.html.html_safe %>
+</div>
+
+<div class="row">
+  <div class="large-9 column">
+    <h3 class="mt0"><%= @video.title %></h3>
+    <p><%= markdown(@video.description) %></p>
+  </div>
+  <div class="large-3 column">
+    <div class="col-sm-3">
+      <%= link_to @video.user, :class=> "ell block" do %>
+      <div class="media">
+        <div class="pull-left">
+          <img class="media-object" src="<%= @video.user.image %>" alt="<%= @video.user.name %>" style="height:64px;height:64px;">
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading"><%= @video.user.name %></h4>
+          <p><%= markdown(@video.user.description) if @video.user.description %></p>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <%= render 'shared/like_form', likeable: @video %>
+    <div class="likes"><%= pluralize(@video.likers(User).count, '')%></div>
+    <% @likers.each do |user|%>
+    <%= link_to user.name, user %>
+    <% end %>
+
+    <p><%= link_to @video.tag_list, tag_path(@video.tag_list)%></p>
+    <% if @video.user == current_user %>
+    <%= link_to 'Delete', video_path(@video), method: :delete, data: { confirm: 'Are you sure you want to delete this video?' } %>
+    <%= link_to 'Edit', edit_video_path(@video) %>
+    <% end %>
+
+  </div>
+</div><!-- row -->
+
+<!-- related Videos by the current video tags -->
 <div class="row">
 
-  <div class="col-sm-12">
-    <div class="embed-responsive embed-responsive-16by9">
-      <div class="embed-responsive-item">
-        <%= @video.html.html_safe %>
-      </div>
-    </div>
-  </div>
+  <% Video.tagged_with([@video.tag_list]).each do |video| %>
 
-  <div class="col-sm-12">
-    <div class="white-bg p1 padding-top-two mt0">
+  <% if video.id != @video.id %>
+  <%= render 'shared/video_card', :video => video %>
+  <% end %>
 
-      <div class="row">
-        <div class="col-sm-9">
-          <h3 class="mt0"><%= @video.title %></h3>
-          <p><%= markdown(@video.description) %></p>
-        </div>
+  <% end %>
 
-        <div class="col-sm-3">
-          <%= link_to @video.user, :class=> "ell block" do %>
-          <div class="media">
-            <div class="pull-left">
-              <img class="media-object" src="<%= @video.user.image %>" alt="<%= @video.user.name %>" style="height:64px;height:64px;">
-            </div>
-            <div class="media-body">
-              <h4 class="media-heading"><%= @video.user.name %></h4>
-              <p><%= markdown(@video.user.description) if @video.user.description %></p>
-            </div>
-          </div>
-        </div>
-        <% end %>
-      </div><!-- row -->
-
-      <div class="row">
-        <div class="col-sm-12">
-          <%= render 'shared/like_form', likeable: @video %>
-          <div class="likes"><%= pluralize(@video.likers(User).count, '')%></div>
-          <% @likers.each do |user|%>
-          <%= link_to user.name, user %>
-          <% end %>
-
-          <p><%= link_to @video.tag_list, tag_path(@video.tag_list)%></p>
-          <% if @video.user == current_user %>
-          <%= link_to 'Delete', video_path(@video), method: :delete, data: { confirm: 'Are you sure you want to delete this video?' } %>
-          <%= link_to 'Edit', edit_video_path(@video) %>
-          <% end %>
-
-        </div>
-      </div><!-- row -->
-
-      <!-- related Videos by the current video tags -->
-
-      <div class="row">
-
-        <% Video.tagged_with([@video.tag_list]).each do |video| %>
-
-        <% if video.id != @video.id %>
-        <div class="col-sm-6 col-md-3 mb2">
-          <%= link_to video, :class=> "ell block" do %>
-          <div class="cover" style="background-image: url(<%= video.thumbnail_url %>)"></div>
-          <div class="gray-bg">
-            <div class="padlx padly ell">
-              <%= video.title %>
-            </div>
-          </div>
-          <% end %>
-        </div>
-        <% end %>
-
-        <% end %>
-
-      </div><!-- row -->
-
-    </div>
-  </div>
-
-</div>
+</div><!-- row -->

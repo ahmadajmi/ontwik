@@ -1,53 +1,44 @@
-<div class="row">
+<div class="media-cover relative full-height margin-bottom-four" style="background-image: url(<%= @user.profile_banner_url if @user.profile_banner.present? %>)">
 
-  <div class="col-sm-3 col-md-3 hide">
-    <div class="white-bg">
-      <img src="<%= @user.image if @user.image %>">
-      <div class="padlx padly">
-        <div class="text-center">
-          <h4><%= @user.name if @user.name %></h4>
+  <div class="gradient gradient--hero"></div>
+
+  <div class="row ">
+    <div class="large-3 column">
+
+      <div class="text-center white-bg padding-bottom-one">
+
+        <div class="margin-bottom-one">
+          <img src="<%= @user.image if @user.image %>">
+          <h3><%= @user.name if @user.name %></h3>
           <p><%= @user.description if @user.description %></p>
         </div>
-        <div class="row mb1">
-          <div class="col-md-4 text-center">
+
+        <div class="row">
+          <div class="large-4 column">
             <strong class="block"><%= @user.videos.count %></strong>
             Videos
           </div>
-          <div class="col-md-4 text-center">
+          <div class="large-4 column">
             <strong class="block"><%= @user.followers(User).count %></strong>
             Followers
           </div>
-          <div class="col-md-4 text-center">
+          <div class="large-4 column">
             <strong class="block"><%= @user.followees(User).count %></strong>
             Following
           </div>
         </div>
+
         <div class="text-center">
-          <%= render 'shared/follow_form' , user: @user%>
+          <%= render 'shared/follow_form' , user: @user %>
         </div>
+
       </div>
     </div>
   </div>
+</div>
 
-  <div class="col-sm-12 col-md-12">
-    <div class="row">
-
-      <% @user.videos.each do |video| %>
-      <div class="col-sm-6 col-md-4 margin-bottom-two">
-
-        <%= link_to video, :class=> "ell block" do %>
-        <div class="cover" style="background-image: url(<%= video.thumbnail_url %>)"></div>
-        <div class="white-bg">
-          <div class="padlx padly ell">
-            <%= video.title %>
-          </div>
-        </div>
-        <% end %>
-
-      </div>
-      <% end %>
-
-    </div>
-  </div>
-
+<div class="row">
+  <% @user.videos.each do |video| %>
+  <%= render 'shared/video_card', :video => video %>
+  <% end %>
 </div>

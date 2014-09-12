@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    render :layout => 'userlayout'
+    # render :layout => 'userlayout'
   end
 
   def edit

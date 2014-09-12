@@ -1,13 +1,9 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 body, html {
   height: 100%;
 }
 
 body {
+  font-size: 100%;
   font-family: $base-font-family;
 }
 
@@ -24,6 +20,8 @@ a:hover {
 a:active, a:hover {
   outline: 0 none;
 }
+
+img { max-width: 100%; }
 
 //
 // CSS highlight

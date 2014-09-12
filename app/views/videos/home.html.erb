@@ -1,4 +1,5 @@
 <div class="row">
-  <%= render 'shared/video_card' %>
+  <% @videos.each do |video| %>
+  <%= render 'shared/video_card', :video => video %>
+  <% end %>
 </div>
-
