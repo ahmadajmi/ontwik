@@ -1,15 +1,27 @@
 <% if user_signed_in? %>
 
 <li class="inline-block">
-	<%=link_to "Add", :controller => :videos, :action => :new %>
+  <%= link_to({:action => 'new', :controller => 'videos'}) do%>
+  <span class="iconicstroke-plus"></span>
+  <% end %>
+</li>
+
+<li class="inline-block padding-left-one">
+  <%= link_to current_user, :class=> "" do %>
+  <span class="iconicstroke-user"></span>
+  <% end %>
 </li>
 
 <li class="inline-block padding-right-one padding-left-one">
-	<%= link_to current_user.name, current_user %>
+  <%= link_to edit_user_path(current_user), :class=> "" do %>
+  <span class="iconicstroke-cog"></span>
+  <% end %>
 </li>
 
 <li class="inline-block">
-  <%= link_to 'Signout', '/signout' %>
+  <%= link_to '/signout', :class=> "" do %>
+  <span class="iconicstroke-arrow-right"></span>
+  <% end %>
 </li>
 
 <% else %>

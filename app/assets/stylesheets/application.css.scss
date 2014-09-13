@@ -4,6 +4,7 @@
 @import 'helpers';
 @import 'highlights';
 @import 'ajmi-grid/grid';
+@import url(http://weloveiconfonts.com/api/?family=iconicstroke);
 
 // Sections
 
@@ -11,3 +12,8 @@
 @import 'flex-embed';
 @import 'videos';
 @import 'base';
+
+/* iconicstroke */
+[class*="iconicstroke-"]:before {
+  font-family: 'IconicStroke', sans-serif;
+}
