@@ -38,7 +38,10 @@
 
 .v-middle    { vertical-align: middle; }
 .v-bottom    { vertical-align: bottom; }
-
+.column--center {
+  float: none !important;
+  margin: 0 auto;
+}
 
 
 //
@@ -108,8 +111,9 @@
 // Color
 //
 
-.white-bg   { background-color: #fff; }
 
+.white-bg   { background-color: #fff; }
+.dark-bg    { background-color: #2c3e50; }
 
 
 

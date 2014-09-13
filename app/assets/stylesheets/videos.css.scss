@@ -1,19 +1,8 @@
-.cover {
- background-color: #ecf0f4;
- background-position: center center;
- background-size: cover;
- display: block;
- height: 0;
- overflow: hidden;
- padding-top: 55%;
- position: relative;
-}
-
 .card-inside {
   position: absolute;
   bottom: 0;
   color: #fff;
-  padding: .5em;
+  padding: 1em;
 
   h3 {
     font-weight: 300;

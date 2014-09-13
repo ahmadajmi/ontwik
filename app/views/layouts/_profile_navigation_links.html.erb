@@ -2,25 +2,25 @@
 
 <li class="inline-block">
   <%= link_to({:action => 'new', :controller => 'videos'}) do%>
-  <span class="iconicstroke-plus"></span>
+  <span class="iconicstroke-plus" title="Add new video"></span>
   <% end %>
 </li>
 
 <li class="inline-block padding-left-one">
   <%= link_to current_user, :class=> "" do %>
-  <span class="iconicstroke-user"></span>
+  <span class="iconicstroke-user" title="Profile"></span>
   <% end %>
 </li>
 
 <li class="inline-block padding-right-one padding-left-one">
   <%= link_to edit_user_path(current_user), :class=> "" do %>
-  <span class="iconicstroke-cog"></span>
+  <span class="iconicstroke-cog" title="Edit Profile"></span>
   <% end %>
 </li>
 
 <li class="inline-block">
   <%= link_to '/signout', :class=> "" do %>
-  <span class="iconicstroke-arrow-right"></span>
+  <span class="iconicstroke-arrow-right" title="Logout"></span>
   <% end %>
 </li>
 

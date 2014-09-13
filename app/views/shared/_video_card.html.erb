@@ -1,7 +1,7 @@
 <div class="column large-4 margin-bottom-two">
   <div class="card relative">
     <%= link_to video, :class=> "ell block" do %>
-    <div class="cover" style="background-image: url(<%= video.thumbnail_url %>)"></div>
+    <div class="media-cover flex-embed flex-embed--16by9" style="background-image: url(<%= video.thumbnail_url %>)"></div>
     <div class="card__overlay"></div>
     <div class="card-inside">
       <h3><%= video.title %></h3>
