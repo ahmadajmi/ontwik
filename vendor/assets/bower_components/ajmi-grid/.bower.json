@@ -16,11 +16,11 @@
     "mobile-first"
   ],
   "license": "MIT",
-  "_release": "bd00d23956",
+  "_release": "244d8f5bc1",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "bd00d23956eff663dfb4aa46ea5e0a82d0dd1103"
+    "commit": "244d8f5bc1bf40de1d72cac43a4f2486bea46f28"
   },
   "_source": "git://github.com/ahmadajmi/ajmi-grid.git",
   "_target": "*",

@@ -13,7 +13,7 @@ $row-max-width:         60em !default;
 // gridCalc(1, 12) => 8.33333%
 
 @function gridCalc($columnNumber, $totalColumns) {
-  @return percentage($columnNumber / $totalColumns); 
+  @return percentage($columnNumber / $totalColumns);
 }
 
 
@@ -50,6 +50,11 @@ $row-max-width:         60em !default;
   padding-right: $base-space-unit;
   padding-left:  $base-space-unit;
   width: 100%;
+}
+
+.column--center {
+  float: none;
+  margin: 0 auto;
 }
 
 // Small screens for greater than 320px

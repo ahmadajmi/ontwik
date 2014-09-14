@@ -1,19 +1,23 @@
-<div class="row">
+<div class="margin-top-one">
+  <div class="row ">
 
-  <div class="col-sm-3 col-md-3">
-    <ul class="list-group">
-      <% tag_cloud Video.tag_counts, %w{s m l} do |tag| %>
-      <li class="list-group-item"><%= link_to tag.name, tag_path(tag.name) %>
-       <span class="badge"><%= tag.count %></span>
-     </li>
-     <% end %>
-   </ul>
- </div>
+    <div class="large-2 column">
+      <ul class="list-bare">
+        <% tag_cloud Video.tag_counts, %w{s m l} do |tag| %>
+        <li class="list-group-item"><%= link_to tag.name, tag_path(tag.name) %>
+         <span class="badge"><%= tag.count %></span>
+       </li>
+       <% end %>
+     </ul>
+   </div>
 
- <div class="col-sm-9 col-md-9">
-  <div class="row">
-    <%= render 'shared/video_card' %>
+   <div class="large-10 column">
+    <div class="row">
+      <% @videos.each do |video| %>
+      <%= render 'shared/video_card', :video => video %>
+      <% end %>
+    </div>
   </div>
-</div>
 
+</div>
 </div>
