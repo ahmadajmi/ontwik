@@ -110,8 +110,8 @@
 
 .white-bg   { background-color: #fff; }
 .dark-bg    { background-color: #2c3e50; }
-
-
+.gray       { color: $gray; }
+.border     { border: 1px solid #f5f5f5; }
 
 //
 // Margin
@@ -208,3 +208,14 @@
 .padding-left-two        { padding-left: double($base-space-unit); }
 .padding-left-three      { padding-left: threefold($base-space-unit); }
 .padding-left-four       { padding-left: quadruple($base-space-unit); }
+
+
+//
+// All
+
+.padding-quarter        { padding: quarter($base-space-unit); }
+.padding-halve          { padding: halve($base-space-unit); }
+.padding-one            { padding: $base-space-unit; }
+.padding-two            { padding: double($base-space-unit); }
+.padding-three          { padding: threefold($base-space-unit); }
+.padding-four           { padding: quadruple($base-space-unit); }
