@@ -31,7 +31,7 @@
 </div>
 
 <div class="row">
-  <div class="col-sm-12">
+  <div class="large-12 column">
     <%= render 'shared/like_form', likeable: @video %>
     <div class="likes"><%= pluralize(@video.likers(User).count, '')%></div>
     <% @likers.each do |user|%>
@@ -45,17 +45,13 @@
     <% end %>
 
   </div>
-</div><!-- row -->
+</div>
 
 <!-- related Videos by the current video tags -->
 <div class="row">
-
   <% Video.tagged_with([@video.tag_list]).each do |video| %>
-
   <% if video.id != @video.id %>
   <%= render 'shared/video_card', :video => video %>
   <% end %>
-
   <% end %>
-
-</div><!-- row -->
+</div>

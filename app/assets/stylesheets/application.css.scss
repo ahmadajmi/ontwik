@@ -1,7 +1,6 @@
 @import 'normalize-css/normalize';
 @import 'variables';
 @import 'functions';
-@import 'helpers';
 @import 'highlights';
 @import 'ajmi-grid/grid';
 @import url(http://weloveiconfonts.com/api/?family=iconicstroke);
@@ -18,6 +17,8 @@
 @import 'flex-embed';
 @import 'videos';
 @import 'base';
+
+@import 'helpers';
 
 /* iconicstroke */
 [class*="iconicstroke-"]:before {

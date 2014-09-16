@@ -1,10 +1,14 @@
 <div class="column large-4 margin-bottom-two">
   <div class="card relative">
     <%= link_to video, :class=> "ell block" do %>
-    <div class="media-cover flex-embed flex-embed--16by9" style="background-image: url(<%= video.thumbnail_url %>)"></div>
-    <div class="card__overlay"></div>
+    <div class="media-cover flex-embed flex-embed--16by9 margin-bottom-half" style="background-image: url(<%= video.thumbnail_url %>)">
+      <div class="card__overlay"></div>
+    </div>
     <div class="card-inside">
-      <h3><%= video.title %></h3>
+      <div class="left margin-right-half">
+        <img class="left radius-half" src="<%= video.user.image %>" alt="<%= video.user.name %>" style="height:24px;height:24px;">
+      </div>
+      <h3 class="ell"><%= video.title %></h3>
     </div>
     <% end %>
   </div>
