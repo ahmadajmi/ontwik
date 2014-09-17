@@ -13,7 +13,14 @@
 
           <div class="margin-bottom-one">
             <%= f.label :profile_banner %>
-            <%= f.file_field :profile_banner, :class => 'form-control border-all padding-one full-width' %>
+            <div class="row">
+              <div class="large-10 medium-10 small-10 column">
+                <%= f.file_field :profile_banner, :class => 'form-control border-all padding-one full-width' %>
+              </div>
+              <div class="large-2 medium-2 small-2 column">
+                <img src="<%= @user.profile_banner_url if @user.profile_banner.present? %>" style="">
+              </div>
+            </div>
           </div>
 
           <div class="margin-bottom-one">
