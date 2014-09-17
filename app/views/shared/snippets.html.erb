@@ -10,3 +10,6 @@
 
   <p><%= @user.profile_background_image_url if @user.nickname %></p>
 </div>
+
+
+<p><%= markdown(@video.user.description) if @video.user.description %></p>

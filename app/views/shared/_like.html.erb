@@ -1,1 +1,3 @@
-<%= link_to "like", like_path(likeable_id: likeable.id, likeable_type: likeable.class) , remote: true, method: :get , class: "like" %>
+<%= link_to like_path(likeable_id: likeable.id, likeable_type: likeable.class) , remote: true, method: :get, :class=> "border-all padding-right-one padding-left-one padding-top-quarter padding-bottom-quarter", :title => "Like" do %>
+<span class="iconicstroke-heart-stroke "></span>
+<% end %>

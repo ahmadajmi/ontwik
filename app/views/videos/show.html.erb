@@ -16,34 +16,53 @@
   </div>
 
   <div class="large-3 column">
+
     <div class="margin-bottom-one padding-top-one padding-bottom-one border-bottom">
-      <%= render 'shared/like_form', likeable: @video %>
-      <div class="likes"><%= pluralize(@video.likers(User).count, '')%></div>
-      <% @likers.each do |user|%>
-      <%= link_to user.name, user %>
+
+      <div class="row">
+        <div class="large-6 medium-6 small-6 column text-left">
+          <%= render 'shared/like_form', likeable: @video %>
+          <span class="likes border-top border-right border-bottom padding-right-one padding-left-one padding-top-quarter padding-bottom-quarter">
+            <%= pluralize(@video.likers(User).count, '')%>
+          </span>
+        </div>
+
+        <div class="large-6 medium-6 small-6 column text-right">
+          <% if @video.user == current_user %>
+          <%= link_to video_path(@video), method: :delete, data: { confirm: 'Are you sure you want to delete this video?' }, :class=> "border-all padding-right-one padding-left-one padding-top-quarter padding-bottom-quarter", :title => "Delete" do %>
+          <span class="iconicstroke-x" title="Profile"></span>
+          <% end %>
+          <%= link_to edit_video_path(@video), :class=> "border-top border-right border-bottom padding-right-one padding-left-one padding-top-quarter padding-bottom-quarter", :title => "Edit" do %>
+          <span class="iconicstroke-pen-alt2" title="Profile"></span>
+          <% end %>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="hide">
+        <% @likers.each do |user|%>
+        <%= link_to user.name, user %>
+        <% end %>
+      </div>
+
+      <% if !@video.tag_list.empty? %>
+      <p><%= raw @video.tag_list.map { |t| link_to t, tag_path(t) }.join(' - ') %></p>
       <% end %>
 
-      <p><%= link_to @video.tag_list, tag_path(@video.tag_list)%></p>
-      <% if @video.user == current_user %>
-      <%= link_to 'Delete', video_path(@video), method: :delete, data: { confirm: 'Are you sure you want to delete this video?' } %>
-      <%= link_to 'Edit', edit_video_path(@video) %>
+    </div>
+
+    <div class="margin-bottom-one padding-bottom-one border-bottom">
+      <%= link_to @video.user, :class=> "ell block gray-bg" do %>
+      <div class="left">
+        <img class="margin-right-half block" src="<%= @video.user.image %>" alt="<%= @video.user.name %>" style="height:64px;height:64px;">
+      </div>
+      <h4 class="margin-bottom-none ell"><%= @video.user.name %></h4>
       <% end %>
     </div>
 
-    <%= link_to @video.user, :class=> "ell block" do %>
-    <div class="media">
-      <div class="pull-left">
-        <img class="media-object" src="<%= @video.user.image %>" alt="<%= @video.user.name %>" style="height:64px;height:64px;">
-      </div>
-      <div class="media-body">
-        <h4 class="media-heading"><%= @video.user.name %></h4>
-        <p><%= markdown(@video.user.description) if @video.user.description %></p>
-      </div>
-    </div>
-    <% end %>
   </div>
 
-</div>
+</div><!-- row -->
 
 
 <!-- related Videos by the current video tags -->
