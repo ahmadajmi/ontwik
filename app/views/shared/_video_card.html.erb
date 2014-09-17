@@ -6,7 +6,9 @@
     </div>
     <div class="card-inside">
       <div class="left margin-right-half">
+        <%= link_to video.user, :title => video.user.name, :class=> "ell block" do %>
         <img class="left radius-half" src="<%= video.user.image %>" alt="<%= video.user.name %>" style="height:24px;height:24px;">
+        <% end %>
       </div>
       <h3 class="ell"><%= video.title %></h3>
     </div>
