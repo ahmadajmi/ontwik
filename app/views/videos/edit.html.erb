@@ -7,22 +7,22 @@
         <div class="large-12 column">
           <%= form_for :video, url: video_path(@video), method: :patch do |f| %>
 
-          <div class="form-group">
+          <div class="margin-bottom-one">
             <%= f.label :title %>
-            <%= f.text_field :title, :type => 'text', :placeholder => 'Video URL', :class => 'form-control form-control border padding-one full-width margin-bottom-one', :required => 'true' %>
+            <%= f.text_field :title, :type => 'text', :placeholder => 'Video URL', :class => 'form-control form-control border padding-one full-width', :required => 'true' %>
           </div>
 
-          <div class="form-group">
+          <div class="margin-bottom-one">
             <%= f.label :tag_list %>
-            <%= f.text_field :tag_list, :type => 'text', :placeholder => 'Tags', :class => 'form-control form-control border padding-one full-width margin-bottom-one', :required => 'true' %>
+            <%= f.text_field :tag_list, :type => 'text', :placeholder => 'Tags', :class => 'form-control form-control border padding-one full-width', :required => 'true' %>
           </div>
 
-          <div class="form-group">
+          <div class="margin-bottom-one">
             <%= f.label :description %>
-            <%= f.text_area :description, :autofocus => true, :placeholder => 'Description', :class=>'form-control form-control border padding-one full-width margin-bottom-one', :hatch => true %>
+            <%= f.text_area :description, :autofocus => true, :placeholder => 'Description', :class=>'form-control form-control border padding-one full-width', :hatch => true %>
           </div>
 
-          <div class="form-group">
+          <div class="margin-bottom-one">
             <%= f.submit class:'padding-top-halve padding-left-two padding-bottom-halve padding-right-two'%>
           </div>
 
