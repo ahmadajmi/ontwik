@@ -22,6 +22,10 @@ class VideosController < ApplicationController
   def new
   end
 
+  def to_param
+    username
+  end
+
   def create
     req_url = URI.parse('http://api.embed.ly/1/oembed?key=a7716080853c4d6d945624885ceb9ab9&url=' + params[:video][:url].to_s)
     req = Net::HTTP::Get.new(req_url.to_s)

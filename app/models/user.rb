@@ -1,5 +1,8 @@
 class User < ActiveRecord::Base
 
+  extend FriendlyId
+  friendly_id :nickname
+
   mount_uploader :profile_banner, ProfileBannerUploader
 
   has_many :videos
