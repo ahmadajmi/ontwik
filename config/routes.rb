@@ -19,6 +19,4 @@ Rails.application.routes.draw do
 
   get 'tags/:tag', to: 'videos#index', as: :tag
 
-  # get ':nickname' => 'users#show', :as => 'nickname'
-
 end

@@ -24,6 +24,8 @@ gem 'autosize-rails'
 gem 'turbolinks'
 gem 'jquery-turbolinks'
 
+gem 'friendly_id', '~> 5.0.0'
+
 # Markdown
 gem 'redcarpet'
 

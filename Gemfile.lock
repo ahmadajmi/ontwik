@@ -59,6 +59,8 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (2.2.1)
+    friendly_id (5.0.4)
+      activerecord (>= 4.0.0)
     hashie (2.1.2)
     high_voltage (2.2.0)
     hike (1.2.3)
@@ -181,6 +183,7 @@ DEPENDENCIES
   bower-rails
   carrierwave
   coffee-rails (~> 4.0.0)
+  friendly_id (~> 5.0.0)
   high_voltage
   jbuilder (~> 2.0)
   jquery-rails
