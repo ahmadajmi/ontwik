@@ -1,1 +1,3 @@
-<%= button_to "Follow", follow_path(user: @user.id) , remote: true, method: :get , class: "btn btn-primary btn-block" %>
+<%= link_to follow_path(user: @user.id), :remote => true, :method => 'get', :class=> "border-all padding-right-one padding-left-one padding-top-quarter padding-bottom-quarter", :title => "Follow" do %>
+<span class="iconicstroke-plus" title="Follow"></span>
+<% end %>

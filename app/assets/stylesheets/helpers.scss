@@ -68,6 +68,11 @@
   bottom: 0;
 }
 
+.pin-bottom {
+  right: 0;
+  left: 0;
+  bottom: 0; }
+
 .ell {
   white-space: nowrap;
   overflow: hidden;
@@ -121,6 +126,7 @@
 .notice-bg  { background-color: $notice; }
 .success-bg { background-color: $success; }
 .danger-bg  { background-color: $danger; }
+.white-transparent  { background-color: rgba(255,255,255,.5); }
 
 .border-all           { border:         1px solid $border-color; }
 .border-top           { border-top:     1px solid $border-color; }

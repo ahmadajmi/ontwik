@@ -1,49 +1,74 @@
 <div class="dark-bg relative media-cover margin-bottom-two" style="background-image: url(<%= @user.profile_banner_url if @user.profile_banner.present? %>)">
   <div class="card__overlay"></div>
+
   <div class="row">
     <div class="large-10 column column--center">
       <div class="flex-embed flex-embed--16by9">
 
-      </div>
+        <div class="absolute pin-bottom">
+         <div class="row">
+          <div class="large-12 column">
+            <div class="white-transparent white">
+
+              <div class="row">
+
+                <div class="large-8 column">
+                  <div class="row">
+                    <div class="large-3 column">
+                      <img src="<%= @user.image if @user.image %>" class="block">
+                    </div>
+
+                    <div class="large-9 column">
+                      <h3><%= @user.name if @user.name %></h3>
+                      <p><%= @user.description if @user.description %></p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="large-4 column">
+
+                    <div class="large-3 column text-center padding-top-three">
+                      <strong class="block"><%= @user.videos.count %></strong>
+                      <small>Videos</small>
+                    </div>
+
+                    <div class="large-3 column text-center padding-top-three">
+                      <strong class="block"><%= @user.followers(User).count %></strong>
+                      <small>Followers</small>
+                    </div>
+
+                    <div class="large-3 column text-center padding-top-three">
+                      <strong class="block"><%= @user.followees(User).count %></strong>
+                      <small>Following</small>
+                    </div>
+
+                    <div class="large-3 column padding-top-four">
+                      <div class="text-center">
+                        <%= render 'shared/follow_form' , user: @user %>
+                      </div>
+                    </div>
+
+                </div>
+
+              </div><!-- row -->
+
+            </div>
+          </div>
+        </div>
+      </div><!-- absolute -->
+
     </div>
   </div>
-</div>
+</div><!-- row -->
+</div><!-- media-cover -->
+
 
 <div class="row">
-  <div class="large-3 column">
-    <div class="text-center white-bg padding-bottom-one">
-
-      <div class="margin-bottom-one">
-        <img src="<%= @user.image if @user.image %>">
-        <h3><%= @user.name if @user.name %></h3>
-        <p><%= @user.description if @user.description %></p>
-      </div>
-
-      <div class="row">
-        <div class="large-4 column">
-          <strong class="block"><%= @user.videos.count %></strong>
-          Videos
-        </div>
-        <div class="large-4 column">
-          <strong class="block"><%= @user.followers(User).count %></strong>
-          Followers
-        </div>
-        <div class="large-4 column">
-          <strong class="block"><%= @user.followees(User).count %></strong>
-          Following
-        </div>
-      </div>
-
-      <div class="text-center">
-        <%= render 'shared/follow_form' , user: @user %>
-      </div>
-
+  <div class="large-10 column column--center">
+    <div class="row">
+      <% @user.videos.each do |video| %>
+      <%= render 'shared/video_card', :video => video %>
+      <% end %>
     </div>
   </div>
-</div>
-
-<div class="row">
-  <% @user.videos.each do |video| %>
-  <%= render 'shared/video_card', :video => video %>
-  <% end %>
 </div>
