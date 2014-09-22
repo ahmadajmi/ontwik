@@ -10,7 +10,6 @@ Rails.application.routes.draw do
 
   get 'videos/create'
 
-  resources :users, :only => [:index, :show]
   root to: 'videos#home'
   get '/auth/:provider/callback' => 'sessions#create'
   get '/signin' => 'sessions#new', :as => :signin
