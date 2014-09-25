@@ -7,9 +7,9 @@ class CreateVideos < ActiveRecord::Migration
       t.string :provider_url
       t.string :provider_name
 
-      t.string :title
-      t.string :html
-      t.string :description
+      t.text :title
+      t.text :html
+      t.text :description
 
       t.string :author_name
       t.string :author_url
