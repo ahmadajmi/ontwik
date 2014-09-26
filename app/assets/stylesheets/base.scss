@@ -14,24 +14,11 @@ a {
   transition: color 0.2s ease 0s;
 }
 
-a:hover {
-  color: #555;
-}
+a:hover { color: #555; }
 
-a:active, a:hover {
+a:active,
+a:hover {
   outline: 0 none;
 }
 
 img { max-width: 100%; }
-
-//
-// CSS highlight
-//
-
-.highlight {
-  padding: 0;
-}
-
-pre {
-  border: 0;
-}
