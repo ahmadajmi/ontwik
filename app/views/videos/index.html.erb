@@ -4,26 +4,29 @@
     <div class="large-2 column">
       <ul class="list-bare">
         <% tag_cloud Video.tag_counts, %w{s m l} do |tag| %>
-        <li class="list-group-item"><%= link_to tag.name, tag_path(tag.name) %>
-         <span class="badge"><%= tag.count %></span>
-       </li>
-       <% end %>
-     </ul>
-   </div>
-
-   <div class="large-10 column">
-    <div class="row">
-      <% if params[:search] %>
-      <div class="large-12 column">
-        <h4>Search for <span class="gray"><%= params[:search] %></span></h4>
-      </div>
-      <% end %>
-      <% @videos.each do |video| %>
-      <%= render 'shared/video_card', :video => video %>
-      <% end %>
+        <li>
+          <%= link_to tag_path(tag.name), :class=> "border-bottom margin-bottom-halve padding-top-halve padding-bottom-halve block" do %>
+          <%= tag.name %>
+          <small class="right small"><%= tag.count %></small>
+          <% end %>
+        </li>
+        <% end %>
+      </ul>
     </div>
-  </div>
 
-</div>
+    <div class="large-10 column">
+      <div class="row">
+        <% if params[:search] %>
+        <div class="large-12 column">
+          <h4>Search for <span class="gray"><%= params[:search] %></span></h4>
+        </div>
+        <% end %>
+        <% @videos.each do |video| %>
+        <%= render 'shared/video_card', :video => video %>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
 
 </div>
