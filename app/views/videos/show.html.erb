@@ -2,7 +2,9 @@
   <div class="row">
     <div class="large-10 column column--center">
       <div class="flex-embed flex-embed--16by9">
+        <% if @video.html %>
         <%= @video.html.html_safe %>
+        <% end %>
       </div>
     </div>
   </div>
