@@ -66,7 +66,7 @@
       <% if @user.videos.length == 0 and user_signed_in? and current_user == @user %>
       <div class="large-12 column">
         <div class="margin-top-four margin-bottom-four text-center">
-          <%= link_to({:action => 'new', :controller => 'videos'}, {:class => "inline-block border-all padding-right-two padding-left-two padding-top-one padding-bottom-one"}) do %>
+        <%= link_to({:action => 'new', :controller => 'videos'}, {:class => "button button-primary"}) do %>
           <span class="iconicstroke-plus margin-right-one" title="Add new video"></span> Add Your First Talk
           <% end %>
         </div>

@@ -14,7 +14,9 @@ a {
   transition: color 0.2s ease 0s;
 }
 
-a:hover { color: #555; }
+a:hover:not(.button):not([class*="button-"]) {
+  color: #555;
+}
 
 a:active,
 a:hover {
