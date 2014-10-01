@@ -1,12 +1,8 @@
 <div class="dark-bg relative media-cover" style="background-image: url(<%= @user.profile_banner_url if @user.profile_banner.present? %>)">
   <div class="card__overlay"></div>
-
   <div class="row">
     <div class="large-10 column column--center">
       <div class="flex-embed flex-embed--16by9">
-
-
-
       </div>
     </div>
   </div><!-- row -->
@@ -66,8 +62,23 @@
 <div class="row">
   <div class="large-10 column column--center">
     <div class="row">
+
+      <% if @user.videos.length == 0 and user_signed_in? and current_user == @user %>
+      <div class="large-12 column">
+        <div class="margin-top-four margin-bottom-four text-center">
+          <%= link_to({:action => 'new', :controller => 'videos'}, {:class => "inline-block border-all padding-right-two padding-left-two padding-top-one padding-bottom-one"}) do %>
+          <span class="iconicstroke-plus margin-right-one" title="Add new video"></span> Add Your First Talk
+          <% end %>
+        </div>
+      </div>
+      <% end %>
+
+      <% if @user.videos.length > 0 %>
       <% @user.videos.each do |video| %>
       <%= render 'shared/video_card', :video => video %>
+      <% end %>
+      <% else %>
+
       <% end %>
     </div>
   </div>
