@@ -7,26 +7,27 @@
         <div class="large-12 column">
           <%= form_for :video, url: video_path(@video), method: :patch do |f| %>
 
-          <div class="margin-bottom-one">
-            <%= f.label :title %>
-            <%= f.text_field :title, :type => 'text', :placeholder => 'Video URL', :class => 'form-control form-control border padding-one full-width', :required => 'true' %>
+          <div class="form-group">
+            <%= f.label :title, :class=> "hide" %>
+            <%= f.text_field :title, :type => 'text', :placeholder => 'Title', :class => 'form-control', :required => 'true' %>
           </div>
 
-          <div class="margin-bottom-one">
-            <%= f.label :tag_list %>
-            <%= f.text_field :tag_list, :type => 'text', :placeholder => 'Tags', :class => 'form-control form-control border padding-one full-width', :required => 'true' %>
+          <div class="form-group">
+            <%= f.label :tag_list, :class=> "hide" %>
+            <%= f.text_field :tag_list, :type => 'text', :placeholder => 'Tags', :class => 'form-control', :required => 'true' %>
           </div>
 
-          <div class="margin-bottom-one">
-            <%= f.label :description %> <small class="notice right">Markdown and syntax hilight are supported.</small>
-            <%= f.text_area :description, :autofocus => true, :placeholder => 'Description', :class=>'form-control form-control border padding-one full-width', :hatch => true %>
+          <div class="form-group">
+            <%= f.label :description, :class=> "hide" %>
+            <%= f.text_area :description, :autofocus => true, :placeholder => 'Description', :class=>'form-control', :hatch => true %>
+            <small class="notice right">Markdown and syntax hilight are supported.</small>
           </div>
 
-          <div class="margin-bottom-one">
+          <div class="form-group">
             <%= f.submit class:'button button-primary'%>
           </div>
 
-          <%= link_to 'Delete', video_path(@video), method: :delete, data: { confirm: 'Are you sure you want to delete this video?' } %>
+          <%= link_to 'Delete', video_path(@video), method: :delete, data: { confirm: 'Are you sure you want to delete this video?' }, :class => "button hide" %>
 
           <% end %>
         </div>
