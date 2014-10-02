@@ -80,6 +80,8 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
+  # Heroku does not serve background image, localhost does?
+  # http://stackoverflow.com/a/19200947/558777
   config.cache_classes = true
   config.serve_static_assets = true
   config.assets.compile = true
