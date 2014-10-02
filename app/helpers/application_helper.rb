@@ -20,4 +20,11 @@ module ApplicationHelper
     Redcarpet::Markdown.new(renderer, options).render(text).html_safe
   end
 
+  def body_css_class
+    @body_css_classes ||= []
+    view_css_class = [controller_path.split('/'), action_name, 'view'].flatten.join('-')
+
+    @body_css_classes.unshift(view_css_class).join(' ')
+  end
+
 end

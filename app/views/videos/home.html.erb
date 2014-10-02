@@ -1,3 +1,7 @@
+<% unless user_signed_in? %>
+  <%= render 'shared/hero' %>
+<% end %>
+
 <div class="margin-top-one">
   <div class="row">
     <% @videos.each do |video| %>

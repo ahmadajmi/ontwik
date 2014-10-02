@@ -27,17 +27,3 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#80000000',GradientType=0 ); /* IE6-9 */
 
 }
-
-.users.show header,
-.videos.show header {
-  position: fixed;
-  opacity: 0;
-  width: 100%;
-  z-index: 100;
-  background: #fff;
-  transition: all 0.2s ease;
-
-  &:hover {
-    opacity: 1;
-  }
-}

@@ -1,6 +1,4 @@
 header {
-  border-bottom: 1px solid $border-color;
-
   a {
     color: #2c3e50;
   }
@@ -10,3 +8,21 @@ header {
   display: inline-block;
   font-weight: bold;
 }
+
+.logged_out:not(.index) header {
+  border-bottom: 0;
+}
+
+// .users.show header,
+// .videos.show header {
+//   position: fixed;
+//   opacity: 0;
+//   width: 100%;
+//   z-index: 100;
+//   background: #fff;
+//   transition: all 0.2s ease;
+
+//   &:hover {
+//     opacity: 1;
+//   }
+// }

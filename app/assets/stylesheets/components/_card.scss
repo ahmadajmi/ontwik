@@ -1,0 +1,37 @@
+.video-preview {
+  display: block;
+  position: relative;
+}
+
+.video-preview:before {
+  background-color: rgba(20, 20, 20, 0.6);
+  border-radius: 20px;
+  content: "";
+  display: block;
+  height: 40px;
+  left: 50%;
+  margin: -20px 0 0 -20px;
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  z-index: 1;
+}
+
+.video-preview:after {
+  border-bottom: 9px solid transparent;
+  border-left: 15px solid rgba(255, 255, 255, 0.9);
+  border-top: 9px solid transparent;
+  content: "";
+  display: block;
+  height: 0;
+  left: 50%;
+  margin: -9px 0 0 -6px;
+  position: absolute;
+  top: 50%;
+  width: 0;
+  z-index: 2;
+}
+
+.video-preview:hover:before {
+  background-color: rgba(20, 20, 20, 0.7);
+}
