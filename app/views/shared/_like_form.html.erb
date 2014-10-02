@@ -1,9 +1,9 @@
-<% if user_signed_in? %>
-  <span id="like_form" class="left">
-    <% if current_user.likes?(likeable) %>
-      <%= render 'shared/unlike', likeable: likeable %>
-    <% else %>
-      <%= render 'shared/like', likeable: likeable %>
-    <% end %>
-  </span>
-<% end %>
+
+<span id="like_form" class="left">
+  <% if current_user.likes?(likeable) %>
+  <%= render 'shared/unlike', likeable: likeable %>
+  <% else %>
+  <%= render 'shared/like', likeable: likeable %>
+  <% end %>
+</span>
+

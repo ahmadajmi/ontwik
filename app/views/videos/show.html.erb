@@ -22,6 +22,8 @@
     <div class="margin-bottom-one padding-top-one padding-bottom-one border-bottom">
 
       <div class="row">
+
+        <% if user_signed_in? %>
         <div class="large-6 medium-6 small-6 column text-left">
 
           <%= render 'shared/like_form', likeable: @video %>
@@ -30,6 +32,7 @@
             <%= pluralize(@video.likers(User).count, '')%>
           </span>
         </div>
+        <% end %>
 
         <div class="large-6 medium-6 small-6 column text-right">
           <% if @video.user == current_user %>
