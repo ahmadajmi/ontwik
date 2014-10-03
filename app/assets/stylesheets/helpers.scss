@@ -128,6 +128,8 @@
 .danger-bg  { background-color: $danger; }
 .white-transparent  { background-color: rgba(255,255,255,.5); }
 
+.border-none          { border:         0; }
+.border-none:focus    { border:         0; }
 .border-all           { border:         1px solid $border-color; }
 .border-top           { border-top:     1px solid $border-color; }
 .border-bottom        { border-bottom:  1px solid $border-color; }
