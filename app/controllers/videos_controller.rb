@@ -39,6 +39,11 @@ class VideosController < ApplicationController
 
     @video.url              = params[:video][:url].to_s
     @video.url_type         = @json['type']
+
+    if @video.url_type != 'video'
+      redirect_to(:action => "new") and return
+    end
+
     @video.version          = @json['version']
     @video.provider_url     = @json['provider_url']
     @video.provider_name    = @json['provider_name']
