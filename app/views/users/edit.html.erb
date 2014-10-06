@@ -4,35 +4,40 @@
 
     <div class="large-6 column column--center">
       <div class="row">
+
         <div class="large-12 column">
 
-          <div class="form-group">
-            <%= f.label :name %>
-            <%= f.text_field :name, :type => 'text', :autofocus => true, :placeholder => 'Name', :class => 'form-control', :required => 'true' %>
-          </div>
-
-          <div class="form-group">
-            <%= f.label :profile_banner %>
-            <div class="row">
-              <div class="large-10 medium-10 small-10 column">
-                <%= f.file_field :profile_banner, :class => 'form-control' %>
-              </div>
-              <label for="user_profile_banner">
-                <div class="large-2 medium-2 small-2 column">
-                <img src="<%= @user.profile_banner_url if @user.profile_banner.present? %>" class="pointer">
-                </div>
-              </label>
+          <div class="border-all padding-two">
+            <h3 class="text-center margin-top-none">Edit Profile</h3>
+            <div class="form-group">
+              <%= f.label :name %>
+              <%= f.text_field :name, :type => 'text', :autofocus => true, :placeholder => 'Name', :class => 'form-control', :required => 'true' %>
             </div>
-          </div>
 
-          <div class="form-group">
-            <%= f.label :description %>
-            <%= f.text_area :description, :class=>'form-control' %>
-          </div>
+            <div class="form-group">
+              <%= f.label :profile_banner %>
+              <div class="row">
+                <div class="large-10 medium-10 small-10 column">
+                  <%= f.file_field :profile_banner, :class => 'form-control' %>
+                </div>
+                <label for="user_profile_banner">
+                  <div class="large-2 medium-2 small-2 column">
+                    <img src="<%= @user.profile_banner_url if @user.profile_banner.present? %>" class="pointer">
+                  </div>
+                </label>
+              </div>
+            </div>
 
-          <%= f.submit "Update",  class:'button button-primary'%>
+            <div class="form-group">
+              <%= f.label :description %>
+              <%= f.text_area :description, :class=>'form-control' %>
+            </div>
+
+            <%= f.submit "Update",  class:'button button-primary'%>
+          </div><!-- border-all padding-two -->
 
         </div>
+
       </div>
     </div>
 
