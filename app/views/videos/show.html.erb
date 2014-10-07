@@ -31,7 +31,7 @@
 
               <%= render 'shared/like_form', likeable: @video %>
 
-              <small class="likes padding-top-halve padding-bottom-halve padding-right-one padding-left-one white-bg border-right border-top border-bottom left">
+              <small class="likes padding-top-half padding-bottom-half padding-right-one padding-left-one white-bg border-right border-top border-bottom left">
                 <%= pluralize(@video.likers(User).count, '')%>
               </small>
             </div>

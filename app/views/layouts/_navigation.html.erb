@@ -1,20 +1,20 @@
 <div class='row'>
 
   <div class="large-3 column">
-    <%= link_to 'Ontwik', root_path, class: 'brand brand padding-top-halve padding-bottom-halve' %>
+    <%= link_to 'Ontwik', root_path, class: 'brand brand padding-top-half padding-bottom-half' %>
   </div>
 
-  <div class="large-3 column hide">
+  <div class="large-3 column">
     <%= form_tag videos_path, :method => 'get', :class => "navbar-form navbar-left" do %>
-    <div class="form-group" style="opacity:0;">
-      <%= text_field_tag :search, params[:search], class: 'form-control border padding-quarter', placeholder: "Search"%>
-      <button type="submit" class="btn btn-default btn-search">Search</button>
+    <div class="form-group">
+      <%= text_field_tag :search, params[:search], class: 'form-control border-none padding-right-one padding-left-one padding-top-half padding-bottom-half margin-bottom-none margin-top-half', placeholder: "Search"%>
+      <button type="submit" class="btn btn-default btn-search hide">Search</button>
     </div>
 
     <% end %>
   </div>
 
-  <div class="large-9 column text-right">
+  <div class="large-6 column text-right">
     <ul class="nav list-bare">
       <%= render 'layouts/profile_navigation_links' %>
     </ul>

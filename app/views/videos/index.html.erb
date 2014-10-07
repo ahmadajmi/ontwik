@@ -5,7 +5,7 @@
       <ul class="list-bare">
         <% tag_cloud Video.tag_counts, %w{s m l} do |tag| %>
         <li>
-          <%= link_to tag_path(tag.name), :class=> "border-bottom margin-bottom-halve padding-top-halve padding-bottom-halve block" do %>
+          <%= link_to tag_path(tag.name), :class=> "border-bottom margin-bottom-half padding-top-half padding-bottom-half block" do %>
           <%= tag.name %>
           <small class="right small"><%= tag.count %></small>
           <% end %>
@@ -18,7 +18,7 @@
       <div class="row">
         <% if params[:search] %>
         <div class="large-12 column">
-          <h4>Search for <span class="gray"><%= params[:search] %></span></h4>
+          <h3 class="margin-top-none margin-bottom-one regular">We found <%= @videos.length %> videos about <span class=""><%= params[:search] %></span></h3>
         </div>
         <% end %>
         <% @videos.each do |video| %>

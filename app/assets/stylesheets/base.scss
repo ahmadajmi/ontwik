@@ -1,6 +1,7 @@
 html {
   font-size: 100%;
 }
+
 body, html {
   height: 100%;
 }
@@ -26,6 +27,8 @@ a:hover {
 }
 
 img { max-width: 100%; }
+
+svg { max-height: 100%; }
 
 .main {
   min-height: 100%;

@@ -1824,7 +1824,7 @@ img {
 }
 
 /* line 224, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
-.padding-top-halve {
+.padding-top-half {
   padding-top: 0.5em;
 }
 
@@ -1859,7 +1859,7 @@ img {
 }
 
 /* line 236, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
-.padding-bottom-halve {
+.padding-bottom-half {
   padding-bottom: 0.5em;
 }
 
@@ -1894,7 +1894,7 @@ img {
 }
 
 /* line 248, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
-.padding-right-halve {
+.padding-right-half {
   padding-right: 0.5em;
 }
 
@@ -1929,7 +1929,7 @@ img {
 }
 
 /* line 259, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
-.padding-left-halve {
+.padding-left-half {
   padding-left: 0.5em;
 }
 
@@ -1964,7 +1964,7 @@ img {
 }
 
 /* line 271, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
-.padding-halve {
+.padding-half {
   padding: 0.5em;
 }
 

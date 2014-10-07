@@ -79,6 +79,14 @@
   bottom: 0;
 }
 
+//
+// Typography
+//
+
+.bold     { font-weight: bold; }
+.regular  { font-weight: normal; }
+.italic   { font-style: italic; }
+
 .ell {
   white-space: nowrap;
   overflow: hidden;
@@ -167,7 +175,7 @@
 
 .margin-top-none        { margin-top: 0; }
 .margin-top-quarter     { margin-top: quarter($base-space-unit); }
-.margin-top-half        { margin-top: halve($base-space-unit); }
+.margin-top-half        { margin-top: half($base-space-unit); }
 .margin-top-one         { margin-top: $base-space-unit; }
 .margin-top-two         { margin-top: double($base-space-unit); }
 .margin-top-three       { margin-top: threefold($base-space-unit); }
@@ -179,7 +187,7 @@
 
 .margin-bottom-none     { margin-bottom: 0; }
 .margin-bottom-quarter  { margin-bottom: quarter($base-space-unit); }
-.margin-bottom-half     { margin-bottom: halve($base-space-unit); }
+.margin-bottom-half     { margin-bottom: half($base-space-unit); }
 .margin-bottom-one      { margin-bottom: $base-space-unit; }
 .margin-bottom-two      { margin-bottom: double($base-space-unit); }
 .margin-bottom-three    { margin-bottom: threefold($base-space-unit); }
@@ -190,7 +198,7 @@
 // Right Margin
 .margin-right-none      { margin-right: 0; }
 .margin-right-quarter   { margin-right: quarter($base-space-unit); }
-.margin-right-half      { margin-right: halve($base-space-unit); }
+.margin-right-half      { margin-right: half($base-space-unit); }
 .margin-right-one       { margin-right: $base-space-unit; }
 .margin-right-two       { margin-right: double($base-space-unit); }
 .margin-right-three     { margin-right: threefold($base-space-unit); }
@@ -202,7 +210,7 @@
 
 .margin-left-none       { margin-left: 0; }
 .margin-left-quarter   { margin-left: quarter($base-space-unit); }
-.margin-left-half      { margin-left: halve($base-space-unit); }
+.margin-left-half      { margin-left: half($base-space-unit); }
 .margin-left-one       { margin-left: $base-space-unit; }
 .margin-left-two       { margin-left: double($base-space-unit); }
 .margin-left-three     { margin-left: threefold($base-space-unit); }
@@ -213,7 +221,7 @@
 // Margin All
 .margin-none      { margin: 0; }
 .margin-quarter   { margin: quarter($base-space-unit); }
-.margin-half      { margin: halve($base-space-unit); }
+.margin-half      { margin: half($base-space-unit); }
 .margin-one       { margin: $base-space-unit; }
 .margin-two       { margin: double($base-space-unit); }
 .margin-three     { margin: threefold($base-space-unit); }
@@ -229,7 +237,7 @@
 
 .padding-top-none       { padding-top: 0; }
 .padding-top-quarter    { padding-top: quarter($base-space-unit); }
-.padding-top-halve      { padding-top: halve($base-space-unit); }
+.padding-top-half      { padding-top: half($base-space-unit); }
 .padding-top-one        { padding-top: $base-space-unit; }
 .padding-top-two        { padding-top: double($base-space-unit); }
 .padding-top-three      { padding-top: threefold($base-space-unit); }
@@ -241,7 +249,7 @@
 
 .padding-bottom-none    { padding-bottom: 0; }
 .padding-bottom-quarter { padding-bottom: quarter($base-space-unit); }
-.padding-bottom-halve   { padding-bottom: halve($base-space-unit); }
+.padding-bottom-half   { padding-bottom: half($base-space-unit); }
 .padding-bottom-one     { padding-bottom: $base-space-unit; }
 .padding-bottom-two     { padding-bottom: double($base-space-unit); }
 .padding-bottom-three   { padding-bottom: threefold($base-space-unit); }
@@ -253,7 +261,7 @@
 
 .padding-right-none       { padding-right: 0; }
 .padding-right-quarter    { padding-right: quarter($base-space-unit); }
-.padding-right-halve      { padding-right: halve($base-space-unit); }
+.padding-right-half      { padding-right: half($base-space-unit); }
 .padding-right-one        { padding-right: $base-space-unit; }
 .padding-right-two        { padding-right: double($base-space-unit); }
 .padding-right-three      { padding-right: threefold($base-space-unit); }
@@ -264,7 +272,7 @@
 // Left Padding
 .padding-left-none       { padding-left: 0; }
 .padding-left-quarter    { padding-left: quarter($base-space-unit); }
-.padding-left-halve      { padding-left: halve($base-space-unit); }
+.padding-left-half      { padding-left: half($base-space-unit); }
 .padding-left-one        { padding-left: $base-space-unit; }
 .padding-left-two        { padding-left: double($base-space-unit); }
 .padding-left-three      { padding-left: threefold($base-space-unit); }
@@ -276,7 +284,7 @@
 
 .padding-none           { padding: 0; }
 .padding-quarter        { padding: quarter($base-space-unit); }
-.padding-halve          { padding: halve($base-space-unit); }
+.padding-half          { padding: half($base-space-unit); }
 .padding-one            { padding: $base-space-unit; }
 .padding-two            { padding: double($base-space-unit); }
 .padding-three          { padding: threefold($base-space-unit); }
