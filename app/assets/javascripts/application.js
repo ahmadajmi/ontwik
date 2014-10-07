@@ -16,3 +16,4 @@
 //= require jquery.autosize
 //= require_tree .
 //= require turbolinks
+//= require bootstrap/modal

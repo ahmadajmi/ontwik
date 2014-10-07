@@ -5,7 +5,6 @@
 @import 'ajmi-grid/grid';
 @import url(http://weloveiconfonts.com/api/?family=iconicstroke);
 
-
 // Components
 
 @import 'components/alerts';
@@ -24,6 +23,10 @@
 @import 'base';
 
 @import 'helpers';
+
+@import 'bootstrap/variables';
+@import 'bootstrap/mixins';
+@import 'bootstrap/modals';
 
 /* iconicstroke */
 [class*="iconicstroke-"]:before {

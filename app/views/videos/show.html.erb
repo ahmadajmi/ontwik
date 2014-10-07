@@ -26,16 +26,20 @@
 
           <div class="row">
 
-            <% if user_signed_in? %>
             <div class="large-6 medium-6 small-6 column text-left">
 
+              <% if user_signed_in? %>
               <%= render 'shared/like_form', likeable: @video %>
+              <% else %>
+              <%= link_to '', :class=> "button button-icon left", :title => "Like" do %>
+              <span class="iconicstroke-heart-stroke "></span>
+              <% end %>
+              <% end %>
 
               <small class="likes padding-top-half padding-bottom-half padding-right-one padding-left-one white-bg border-right border-top border-bottom left">
                 <%= pluralize(@video.likers(User).count, '')%>
               </small>
             </div>
-            <% end %>
 
             <div class="large-6 medium-6 small-6 column text-right">
               <% if @video.user == current_user %>
@@ -56,8 +60,8 @@
           </div>
 
           <% if !@video.tag_list.empty? %>
-            <h4>Tags</h4>
-            <%= raw @video.tag_list.map { |t| link_to t, tag_path(t), class: 'tag radius' }.join('  ') %>
+          <h4>Tags</h4>
+          <%= raw @video.tag_list.map { |t| link_to t, tag_path(t), class: 'tag radius' }.join('  ') %>
           <% end %>
 
         </div>
