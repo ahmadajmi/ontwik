@@ -56,7 +56,8 @@
           </div>
 
           <% if !@video.tag_list.empty? %>
-            <p><%= raw @video.tag_list.map { |t| link_to t, tag_path(t), class: 'tag' }.join('  ') %></p>
+            <h4>Tags</h4>
+            <%= raw @video.tag_list.map { |t| link_to t, tag_path(t), class: 'tag radius' }.join('  ') %>
           <% end %>
 
         </div>
