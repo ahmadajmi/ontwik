@@ -56,7 +56,7 @@
           </div>
 
           <% if !@video.tag_list.empty? %>
-          <p><%= raw @video.tag_list.map { |t| link_to t, tag_path(t) }.join(' - ') %></p>
+            <p><%= raw @video.tag_list.map { |t| link_to t, tag_path(t), class: 'tag' }.join('  ') %></p>
           <% end %>
 
         </div>
