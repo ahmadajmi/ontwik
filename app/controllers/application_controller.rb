@@ -3,9 +3,15 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  # before_action :ensure_http_referer_is_set
+
   helper_method :current_user
   helper_method :user_signed_in?
   helper_method :correct_user?
+
+  # def ensure_http_referer_is_set
+  #   request.env['HTTP_REFERER'] ||= ''
+  # end
 
   # Controllers can call this to add classes to the body tag
   def add_body_css_class(css_class)

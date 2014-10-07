@@ -31,9 +31,13 @@
               <% if user_signed_in? %>
               <%= render 'shared/like_form', likeable: @video %>
               <% else %>
-              <%= link_to '', :class=> "button button-icon left", :title => "Like" do %>
-              <span class="iconicstroke-heart-stroke "></span>
+
+              <%= link_to '', :class=> "button button-icon left", :'data-toggle'=>"modal", :'data-target'=>".bs-example-modal-sm", :title => "Like" do %>
+              <span class="iconicstroke-heart-stroke"></span>
               <% end %>
+
+              <%= render 'shared/login_modal' %>
+
               <% end %>
 
               <small class="likes padding-top-half padding-bottom-half padding-right-one padding-left-one white-bg border-right border-top border-bottom left">
