@@ -7,29 +7,35 @@
 
         <div class="large-12 column">
 
-          <h3 class="text-center margin-top-none">Edit Profile</h3>
+          <h3 class="text-center margin-top-none margin-bottom-one">Profile</h3>
+
           <div class="form-group">
-            <%= f.label :name %>
+            <%= f.label :name, :class => 'hide'%>
             <%= f.text_field :name, :type => 'text', :autofocus => true, :placeholder => 'Name', :class => 'form-control', :required => 'true' %>
           </div>
 
           <div class="form-group">
-            <%= f.label :profile_banner %>
-            <div class="row">
-              <div class="large-10 medium-10 small-10 column">
-                <%= f.file_field :profile_banner, :class => 'form-control' %>
+            <%= f.label :profile_banner, :class => 'hide'%>
+            <div class="row margin-bottom-one">
+              <div class="large-8 medium-10 small-10 column">
+                <%= f.file_field :profile_banner, :class => 'form-control margin-bottom-none' %>
+                <small class="dark-gray">Recommended dimensions of 1500×500</small>
               </div>
               <label for="user_profile_banner">
-                <div class="large-2 medium-2 small-2 column">
-                  <img src="<%= @user.profile_banner_url if @user.profile_banner.present? %>" class="pointer">
+                <div class="large-4 medium-2 small-2 column">
+                  <% if @user.profile_banner.present? %>
+                  <img src="<%= @user.profile_banner_url %>" class="pointer" title="Click to change Profile Header">
+                  <% else %>
+                  <div class="gray-bg padding-top-one padding-bottom-one text-center pointer" title="Click to change Profile Header">Profile Header</div>
+                  <% end %>
                 </div>
               </label>
             </div>
           </div>
 
           <div class="form-group">
-            <%= f.label :description %>
-            <%= f.text_area :description, :class=>'form-control' %>
+            <%= f.label :description, :class => 'hide'%>
+            <%= f.text_area :description, :class=>'form-control', :placeholder => "Bio" %>
           </div>
 
           <%= f.submit "Update",  class:'button button-primary'%>

@@ -39,7 +39,7 @@
 
             <div class="large-6 medium-6 small-6 column text-right">
               <% if @video.user == current_user %>
-              <%= link_to video_path(@video), method: :delete, data: { confirm: 'Are you sure you want to delete this video?' }, :class=> "button button-icon hide", :title => "Delete" do %>
+              <%= link_to video_path(@video), method: :delete, data: { confirm: 'Are you sure you want to delete this video?' }, :class=> "button button-icon", :title => "Delete" do %>
               <span class="iconicstroke-x" title="Delete"></span>
               <% end %>
               <%= link_to edit_video_path(@video), :class=> "button button-icon", :title => "Edit" do %>

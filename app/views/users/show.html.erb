@@ -6,6 +6,13 @@
       </div>
     </div>
   </div><!-- row -->
+
+  <% if user_signed_in? %>
+  <%= link_to edit_user_path(current_user), :class=> "absolute pin-bottom-bight padding-one white" do %>
+  <span class="iconicstroke-cog" title="Change Profile Header"></span>
+  <% end %>
+  <% end %>
+
 </div><!-- media-cover -->
 
 <div class="gray-bg">
@@ -66,8 +73,8 @@
       <% if @user.videos.length == 0 and user_signed_in? and current_user == @user %>
       <div class="large-12 column">
         <div class="margin-top-four margin-bottom-four text-center">
-        <%= link_to({:action => 'new', :controller => 'videos'}, {:class => "button button-primary"}) do %>
-          <span class="iconicstroke-plus margin-right-one" title="Add new video"></span> Add Your First Talk
+          <%= link_to({:action => 'new', :controller => 'videos'}, {:class => "button button-primary"}) do %>
+          <span class="iconicstroke-plus margin-right-one"></span> Add Your First Video
           <% end %>
         </div>
       </div>
