@@ -7,8 +7,8 @@
   <div class="large-3 column">
     <%= form_tag videos_path, :method => 'get', :class => "navbar-form navbar-left" do %>
     <div class="form-group">
-      <%= text_field_tag :search, params[:search], class: 'form-control border-none padding-right-one padding-left-one padding-top-half padding-bottom-half margin-bottom-none margin-top-half', placeholder: "Search"%>
-      <button type="submit" class="btn btn-default btn-search hide">Search</button>
+      <%= text_field_tag :search, params[:search], class: 'form-control padding-right-one padding-left-one padding-top-quarter padding-bottom-half margin-bottom-none margin-top-half', placeholder: "Search", required: 'true' %>
+      <button type="submit" class="iconicstroke-magnifying-glass btn-search"></button>
     </div>
 
     <% end %>
