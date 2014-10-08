@@ -14,6 +14,9 @@ gem 'acts-as-taggable-on'
 gem "socialization"
 gem 'carrierwave'
 
+# Fog is used to support Amazon S3
+gem "fog"
+
 # Front-end
 gem 'bower-rails'
 gem 'bootstrap-sass', '~> 3.2.0'
