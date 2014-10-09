@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
-
   extend FriendlyId
   friendly_id :nickname
+
+  validates :name, :presence => true, :on => :update
 
   mount_uploader :profile_banner, ProfileBannerUploader
 

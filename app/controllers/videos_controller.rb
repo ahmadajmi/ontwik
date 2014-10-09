@@ -20,6 +20,7 @@ class VideosController < ApplicationController
   end
 
   def new
+    @video = Video.new
   end
 
   def to_param
@@ -27,6 +28,7 @@ class VideosController < ApplicationController
   end
 
   def create
+    puts "dsfsfs"
     req_url = URI.parse('http://api.embed.ly/1/oembed?key=a7716080853c4d6d945624885ceb9ab9&url=' + params[:video][:url].to_s)
     req = Net::HTTP::Get.new(req_url.to_s)
     res = Net::HTTP.start(req_url.host, req_url.port) {|http|
@@ -41,6 +43,7 @@ class VideosController < ApplicationController
     @video.url_type         = @json['type']
 
     if @video.url_type != 'video'
+      flash[:danger] = "This URL is not supported, Videos from Youtube or Vimeo are well supported"
       redirect_to(:action => "new") and return
     end
 
@@ -64,8 +67,12 @@ class VideosController < ApplicationController
 
     @video.user_id = current_user.id
 
-    @video.save
-    redirect_to @video
+    if @video.save
+      flash[:notice] = "Yay, you just published a new video. Thanks!"
+      redirect_to @video
+    else
+      render 'new'
+    end
   end
 
   def show
@@ -87,7 +94,7 @@ class VideosController < ApplicationController
     @video = Video.find(params[:id])
 
     if @video.update(update_params)
-      redirect_to @video
+      redirect_to @video, :notice => 'Successfully updated video.'
     else
       render 'edit'
     end

@@ -6,6 +6,14 @@
 
       <h3 class="text-center margin-top-none margin-bottom-one">Edit Video</h3>
 
+      <% if @video.errors.any? %>
+      <ul class="list-bare">
+        <% @video.errors.full_messages.each do |msg| %>
+        <li class="margin-bottom-one danger"><%= msg %></li>
+        <% end %>
+      </ul>
+      <% end %>
+
       <div class="row">
         <div class="large-12 column">
           <%= form_for :video, url: video_path(@video), method: :patch do |f| %>

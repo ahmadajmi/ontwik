@@ -9,6 +9,14 @@
 
           <h3 class="text-center margin-top-none margin-bottom-one">Profile</h3>
 
+          <% if @user.errors.any? %>
+          <ul class="list-bare">
+            <% @user.errors.full_messages.each do |msg| %>
+            <li class="margin-bottom-one danger"><%= msg %></li>
+            <% end %>
+          </ul>
+          <% end %>
+
           <div class="form-group">
             <%= f.label :name, :class => 'hide'%>
             <%= f.text_field :name, :type => 'text', :autofocus => true, :placeholder => 'Name', :class => 'form-control', :required => 'true' %>
@@ -38,7 +46,7 @@
             <%= f.text_area :description, :class=>'form-control', :placeholder => "Bio" %>
           </div>
 
-          <%= f.submit "Update",  class:'button button-primary'%>
+          <%= f.submit "Update Profile",  class:'button button-primary'%>
 
         </div>
 

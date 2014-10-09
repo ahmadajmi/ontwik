@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     @user = User.friendly.find(params[:id])
 
     if @user.update(user_params)
-      redirect_to @user
+      redirect_to @user, :notice => 'Successfully updated your profile.'
     else
       render 'edit'
     end
