@@ -17,3 +17,12 @@
 //= require_tree .
 //= require turbolinks
 //= require bootstrap/modal
+
+$(function(){
+  $('.close--alert').on('click keypress', function(e) {
+    var key = e.which || e.keyCode;
+    if ((e.type == 'click') || (e.type == 'keypress' && key == 13)) {
+      $(this).parent($('alert')).fadeOut();
+    }
+  });
+});
