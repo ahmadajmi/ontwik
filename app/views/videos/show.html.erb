@@ -41,9 +41,9 @@
 
               <% end %>
 
-              <small class="likes padding-top-half padding-bottom-half padding-right-one padding-left-one white-bg border-right border-top border-bottom left">
+              <span class="likes padding-top-quarter padding-bottom-quarter padding-right-one padding-left-one white-bg border-right border-top border-bottom left">
                 <%= pluralize(@video.likers(User).count, '')%>
-              </small>
+              </span>
               <!-- End Like Button -->
 
               <a href="http://twitter.com/share?url=<%= request.original_url %>&text=<%= @video.title %>" target="_blank" class="button button-icon button-info right" title="Share on Twitter">

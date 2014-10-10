@@ -3,55 +3,57 @@
   <div class="row">
 
     <div class="large-6 column column--center">
-      <div class="row">
+      <div class="white-bg padding-two">
+        <div class="row">
 
-        <div class="large-12 column">
+          <div class="large-12 column">
 
-          <h3 class="text-center margin-top-none margin-bottom-one">Profile</h3>
+            <h3 class="text-center margin-top-none margin-bottom-one">Profile</h3>
 
-          <% if @user.errors.any? %>
-          <ul class="list-bare">
-            <% @user.errors.full_messages.each do |msg| %>
-            <li class="margin-bottom-one danger"><%= msg %></li>
+            <% if @user.errors.any? %>
+            <ul class="list-bare">
+              <% @user.errors.full_messages.each do |msg| %>
+              <li class="margin-bottom-one danger"><%= msg %></li>
+              <% end %>
+            </ul>
             <% end %>
-          </ul>
-          <% end %>
 
-          <div class="form-group">
-            <%= f.label :name, :class => 'hide'%>
-            <%= f.text_field :name, :type => 'text', :autofocus => true, :placeholder => 'Name', :class => 'form-control', :required => 'true' %>
-          </div>
-
-          <div class="form-group">
-            <%= f.label :profile_banner, :class => 'hide'%>
-            <div class="row margin-bottom-one">
-              <div class="large-8 medium-10 small-10 column">
-                <%= f.file_field :profile_banner, :class => 'form-control margin-bottom-none' %>
-                <small class="dark-gray">Recommended dimensions of 1500×500</small>
-              </div>
-              <label for="user_profile_banner">
-                <div class="large-4 medium-2 small-2 column">
-                  <% if @user.profile_banner.present? %>
-                  <img src="<%= @user.profile_banner_url %>" class="pointer" title="Click to change Profile Header">
-                  <% else %>
-                  <div class="gray-bg padding-top-one padding-bottom-one text-center pointer" title="Click to change Profile Header">Profile Header</div>
-                  <% end %>
-                </div>
-              </label>
+            <div class="form-group">
+              <%= f.label :name, :class => 'hide'%>
+              <%= f.text_field :name, :type => 'text', :autofocus => true, :placeholder => 'Name', :class => 'form-control', :required => 'true' %>
             </div>
-          </div>
 
-          <div class="form-group">
-            <%= f.label :description, :class => 'hide'%>
-            <%= f.text_area :description, :class=>'form-control', :placeholder => "Bio" %>
-          </div>
+            <div class="form-group">
+              <%= f.label :profile_banner, :class => 'hide'%>
+              <div class="row margin-bottom-one">
+                <div class="large-8 medium-10 small-10 column">
+                  <%= f.file_field :profile_banner, :class => 'form-control margin-bottom-none' %>
+                  <small class="dark-gray">Recommended dimensions of 1500×500</small>
+                </div>
+                <label for="user_profile_banner">
+                  <div class="large-4 medium-2 small-2 column">
+                    <% if @user.profile_banner.present? %>
+                    <img src="<%= @user.profile_banner_url %>" class="pointer" title="Click to change Profile Header">
+                    <% else %>
+                    <div class="gray-bg padding-top-one padding-bottom-one text-center pointer" title="Click to change Profile Header">Profile Header</div>
+                    <% end %>
+                  </div>
+                </label>
+              </div>
+            </div>
 
-          <%= f.submit "Update Profile",  class:'button button-primary'%>
+            <div class="form-group">
+              <%= f.label :description, :class => 'hide'%>
+              <%= f.text_area :description, :class=>'form-control', :placeholder => "Bio" %>
+            </div>
+
+            <%= f.submit "Update Profile",  class:'button button-primary'%>
+
+          </div>
 
         </div>
-
-      </div>
-    </div>
+      </div><!-- white-bg padding-two -->
+    </div><!-- large-6 -->
 
   </div>
   <% end %>

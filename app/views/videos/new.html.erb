@@ -1,40 +1,43 @@
-<div class="margin-top-four">
+<div class="margin-top-two">
 
   <%= form_for @video, url: videos_path do |f| %>
 
   <div class="row">
 
     <div class="large-6 column column--center">
+      <div class="white-bg padding-two">
 
-      <h3 class="text-center margin-top-none margin-bottom-one">New Video</h3>
+        <h3 class="text-center margin-top-none margin-bottom-one">New Video</h3>
 
-      <% if @video.errors.any? %>
-      <ul class="list-bare">
-        <% @video.errors.full_messages.each do |msg| %>
-        <li class="margin-bottom-one danger"><%= msg %></li>
+        <% if @video.errors.any? %>
+        <ul class="list-bare">
+          <% @video.errors.full_messages.each do |msg| %>
+          <li class="margin-bottom-one danger"><%= msg %></li>
+          <% end %>
+        </ul>
         <% end %>
-      </ul>
-      <% end %>
 
-      <div class="row">
-        <div class="large-12 column">
-          <div class="form-group">
-            <%= f.text_field :url, :type => 'url', :placeholder => 'Video URL', :class => 'form-control', :required => 'true' %>
+        <div class="row">
+          <div class="large-12 column">
+            <div class="form-group">
+              <%= f.text_field :url, :type => 'url', :placeholder => 'Video URL', :class => 'form-control', :required => 'true' %>
+            </div>
+          </div>
+
+          <div class="large-12 column">
+            <div class="form-group">
+              <%= f.text_field :tag_list, :type => 'text', :placeholder => 'Tags', :class => 'form-control', :required => 'true' %>
+            </div>
+          </div>
+
+          <div class="large-8 column">
+            <%= f.submit 'Add', :class => 'button button-primary' %>
           </div>
         </div>
 
-        <div class="large-12 column">
-          <div class="form-group">
-            <%= f.text_field :tag_list, :type => 'text', :placeholder => 'Tags', :class => 'form-control', :required => 'true' %>
-          </div>
-        </div>
+      </div><!-- white-bg padding-two -->
+    </div><!-- large-6 -->
 
-        <div class="large-8 column">
-          <%= f.submit 'Add', :class => 'button button-primary' %>
-        </div>
-      </div>
-
-    </div>
   </div>
   <% end %>
 </div>
