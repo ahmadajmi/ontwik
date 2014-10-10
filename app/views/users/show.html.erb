@@ -28,7 +28,14 @@
           </div>
 
           <div class="large-9 column">
-            <h3><%= @user.name if @user.name %><small><a href="<%= @user.twitter_url %>" target="_blank"> Twitter</a></small></h3>
+            <h3>
+              <%= @user.name if @user.name %>
+              <small>
+                <a href="<%= @user.twitter_url %>" target="_blank" title="">
+                  <img src="/assets/twitter-bird-blue-16x16.png">
+                </a>
+              </small>
+            </h3>
             <p><%= @user.description if @user.description %></p>
           </div>
         </div>
