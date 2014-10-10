@@ -28,8 +28,14 @@ header {
 //   }
 // }
 
+[name='search'] {
+  margin-top: 5px;
+}
+
 .btn-search {
   border: 0 none;
+  height: 25px;
+  width: 25px;
   right: 20px;
-  top: 11px;
+  top: 8px;
 }

@@ -1,26 +1,26 @@
 <% if user_signed_in? %>
 
 <li class="right">
-  <%= link_to '/signout', :class=> "border-right border-left inline-block padding-right-one padding-left-one padding-top-half padding-bottom-half" do %>
-  <span class="iconicstroke-arrow-right" title="Logout"></span>
+  <%= link_to '/signout', :class=> "border-right border-left inline-block padding-right-one padding-left-one padding-top-half padding-bottom-half", :title => 'Logout' do %>
+  <span class="iconicstroke-arrow-right dark-gray"></span>
   <% end %>
 </li>
 
 <li class="right">
-  <%= link_to edit_user_path(current_user), :class=> "border-left block padding-right-one padding-left-one padding-top-half padding-bottom-half" do %>
-  <span class="iconicstroke-cog" title="Profile Settings"></span>
+  <%= link_to edit_user_path(current_user), :class=> "border-left block padding-right-one padding-left-one padding-top-half padding-bottom-half", :title => 'Profile Settings' do %>
+  <span class="iconicstroke-cog dark-gray"></span>
   <% end %>
 </li>
 
 <li class="right">
-  <%= link_to current_user, :class=> " block padding-right-one padding-left-one padding-top-half padding-bottom-half" do %>
-  <span class="iconicstroke-user" title="Profile"></span>
+  <%= link_to current_user, :class=> " block padding-right-one padding-left-one padding-top-half padding-bottom-half", :title => 'Profile' do %>
+  <span class="iconicstroke-user dark-gray"></span>
   <% end %>
 </li>
 
 <li class="right">
-  <%= link_to({:action => 'new', :controller => 'videos'}, {:class => "border-right border-left block padding-right-one padding-left-one padding-top-half padding-bottom-half"}) do %>
-  <span class="iconicstroke-plus" title="Add new video"></span>
+  <%= link_to({:action => 'new', :controller => 'videos'}, {:class => "border-right border-left block padding-right-one padding-left-one padding-top-half padding-bottom-half", :title => 'Add new video'}) do %>
+  <span class="iconicstroke-plus dark-gray"></span>
   <% end %>
 </li>
 
