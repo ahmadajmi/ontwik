@@ -46,7 +46,7 @@
               </span>
               <!-- End Like Button -->
 
-              <a href="http://twitter.com/share?url=<%= request.original_url %>&text=<%= @video.title %>" target="_blank" class="button button-icon button-info right" title="Share on Twitter">
+              <a href="http://twitter.com/share?url=<%= request.original_url %>&text=<%= @video.title %> By @<%= @video.user.nickname %>" target="_blank" class="button button-icon button-info right" title="Share on Twitter">
                 <img src="/assets/twitter-bird-white-16x16.png">
               </a>
 
