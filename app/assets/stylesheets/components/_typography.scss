@@ -1,45 +1,74 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: bold;
-  line-height: 1.25;
-  margin-top: 1em;
-  margin-bottom: .5em;
+//
+// http://www.gridlover.net/app/
+//
+
+html {
+  font-size: 100%;
 }
 
-p,
-dl,
-ol,
-ul {
+body {
   font-size: 1rem;
-  margin-top: 0;
-  margin-bottom: 1rem;
+  line-height: 1.5rem;
+  font-family: $base-font-family;
 }
 
-ol,
-ul {
-  padding-left: 2rem;
+h1 {
+  font-size: 1.4375rem;
+  line-height: 1.5rem;
+  margin-top: 0rem;
+  margin-bottom: 1.5rem;
 }
 
-pre,
-code,
-samp {
-  font-family: 'Source Code Pro', Consolas, monospace;
-  font-size: inherit;
+h2 {
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
 }
 
-pre {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  overflow-x: scroll;
+h3 {
+  font-size: 1.4375rem;
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
+
+h4 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+p, ul, ol, pre, table, blockquote {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+// Sanitation
 
 hr {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  border: 1px solid;
+  margin: -1px 0;
+}
+
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+b, strong, em, small, code {
+  line-height: 1;
+}
+
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+
+sub {
+  top: 0.4em;
 }
 
 blockquote {
@@ -49,29 +78,4 @@ blockquote {
   padding-left: 1rem;
   padding-right: 1rem;
   border-left: 5px solid $gray;
-}
-
-h1,
-.h1 {
-  font-size: 2rem;
-}
-h2,
-.h2 {
-  font-size: 1.5rem;
-}
-h3,
-.h3 {
-  font-size: 1.25rem;
-}
-h4,
-.h4 {
-  font-size: 1rem;
-}
-h5,
-.h5 {
-  font-size: .875rem;
-}
-h6,
-.h6 {
-  font-size: .75rem;
 }

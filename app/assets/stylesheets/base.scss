@@ -1,14 +1,5 @@
-html {
-  font-size: 100%;
-}
-
 body, html {
   height: 100%;
-}
-
-body {
-  line-height: 1.5;
-  font-family: $base-font-family;
 }
 
 a {
@@ -32,4 +23,8 @@ svg { max-height: 100%; }
 
 .main {
   min-height: 100%;
+}
+
+p:empty {
+  display: none;
 }
