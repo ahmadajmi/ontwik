@@ -11,7 +11,8 @@ class TalksController < ApplicationController
 
   def index
     if params[:search]
-      @talks = Talk.search(params[:search]).order('created_at DESC')
+      @talks = Talk.tagged_with(params[:search]).order('created_at DESC') \
+             | Talk.search(params[:search]).order('created_at DESC')
     elsif params[:tag]
       @talks = Talk.tagged_with(params[:tag]).order('created_at DESC')
     else
