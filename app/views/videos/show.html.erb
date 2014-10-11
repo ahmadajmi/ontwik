@@ -18,6 +18,16 @@
       <div class="large-9 column">
         <h3 class="mt0"><%= @video.title %></h3>
         <p><%= markdown(@video.description) %></p>
+        <% if @video.user == current_user %>
+        <%= link_to edit_video_path(@video), :title => "Edit" do %>
+        <p class="border-all padding-one inline-block">
+          <span class="iconicstroke-info dark-gray margin-right-half"></span>
+          <small>
+            You can edit the video description, markdown and syntax hilight are supported.
+          </small>
+        </p>
+        <% end %>
+        <% end %>
       </div>
 
       <div class="large-3 column">
