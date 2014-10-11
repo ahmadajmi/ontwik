@@ -7,7 +7,7 @@
     </div>
   </div><!-- row -->
 
-  <% if user_signed_in? %>
+  <% if user_signed_in? and current_user == @user %>
   <%= link_to edit_user_path(current_user), :class=> "absolute pin-bottom-bight padding-one white" do %>
   <span class="iconicstroke-cog" title="Change Profile Header"></span>
   <% end %>
