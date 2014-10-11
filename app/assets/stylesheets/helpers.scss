@@ -25,7 +25,7 @@
 .relative { position: relative; }
 .absolute { position: absolute; }
 .static   { position: static; }
-
+.fixed-background { background-attachment: fixed; }
 
 
 //
@@ -79,6 +79,13 @@
   bottom: 0;
 }
 
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 //
 // Typography
 //
@@ -94,7 +101,7 @@
 }
 
 .media-cover {
-  background-position: 0;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
