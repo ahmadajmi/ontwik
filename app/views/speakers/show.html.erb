@@ -82,7 +82,7 @@
 
       <% if @speaker.talks.length == 0 and user_signed_in? and current_user == @speaker %>
       <div class="large-12 column">
-        <div class="margin-top-four margin-bottom-four text-center">
+        <div class="margin-top-two margin-bottom-four text-center">
           <%= link_to({:action => 'new', :controller => 'talks'}, {:class => "button button-primary"}) do %>
           <span class="iconicstroke-plus margin-right-one"></span> Add Your First Talk
           <% end %>
