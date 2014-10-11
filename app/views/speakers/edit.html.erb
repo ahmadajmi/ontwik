@@ -1,5 +1,5 @@
 <div class="margin-top-two">
-  <%= form_for :user, url: user_path(@user), html: { multipart: true }, method: :patch do |f| %>
+  <%= form_for :speaker, url: speaker_path(@speaker), html: { multipart: true }, method: :patch do |f| %>
   <div class="row">
 
     <div class="large-6 column column--center">
@@ -10,9 +10,9 @@
 
             <h3 class="text-center margin-top-none margin-bottom-one">Profile</h3>
 
-            <% if @user.errors.any? %>
+            <% if @speaker.errors.any? %>
             <ul class="list-bare">
-              <% @user.errors.full_messages.each do |msg| %>
+              <% @speaker.errors.full_messages.each do |msg| %>
               <li class="margin-bottom-one danger"><%= msg %></li>
               <% end %>
             </ul>
@@ -30,10 +30,10 @@
                   <%= f.file_field :profile_banner, :class => 'form-control margin-bottom-none' %>
                   <small class="dark-gray">Recommended dimensions of 1500×500</small>
                 </div>
-                <label for="user_profile_banner">
+                <label for="speaker_profile_banner">
                   <div class="large-4 medium-2 small-2 column">
-                    <% if @user.profile_banner.present? %>
-                    <img src="<%= @user.profile_banner_url %>" class="pointer" title="Click to change Profile Header">
+                    <% if @speaker.profile_banner.present? %>
+                    <img src="<%= @speaker.profile_banner_url %>" class="pointer" title="Click to change Profile Header">
                     <% else %>
                     <div class="gray-bg padding-top-one padding-bottom-one text-center pointer" title="Click to change Profile Header">Profile Header</div>
                     <% end %>

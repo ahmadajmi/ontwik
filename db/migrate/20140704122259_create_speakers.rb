@@ -1,6 +1,6 @@
-class CreateUsers < ActiveRecord::Migration
+class CreateSpeakers < ActiveRecord::Migration
   def change
-    create_table :users do |t|
+    create_table :speakers do |t|
       t.string :nickname
       t.string :name
       t.string :location

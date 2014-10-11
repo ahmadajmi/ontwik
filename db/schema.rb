@@ -46,6 +46,23 @@ ActiveRecord::Schema.define(version: 20140905064940) do
   add_index "mentions", ["mentionable_id", "mentionable_type"], name: "fk_mentionables"
   add_index "mentions", ["mentioner_id", "mentioner_type"], name: "fk_mentions"
 
+  create_table "speakers", force: true do |t|
+    t.string   "nickname"
+    t.string   "name"
+    t.string   "location"
+    t.string   "image"
+    t.string   "description"
+    t.string   "website_url"
+    t.string   "twitter_url"
+    t.string   "profile_background_image_url"
+    t.string   "profile_background_image_url_https"
+    t.string   "provider"
+    t.string   "uid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "profile_banner"
+  end
+
   create_table "taggings", force: true do |t|
     t.integer  "tag_id"
     t.integer  "taggable_id"
@@ -82,28 +99,11 @@ ActiveRecord::Schema.define(version: 20140905064940) do
     t.string   "thumbnail_url"
     t.string   "thumbnail_width"
     t.string   "thumbnail_height"
-    t.integer  "user_id"
+    t.integer  "speaker_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "talks", ["user_id", "created_at"], name: "index_talks_on_user_id_and_created_at"
-
-  create_table "users", force: true do |t|
-    t.string   "nickname"
-    t.string   "name"
-    t.string   "location"
-    t.string   "image"
-    t.string   "description"
-    t.string   "website_url"
-    t.string   "twitter_url"
-    t.string   "profile_background_image_url"
-    t.string   "profile_background_image_url_https"
-    t.string   "provider"
-    t.string   "uid"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "profile_banner"
-  end
+  add_index "talks", ["speaker_id", "created_at"], name: "index_talks_on_speaker_id_and_created_at"
 
 end

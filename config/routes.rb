@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   resources :talks
-  resources :users
+  resources :speakers
 
-  get 'follow' => 'users#follow'
-  get 'unfollow' => 'users#unfollow'
-  get 'like' => 'users#like'
-  get 'unlike' => 'users#unlike'
+  get 'follow' => 'speakers#follow'
+  get 'unfollow' => 'speakers#unfollow'
+  get 'like' => 'speakers#like'
+  get 'unlike' => 'speakers#unlike'
   get 'talks/new'
 
   get 'talks/create'

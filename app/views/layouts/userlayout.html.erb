@@ -1,7 +1,7 @@
 <%= render 'shared/head' %>
 
 <header class="full-height media-cover relative margin-bottom-three"
-style="background-image: url(<%= @user.profile_banner_url if @user.profile_banner.present? %>)">
+style="background-image: url(<%= @speaker.profile_banner_url if @speaker.profile_banner.present? %>)">
 
 <%= render 'layouts/navigation' %>
 <div class="gradient gradient--hero"></div>
@@ -11,28 +11,28 @@ style="background-image: url(<%= @user.profile_banner_url if @user.profile_banne
       <div class="padlx padly">
 
         <div class="text-center margin-bottom-one ">
-          <img src="<%= @user.image if @user.image %>">
-          <h3><%= @user.name if @user.name %></h3>
-          <p><%= @user.description if @user.description %></p>
+          <img src="<%= @speaker.image if @speaker.image %>">
+          <h3><%= @speaker.name if @speaker.name %></h3>
+          <p><%= @speaker.description if @speaker.description %></p>
         </div>
 
         <div class="row margin-bottom-one">
           <div class="col-sm-4 col-md-4">
-            <strong class="block"><%= @user.talks.count %></strong>
+            <strong class="block"><%= @speaker.talks.count %></strong>
             talks
           </div>
           <div class="col-sm-4 col-md-4">
-            <strong class="block"><%= @user.followers(User).count %></strong>
+            <strong class="block"><%= @speaker.followers(speaker).count %></strong>
             Followers
           </div>
           <div class="col-sm-4 col-md-4">
-            <strong class="block"><%= @user.followees(User).count %></strong>
+            <strong class="block"><%= @speaker.followees(speaker).count %></strong>
             Following
           </div>
         </div>
 
         <div class="text-center">
-          <%= render 'shared/follow_form' , user: @user %>
+          <%= render 'shared/follow_form' , speaker: @speaker %>
         </div>
 
       </div>

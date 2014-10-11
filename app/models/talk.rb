@@ -2,7 +2,7 @@ require 'acts-as-taggable-on'
 
 class Talk < ActiveRecord::Base
 
-  belongs_to :user
+  belongs_to :speaker
 
   # validates :url, :uniqueness => { :message => "is already used before." }, :on => :create
   validates :url, :tag_list, :presence => true, :on => :create

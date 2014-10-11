@@ -2,14 +2,14 @@
 <%= link_to talk.tag_list, tag_path(talk.tag_list) %>
 
 <div class="hide">
-  <p><%= @user.website_url %></p>
+  <p><%= @speaker.website_url %></p>
 
-  <p><%= @user.twitter_url %></p>
+  <p><%= @speaker.twitter_url %></p>
 
-  <p><%= @user.profile_background_image_url_https if @user.nickname %></p>
+  <p><%= @speaker.profile_background_image_url_https if @speaker.nickname %></p>
 
-  <p><%= @user.profile_background_image_url if @user.nickname %></p>
+  <p><%= @speaker.profile_background_image_url if @speaker.nickname %></p>
 </div>
 
 
-<p><%= markdown(@talk.user.description) if @talk.user.description %></p>
+<p><%= markdown(@talk.speaker.description) if @talk.speaker.description %></p>

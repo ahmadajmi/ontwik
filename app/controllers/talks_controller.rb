@@ -24,7 +24,7 @@ class TalksController < ApplicationController
   end
 
   def to_param
-    username
+    speakername
   end
 
   def create
@@ -64,10 +64,10 @@ class TalksController < ApplicationController
     @talk.thumbnail_width  = @json['thumbnail_width']
     @talk.thumbnail_height = @json['thumbnail_height']
 
-    @talk.user_id = current_user.id
+    @talk.speaker_id = current_user.id
 
     if @talk.save
-      flash[:notice] = "Yay, you just published a new talk. Thanks!"
+      flash[:notice] = "You just published a new talk. Thanks!"
       redirect_to @talk
     else
       render 'new'
@@ -77,13 +77,13 @@ class TalksController < ApplicationController
   def show
     @talk    = Talk.find(params[:id])
     @likeable = @talk
-    @likers   = @talk.likers(User)
+    @likers   = @talk.likers(Speaker)
   end
 
   def edit
-    @user = Talk.find(params[:id]).user
+    @speaker = Talk.find(params[:id]).speaker
     @talk = Talk.find(params[:id])
-    unless current_user == @user
+    unless current_user == @speaker
       redirect_to root_url, :alert => "Access denied."
     end
 
@@ -93,7 +93,7 @@ class TalksController < ApplicationController
     @talk = Talk.find(params[:id])
 
     if @talk.update(update_params)
-      redirect_to @talk, :notice => 'Successfully updated talk.'
+      redirect_to @talk, :notice => 'Successfully updated.'
     else
       render 'edit'
     end
