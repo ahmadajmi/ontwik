@@ -1,5 +1,5 @@
-<!-- Tag list in the video grid -->
-<%= link_to video.tag_list, tag_path(video.tag_list) %>
+<!-- Tag list in the talk grid -->
+<%= link_to talk.tag_list, tag_path(talk.tag_list) %>
 
 <div class="hide">
   <p><%= @user.website_url %></p>
@@ -12,4 +12,4 @@
 </div>
 
 
-<p><%= markdown(@video.user.description) if @video.user.description %></p>
+<p><%= markdown(@talk.user.description) if @talk.user.description %></p>

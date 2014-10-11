@@ -66,24 +66,7 @@ ActiveRecord::Schema.define(version: 20140905064940) do
 
   add_index "tags", ["name"], name: "index_tags_on_name", unique: true
 
-  create_table "users", force: true do |t|
-    t.string   "nickname"
-    t.string   "name"
-    t.string   "location"
-    t.string   "image"
-    t.string   "description"
-    t.string   "website_url"
-    t.string   "twitter_url"
-    t.string   "profile_background_image_url"
-    t.string   "profile_background_image_url_https"
-    t.string   "provider"
-    t.string   "uid"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "profile_banner"
-  end
-
-  create_table "videos", force: true do |t|
+  create_table "talks", force: true do |t|
     t.string   "url"
     t.string   "url_type"
     t.string   "version"
@@ -104,6 +87,23 @@ ActiveRecord::Schema.define(version: 20140905064940) do
     t.datetime "updated_at"
   end
 
-  add_index "videos", ["user_id", "created_at"], name: "index_videos_on_user_id_and_created_at"
+  add_index "talks", ["user_id", "created_at"], name: "index_talks_on_user_id_and_created_at"
+
+  create_table "users", force: true do |t|
+    t.string   "nickname"
+    t.string   "name"
+    t.string   "location"
+    t.string   "image"
+    t.string   "description"
+    t.string   "website_url"
+    t.string   "twitter_url"
+    t.string   "profile_background_image_url"
+    t.string   "profile_background_image_url_https"
+    t.string   "provider"
+    t.string   "uid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "profile_banner"
+  end
 
 end

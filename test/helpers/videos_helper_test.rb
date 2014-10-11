@@ -1,4 +1,4 @@
 require 'test_helper'
 
-class VideosHelperTest < ActionView::TestCase
+class TalksHelperTest < ActionView::TestCase
 end

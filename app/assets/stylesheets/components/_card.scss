@@ -1,9 +1,9 @@
-.video-preview {
+.talk-preview {
   display: block;
   position: relative;
 }
 
-.video-preview:before {
+.talk-preview:before {
   background-color: rgba(20, 20, 20, 0.6);
   border-radius: 20px;
   content: "";
@@ -17,7 +17,7 @@
   z-index: 1;
 }
 
-.video-preview:after {
+.talk-preview:after {
   border-bottom: 9px solid transparent;
   border-left: 15px solid rgba(255, 255, 255, 0.9);
   border-top: 9px solid transparent;
@@ -32,6 +32,6 @@
   z-index: 2;
 }
 
-.video-preview:hover:before {
+.talk-preview:hover:before {
   background-color: rgba(20, 20, 20, 0.7);
 }

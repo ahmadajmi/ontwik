@@ -1,0 +1,3 @@
+module TalksHelper
+
+end

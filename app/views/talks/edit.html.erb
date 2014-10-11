@@ -5,11 +5,11 @@
     <div class="large-8 column column--center">
       <div class="white-bg padding-two">
 
-        <h3 class="text-center margin-top-none margin-bottom-one">Edit Video</h3>
+        <h3 class="text-center margin-top-none margin-bottom-one">Edit talk</h3>
 
-        <% if @video.errors.any? %>
+        <% if @talk.errors.any? %>
         <ul class="list-bare">
-          <% @video.errors.full_messages.each do |msg| %>
+          <% @talk.errors.full_messages.each do |msg| %>
           <li class="margin-bottom-one danger"><%= msg %></li>
           <% end %>
         </ul>
@@ -17,7 +17,7 @@
 
         <div class="row">
           <div class="large-12 column">
-            <%= form_for :video, url: video_path(@video), method: :patch do |f| %>
+            <%= form_for :talk, url: talk_path(@talk), method: :patch do |f| %>
 
             <div class="form-group">
               <%= f.label :title, :class=> "hide" %>
@@ -39,7 +39,7 @@
               <%= f.submit "Update", class:'button button-primary'%>
             </div>
 
-            <%= link_to 'Delete', video_path(@video), method: :delete, data: { confirm: 'Are you sure you want to delete this video?' }, :class => "button hide" %>
+            <%= link_to 'Delete', talk_path(@talk), method: :delete, data: { confirm: 'Are you sure you want to delete this talk?' }, :class => "button hide" %>
 
             <% end %>
           </div>

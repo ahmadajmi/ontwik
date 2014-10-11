@@ -43,8 +43,8 @@
       <div class="large-4 column">
 
         <div class="large-3 column text-center padding-top-three">
-          <strong class="block"><%= @user.videos.count %></strong>
-          <small>Videos</small>
+          <strong class="block"><%= @user.talks.count %></strong>
+          <small>Talks</small>
         </div>
 
         <div class="large-3 column text-center padding-top-three">
@@ -76,26 +76,26 @@
   <div class="large-10 column column--center">
     <div class="row">
 
-      <% if @user.videos.length == 0 %>
-      <%= render 'shared/video_card_placeholders' %>
+      <% if @user.talks.length == 0 %>
+      <%= render 'shared/talk_card_placeholders' %>
       <% end %>
 
-      <% if @user.videos.length == 0 and user_signed_in? and current_user == @user %>
+      <% if @user.talks.length == 0 and user_signed_in? and current_user == @user %>
       <div class="large-12 column">
         <div class="margin-top-four margin-bottom-four text-center">
-          <%= link_to({:action => 'new', :controller => 'videos'}, {:class => "button button-primary"}) do %>
+          <%= link_to({:action => 'new', :controller => 'talks'}, {:class => "button button-primary"}) do %>
           <span class="iconicstroke-plus margin-right-one"></span> Add Your First Talk
           <% end %>
         </div>
       </div>
       <% end %>
 
-      <% if @user.videos.length > 0 %>
-      <% @user.videos.each do |video| %>
-      <%= render 'shared/video_card', :video => video %>
+      <% if @user.talks.length > 0 %>
+      <% @user.talks.each do |talk| %>
+      <%= render 'shared/talk_card', :talk => talk %>
       <% end %>
       <% if user_signed_in? and current_user == @user %>
-      <%= render 'shared/video_card_add_placeholder' %>
+      <%= render 'shared/talk_card_add_placeholder' %>
       <% end %>
       <% end %>
 

@@ -1,17 +1,17 @@
 <div class="margin-top-two">
 
-  <%= form_for @video, url: videos_path do |f| %>
+  <%= form_for @talk, url: talks_path do |f| %>
 
   <div class="row">
 
     <div class="large-6 column column--center">
       <div class="white-bg padding-two">
 
-        <h3 class="text-center margin-top-none margin-bottom-one">New Video</h3>
+        <h3 class="text-center margin-top-none margin-bottom-one">New Talk</h3>
 
-        <% if @video.errors.any? %>
+        <% if @talk.errors.any? %>
         <ul class="list-bare">
-          <% @video.errors.full_messages.each do |msg| %>
+          <% @talk.errors.full_messages.each do |msg| %>
           <li class="margin-bottom-one danger"><%= msg %></li>
           <% end %>
         </ul>
@@ -20,13 +20,13 @@
         <div class="row">
           <div class="large-12 column">
             <div class="form-group">
-              <%= f.text_field :url, :type => 'url', :placeholder => 'Video URL', :class => 'form-control', :required => 'true' %>
+              <%= f.text_field :url, :type => 'url', :placeholder => 'Talk URL (Youtube , Vimeo)', :class => 'form-control', :required => 'true' %>
             </div>
           </div>
 
           <div class="large-12 column">
             <div class="form-group">
-              <%= f.text_field :tag_list, :type => 'text', :placeholder => 'Tags', :class => 'form-control', :required => 'true' %>
+              <%= f.text_field :tag_list, :type => 'text', :placeholder => 'Talk Tags', :class => 'form-control', :required => 'true' %>
             </div>
           </div>
 

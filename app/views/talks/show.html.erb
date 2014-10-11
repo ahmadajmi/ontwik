@@ -2,8 +2,8 @@
   <div class="row">
     <div class="large-10 column column--center">
       <div class="flex-embed flex-embed--16by9">
-        <% if @video.html %>
-        <%= @video.html.html_safe %>
+        <% if @talk.html %>
+        <%= @talk.html.html_safe %>
         <% end %>
       </div>
     </div>
@@ -16,10 +16,10 @@
 
     <div class="row">
       <div class="large-9 column">
-        <h3 class="mt0"><%= @video.title %></h3>
-        <p><%= markdown(@video.description) %></p>
-        <% if @video.user == current_user %>
-        <%= link_to edit_video_path(@video), :title => "Edit" do %>
+        <h3 class="mt0"><%= @talk.title %></h3>
+        <p><%= markdown(@talk.description) %></p>
+        <% if @talk.user == current_user %>
+        <%= link_to edit_talk_path(@talk), :title => "Edit" do %>
         <p class="border-all padding-one inline-block">
           <span class="iconicstroke-info dark-gray margin-right-half"></span>
           <small>
@@ -40,7 +40,7 @@
 
               <!-- Like Button -->
               <% if user_signed_in? %>
-              <%= render 'shared/like_form', likeable: @video %>
+              <%= render 'shared/like_form', likeable: @talk %>
               <% else %>
 
               <%= link_to '', :class=> "button button-icon left", :'data-toggle'=>"modal", :'data-target'=>".bs-example-modal-sm", :title => "Like" do %>
@@ -52,22 +52,22 @@
               <% end %>
 
               <span class="likes padding-top-quarter padding-bottom-quarter padding-right-one padding-left-one white-bg border-right border-top border-bottom left">
-                <%= pluralize(@video.likers(User).count, '')%>
+                <%= pluralize(@talk.likers(User).count, '')%>
               </span>
               <!-- End Like Button -->
 
-              <a href="http://twitter.com/share?url=<%= request.original_url %>&text=<%= @video.title %> By @<%= @video.user.nickname %>" target="_blank" class="button button-icon button-info right" title="Share on Twitter">
+              <a href="http://twitter.com/share?url=<%= request.original_url %>&text=<%= @talk.title %> By @<%= @talk.user.nickname %>" target="_blank" class="button button-icon button-info right" title="Share on Twitter">
                 <img src="/assets/twitter-bird-white-16x16.png">
               </a>
 
             </div>
 
-            <% if @video.user == current_user %>
+            <% if @talk.user == current_user %>
             <div class="large-12 medium-6 small-6 column margin-top-one">
-              <%= link_to video_path(@video), method: :delete, data: { confirm: 'Are you sure you want to delete this video?' }, :class=> "button button-icon", :title => "Delete" do %>
+              <%= link_to talk_path(@talk), method: :delete, data: { confirm: 'Are you sure you want to delete this talk?' }, :class=> "button button-icon", :title => "Delete" do %>
               <span class="iconicstroke-x"></span>
               <% end %>
-              <%= link_to edit_video_path(@video), :class=> "button button-icon", :title => "Edit" do %>
+              <%= link_to edit_talk_path(@talk), :class=> "button button-icon", :title => "Edit" do %>
               <span class="iconicstroke-pen-alt2"></span>
               <% end %>
             </div>
@@ -81,19 +81,19 @@
             <% end %>
           </div>
 
-          <% if !@video.tag_list.empty? %>
+          <% if !@talk.tag_list.empty? %>
           <h4>Tags</h4>
-          <%= raw @video.tag_list.map { |t| link_to t, tag_path(t), class: 'tag radius' }.join('  ') %>
+          <%= raw @talk.tag_list.map { |t| link_to t, tag_path(t), class: 'tag radius' }.join('  ') %>
           <% end %>
 
         </div>
 
         <div class="margin-bottom-one padding-bottom-one border-bottom">
-          <%= link_to @video.user, :class=> "ell block gray-bg" do %>
+          <%= link_to @talk.user, :class=> "ell block gray-bg" do %>
           <div class="left">
-            <img class="margin-right-half block" src="<%= @video.user.image %>" alt="<%= @video.user.name %>" style="width:64px;height:64px;">
+            <img class="margin-right-half block" src="<%= @talk.user.image %>" alt="<%= @talk.user.name %>" style="width:64px;height:64px;">
           </div>
-          <h4 class="margin-bottom-none ell"><%= @video.user.name %></h4>
+          <h4 class="margin-bottom-none ell"><%= @talk.user.name %></h4>
           <% end %>
         </div>
 
@@ -103,8 +103,8 @@
 </div><!-- row -->
 
 
-<!-- related Videos by the current video tags -->
-<% if Video.tagged_with([@video.tag_list]).length  > 1 %>
+<!-- related talks by the current talk tags -->
+<% if Talk.tagged_with([@talk.tag_list]).length  > 1 %>
 <div class="gray-bg padding-top-two padding-bottom-two">
   <div class="row">
     <div class="large-10 column column--center">
@@ -113,9 +113,9 @@
 
     <div class="large-10 column column--center">
       <div class="row">
-        <% Video.tagged_with([@video.tag_list]).each do |video| %>
-        <% if video.id != @video.id %>
-        <%= render 'shared/video_card', :video => video %>
+        <% Talk.tagged_with([@talk.tag_list]).each do |talk| %>
+        <% if talk.id != @talk.id %>
+        <%= render 'shared/talk_card', :talk => talk %>
         <% end %>
         <% end %>
       </div>

@@ -1,6 +1,6 @@
 require 'acts-as-taggable-on'
 
-class Video < ActiveRecord::Base
+class Talk < ActiveRecord::Base
 
   belongs_to :user
 

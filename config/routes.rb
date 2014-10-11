@@ -1,21 +1,21 @@
 Rails.application.routes.draw do
-  resources :videos
+  resources :talks
   resources :users
 
   get 'follow' => 'users#follow'
   get 'unfollow' => 'users#unfollow'
   get 'like' => 'users#like'
   get 'unlike' => 'users#unlike'
-  get 'videos/new'
+  get 'talks/new'
 
-  get 'videos/create'
+  get 'talks/create'
 
-  root to: 'videos#home'
+  root to: 'talks#home'
   get '/auth/:provider/callback' => 'sessions#create'
   get '/signin' => 'sessions#new', :as => :signin
   get '/signout' => 'sessions#destroy', :as => :signout
   get '/auth/failure' => 'sessions#failure'
 
-  get 'tags/:tag', to: 'videos#index', as: :tag
+  get 'tags/:tag', to: 'talks#index', as: :tag
 
 end

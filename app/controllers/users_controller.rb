@@ -35,12 +35,12 @@ class UsersController < ApplicationController
   end
 
   def like
-    @likeable = Video.find(params[:likeable_id])
+    @likeable = Talk.find(params[:likeable_id])
     current_user.like!(@likeable)
   end
 
   def unlike
-    @likeable = Video.find(params[:likeable_id])
+    @likeable = Talk.find(params[:likeable_id])
     current_user.unlike!(@likeable)
   end
 

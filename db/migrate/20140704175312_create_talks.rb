@@ -1,6 +1,6 @@
-class CreateVideos < ActiveRecord::Migration
+class CreateTalks < ActiveRecord::Migration
   def change
-    create_table :videos do |t|
+    create_table :talks do |t|
       t.string :url
       t.string :url_type
       t.string :version
@@ -26,7 +26,7 @@ class CreateVideos < ActiveRecord::Migration
       t.timestamps
     end
 
-    add_index :videos, [:user_id, :created_at]
+    add_index :talks, [:user_id, :created_at]
 
   end
 end

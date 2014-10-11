@@ -1,0 +1,32 @@
+<div class="margin-top-one">
+  <div class="row ">
+
+    <div class="large-2 column">
+      <ul class="list-bare">
+        <% tag_cloud Talk.tag_counts, %w{s m l} do |tag| %>
+        <li>
+          <%= link_to tag_path(tag.name), :class=> "small border-bottom padding-top-half padding-bottom-half block dark-gray" do %>
+          <%= tag.name %>
+          <span class="right"><%= tag.count %></span>
+          <% end %>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="large-10 column">
+      <div class="row">
+        <% if params[:search] %>
+        <div class="large-12 column">
+          <h3 class="margin-top-none margin-bottom-one regular">We found <%= @talks.length %> talks about <span class=""><%= params[:search] %></span></h3>
+        </div>
+        <% end %>
+        <% @talks.each do |talk| %>
+        <%= render 'shared/talk_card', :talk => talk %>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+
+</div>

@@ -18,8 +18,8 @@ style="background-image: url(<%= @user.profile_banner_url if @user.profile_banne
 
         <div class="row margin-bottom-one">
           <div class="col-sm-4 col-md-4">
-            <strong class="block"><%= @user.videos.count %></strong>
-            Videos
+            <strong class="block"><%= @user.talks.count %></strong>
+            talks
           </div>
           <div class="col-sm-4 col-md-4">
             <strong class="block"><%= @user.followers(User).count %></strong>
