@@ -68,7 +68,7 @@ class VideosController < ApplicationController
     @video.user_id = current_user.id
 
     if @video.save
-      flash[:notice] = "Yay, you just published a new video. Thanks!"
+      flash[:notice] = "Yay, you just published a new talk. Thanks!"
       redirect_to @video
     else
       render 'new'
@@ -94,7 +94,7 @@ class VideosController < ApplicationController
     @video = Video.find(params[:id])
 
     if @video.update(update_params)
-      redirect_to @video, :notice => 'Successfully updated video.'
+      redirect_to @video, :notice => 'Successfully updated talk.'
     else
       render 'edit'
     end
