@@ -40,6 +40,9 @@ gem 'pygments.rb', '~> 0.6.0'
 # For making assets working on deployment
 gem 'rails_12factor', group: :production
 
+# SEO
+gem 'sitemap_generator'
+
 group :development do
   gem 'sqlite3'
   gem 'spring'

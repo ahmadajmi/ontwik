@@ -3,10 +3,11 @@
 
 
 /* TEAM */
-  <your title>: <your name>
-  Site:
-  Twitter:
-  Location:
+  Founder: Ahmad Ajmi
+  Contact: ahmad [at] ahmadajmi.com
+  Site: ahmadajmi.com
+  Twitter: @ahmadajmi
+  Location: Cairo - Egypt
 
 /* THANKS */
   Daniel Kehoe (@rails_apps) for the RailsApps project
