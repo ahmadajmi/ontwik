@@ -1,3 +1,11 @@
+<% content_for :title do %>
+<%= truncate @talk.title, length: 60 %>
+<% end %>
+
+<% content_for :description do %>
+<%= truncate @talk.description, length: 155 %>
+<% end %>
+
 <div class="black-bg">
   <div class="row">
     <div class="large-10 column column--center">

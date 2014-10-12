@@ -1,3 +1,7 @@
+<% content_for :title do %>
+Edit Profile
+<% end %>
+
 <div class="margin-top-two">
   <%= form_for :speaker, url: speaker_path(@speaker), html: { multipart: true }, method: :patch do |f| %>
   <div class="row">

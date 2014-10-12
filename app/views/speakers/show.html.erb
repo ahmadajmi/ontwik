@@ -1,3 +1,11 @@
+<% content_for :title do %>
+<%= @speaker.name %>
+<% end %>
+
+<% content_for :description do %>
+<%= truncate @speaker.description, length: 155 %>
+<% end %>
+
 <div class="dark-bg relative media-cover" style="background-image: url(<%= @speaker.profile_banner_url if @speaker.profile_banner.present? %>)">
   <div class="card__overlay"></div>
   <div class="row">
