@@ -8,6 +8,7 @@ class SpeakersController < ApplicationController
 
   def show
     @speaker = Speaker.friendly.find(params[:id])
+    @speakerTalks = @speaker.talks.order('created_at DESC').all
   end
 
   def edit
