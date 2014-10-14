@@ -10,6 +10,8 @@ class TopicsController < ApplicationController
   # GET /topics/1
   # GET /topics/1.json
   def show
+    @topic = Topic.find(params[:id])
+    @talks = @topic.talks.order('created_at DESC').all
   end
 
   # GET /topics/new

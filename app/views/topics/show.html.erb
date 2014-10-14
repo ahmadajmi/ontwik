@@ -5,5 +5,9 @@
   <%= @topic.name %>
 </p>
 
+<% @talks.each do |talk| %>
+<%= render 'shared/talk_card', :talk => talk %>
+<% end %>
+
 <%= link_to 'Edit', edit_topic_path(@topic) %> |
 <%= link_to 'Back', topics_path %>

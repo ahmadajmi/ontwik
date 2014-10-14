@@ -11,7 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140905064940) do
+ActiveRecord::Schema.define(version: 20141014201648) do
+
+  create_table "comments", force: true do |t|
+    t.integer  "commentable_id"
+    t.string   "commentable_type"
+    t.string   "title"
+    t.text     "body"
+    t.string   "subject"
+    t.integer  "user_id",          null: false
+    t.integer  "parent_id"
+    t.integer  "lft"
+    t.integer  "rgt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "comments", ["commentable_id", "commentable_type"], name: "index_comments_on_commentable_id_and_commentable_type"
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 
   create_table "follows", force: true do |t|
     t.string   "follower_type"
@@ -102,8 +119,15 @@ ActiveRecord::Schema.define(version: 20140905064940) do
     t.integer  "speaker_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "topic_id"
   end
 
   add_index "talks", ["speaker_id", "created_at"], name: "index_talks_on_speaker_id_and_created_at"
+
+  create_table "topics", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
