@@ -97,11 +97,11 @@
         </div>
 
         <div class="margin-bottom-one padding-bottom-one border-bottom ell">
-          <%= link_to @talk.speaker, :class=> "block gray-bg vertical-align" do %>
-          <div class="vertical-align__inner">
-            <img class="margin-right-half block" src="<%= @talk.speaker.image %>" alt="<%= @talk.speaker.name %>" style="width:64px;height:64px;">
+          <%= link_to @talk.speaker, :class=> "block gray-bg flag" do %>
+          <div class="flag__image">
+            <img src="<%= @talk.speaker.image %>" alt="<%= @talk.speaker.name %>" style="width:64px;height:64px;">
           </div>
-          <h4 class="margin-bottom-none full-width vertical-align__inner">
+          <h4 class="margin-bottom-none flag__image">
             <%= @talk.speaker.name %>
           </h4>
           <% end %>
