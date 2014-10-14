@@ -11,7 +11,7 @@
     <div class="large-10 column column--center">
       <div class="flex-embed flex-embed--16by9">
         <% if @talk.html %>
-        <%= @talk.html.html_safe %>
+        <%#= @talk.html.html_safe %>
         <% end %>
       </div>
     </div>
@@ -45,33 +45,33 @@
           <div class="row">
 
             <div class="large-12 medium-6 small-6 column text-left">
+              <div class="margin-bottom-one padding-bottom-one border-bottom clearfix">
+                <!-- Like Button -->
+                <% if user_signed_in? %>
+                <%= render 'shared/like_form', likeable: @talk %>
+                <% else %>
 
-              <!-- Like Button -->
-              <% if user_signed_in? %>
-              <%= render 'shared/like_form', likeable: @talk %>
-              <% else %>
+                <%= link_to '', :class=> "button button-icon left", :'data-toggle'=>"modal", :'data-target'=>".bs-example-modal-sm", :title => "Like" do %>
+                <span class="iconicstroke-heart-stroke"></span>
+                <% end %>
 
-              <%= link_to '', :class=> "button button-icon left", :'data-toggle'=>"modal", :'data-target'=>".bs-example-modal-sm", :title => "Like" do %>
-              <span class="iconicstroke-heart-stroke"></span>
-              <% end %>
+                <%= render 'shared/login_modal' %>
 
-              <%= render 'shared/login_modal' %>
+                <% end %>
 
-              <% end %>
+                <span class="likes padding-top-quarter padding-bottom-quarter padding-right-one padding-left-one white-bg border-right border-top border-bottom left">
+                  <%= pluralize(@talk.likers(Speaker).count, '')%>
+                </span>
+                <!-- End Like Button -->
 
-              <span class="likes padding-top-quarter padding-bottom-quarter padding-right-one padding-left-one white-bg border-right border-top border-bottom left">
-                <%= pluralize(@talk.likers(Speaker).count, '')%>
-              </span>
-              <!-- End Like Button -->
-
-              <a href="http://twitter.com/share?url=<%= request.original_url %>&text=<%= @talk.title %> By @<%= @talk.speaker.nickname %>" target="_blank" class="button button-icon button-info right" title="Share on Twitter">
-                <img src="/assets/twitter-bird-white-16x16.png">
-              </a>
-
+                <a href="http://twitter.com/share?url=<%= request.original_url %>&text=<%= @talk.title %> By @<%= @talk.speaker.nickname %>" target="_blank" class="button button-icon button-info right" title="Share on Twitter">
+                  <img src="/assets/twitter-bird-white-16x16.png">
+                </a>
+              </div>
             </div>
 
             <% if @talk.speaker == current_user %>
-            <div class="large-12 medium-6 small-6 column margin-top-one">
+            <div class="large-12 medium-6 small-6 column">
               <%= link_to talk_path(@talk), method: :delete, data: { confirm: 'Are you sure you want to delete this talk?' }, :class=> "button button-icon", :title => "Delete" do %>
               <span class="iconicstroke-x"></span>
               <% end %>
@@ -80,7 +80,6 @@
               <% end %>
             </div>
             <% end %>
-
           </div>
 
           <div class="hide">
@@ -89,19 +88,22 @@
             <% end %>
           </div>
 
-          <% if !@talk.tag_list.empty? %>
-          <h4>Tags</h4>
-          <%= raw @talk.tag_list.map { |t| link_to t, tag_path(t), class: 'tag radius' }.join('  ') %>
-          <% end %>
-
+          <div class="margin-top-one padding-top-one border-top clearfix">
+            <% if !@talk.tag_list.empty? %>
+            <h4 class="margin-bottom-one margin-top-none">Tags</h4>
+            <%= raw @talk.tag_list.map { |t| link_to t, tag_path(t), class: 'tag radius' }.join('  ') %>
+            <% end %>
+          </div>
         </div>
 
-        <div class="margin-bottom-one padding-bottom-one border-bottom">
-          <%= link_to @talk.speaker, :class=> "ell block gray-bg" do %>
-          <div class="left">
+        <div class="margin-bottom-one padding-bottom-one border-bottom ell">
+          <%= link_to @talk.speaker, :class=> "block gray-bg vertical-align" do %>
+          <div class="vertical-align__inner">
             <img class="margin-right-half block" src="<%= @talk.speaker.image %>" alt="<%= @talk.speaker.name %>" style="width:64px;height:64px;">
           </div>
-          <h4 class="margin-bottom-none ell"><%= @talk.speaker.name %></h4>
+          <h4 class="margin-bottom-none full-width vertical-align__inner">
+            <%= @talk.speaker.name %>
+          </h4>
           <% end %>
         </div>
 
