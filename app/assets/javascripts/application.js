@@ -11,11 +11,11 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery.turbolinks
+//=# require jquery.turbolinks
 //= require jquery_ujs
 //= require jquery.autosize
 //= require_tree .
-//= require turbolinks
+//=# require turbolinks
 //= require bootstrap/modal
 
 $(function(){

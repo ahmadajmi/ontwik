@@ -4,7 +4,7 @@
   </div>
   <div class="card-inside">
     <div class="left margin-right-half">
-      <%= link_to talk.speaker, :title => talk.speaker.name, :class=> "ell block" do %>
+      <%= link_to talk.speaker.nickname, :title => talk.speaker.name, :class=> "ell block" do %>
       <img class="left radius-half" src="<%= talk.speaker.image %>" alt="<%= talk.speaker.name %>" style="height:24px;height:24px;">
       <% end %>
     </div>

@@ -1,5 +1,5 @@
 class SpeakersController < ApplicationController
-  before_filter :authenticate_speaker!, except: [:show]
+  before_filter :authenticate_speaker!, except: [:show, :index]
   before_filter :correct_user?, :only => :edit
 
   def index
@@ -7,7 +7,8 @@ class SpeakersController < ApplicationController
   end
 
   def show
-    @speaker = Speaker.friendly.find(params[:id])
+    # @speaker = Speaker.friendly.find(params[:nickname])
+    @speaker = params[:id] ? Speaker.friendly.find(params[:id]) : Speaker.friendly.find(params[:nickname])
     @speakerTalks = @speaker.talks.order('created_at DESC').all
   end
 

@@ -18,4 +18,7 @@ Rails.application.routes.draw do
 
   get 'tags/:tag', to: 'talks#index', as: :tag
 
+  scope ":nickname" do
+    get '', to: 'speakers#show'
+  end
 end
