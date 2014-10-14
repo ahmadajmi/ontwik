@@ -1,13 +1,43 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @topic.name %>
-</p>
-
-<% @talks.each do |talk| %>
-<%= render 'shared/talk_card', :talk => talk %>
+<% content_for :title do %>
+Topics
 <% end %>
 
-<%= link_to 'Edit', edit_topic_path(@topic) %> |
-<%= link_to 'Back', topics_path %>
+<div class="margin-top-one">
+  <div class="row ">
+
+    <div class="large-2 column">
+      <ul class="list-bare">
+        <% @topics.each do |topic| %>
+        <%= link_to topic.name, :class=> "small border-bottom padding-top-half padding-bottom-half block dark-gray" do %>
+        <%= topic.name %>
+        <span class="right"><%= topic.talks.length %></span>
+        <% end %>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="large-10 column">
+      <div class="row">
+        <div class="large-12 column">
+          <h3 class="margin-top-none margin-bottom-one regular"><%= @topic.name %></h3>
+        </div>
+        <% @talks.each do |talk| %>
+        <%= render 'shared/talk_card', :talk => talk %>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="hide">
+  <p>
+    <strong>Name:</strong>
+    <%= @topic.name %>
+  </p>
+
+  <%= link_to 'Edit', edit_topic_path(@topic) %> |
+  <%= link_to 'Back', topics_path %>
+</div>
