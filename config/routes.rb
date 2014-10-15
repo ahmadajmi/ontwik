@@ -23,4 +23,9 @@ Rails.application.routes.draw do
   scope ":nickname" do
     get '', to: 'speakers#show'
   end
+
+  scope ":nickname/:edit" do
+    get '', to: 'speakers#edit'
+  end
+
 end

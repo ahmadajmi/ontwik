@@ -33,7 +33,8 @@ class ApplicationController < ActionController::Base
     end
 
     def correct_user?
-      @speaker = Speaker.friendly.find(params[:id])
+      # @speaker = Speaker.friendly.find(params[:id])
+      @speaker = params[:id] ? Speaker.friendly.find(params[:id]) : Speaker.friendly.find(params[:nickname])
       unless current_user == @speaker
         redirect_to root_url, :alert => "Access denied."
       end

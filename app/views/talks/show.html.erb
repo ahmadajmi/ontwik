@@ -11,7 +11,7 @@
     <div class="large-10 column column--center">
       <div class="flex-embed flex-embed--16by9">
         <% if @talk.html %>
-        <%#= @talk.html.html_safe %>
+        <%= @talk.html.html_safe %>
         <% end %>
       </div>
     </div>
@@ -19,7 +19,6 @@
 </div>
 
 <div class="row">
-
   <div class="large-10 column column--center">
 
     <div class="row">
@@ -71,7 +70,7 @@
             </div>
 
             <% if @talk.speaker == current_user %>
-            <div class="large-12 medium-6 small-6 column">
+            <div class="large-12 medium-6 small-6 column margin-bottom-one">
               <%= link_to talk_path(@talk), method: :delete, data: { confirm: 'Are you sure you want to delete this talk?' }, :class=> "button button-icon", :title => "Delete" do %>
               <span class="iconicstroke-x"></span>
               <% end %>

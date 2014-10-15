@@ -15,9 +15,12 @@
     </div>
   </div><!-- row -->
 
-  <% if user_signed_in? and current_user == @speaker %>
-  <%= link_to edit_speaker_path(current_user), :class=> "absolute pin-bottom-bight padding-one white" do %>
-  <span class="iconicstroke-cog" title="Change Profile Header"></span>
+  <% if user_signed_in? and current_user == @speaker and not @speaker.profile_banner.present? %>
+  <%= link_to edit_speaker_path(current_user), :class=> "absolute pin-bottom-right padding-one white" do %>
+  <small class="border-all padding-right-one padding-left-one padding-top-half padding-bottom-half">
+    <span class="iconicstroke-plus margin-right-half"></span>
+    Add a header photo
+  </small>
   <% end %>
   <% end %>
 </div><!-- media-cover -->

@@ -12,7 +12,7 @@ class SpeakersController < ApplicationController
   end
 
   def edit
-    @speaker = Speaker.friendly.find(params[:id])
+    @speaker = params[:id] ? Speaker.friendly.find(params[:id]) : Speaker.friendly.find(params[:nickname])
   end
 
   def update
