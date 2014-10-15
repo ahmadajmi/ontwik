@@ -80,7 +80,8 @@
               <% end %>
             </div>
             <% end %>
-          </div>
+
+          </div><!-- row -->
 
           <div class="hide">
             <% @likers.each do |speaker|%>
@@ -88,17 +89,18 @@
             <% end %>
           </div>
 
+          <%= link_to @talk.topic, :class=> "block gray-bg flag padding-one margin-bottom-one" do %>
+          <%= @talk.topic.name %>
+          <% end %>
+
           <div class="margin-top-one padding-top-one border-top clearfix">
             <% if !@talk.tag_list.empty? %>
             <h4 class="margin-bottom-one margin-top-none">Tags</h4>
             <%= raw @talk.tag_list.map { |t| link_to t, tag_path(t), class: 'tag radius' }.join('  ') %>
             <% end %>
           </div>
-        </div>
 
-        <%= link_to @talk.topic, :class=> "block gray-bg flag" do %>
-        <%= @talk.topic.name %>
-        <% end %>
+        </div>
 
         <div class="margin-bottom-one padding-bottom-one border-bottom ell">
           <%= link_to @talk.speaker, :class=> "block gray-bg flag" do %>

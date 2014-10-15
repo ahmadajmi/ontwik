@@ -113,7 +113,7 @@ class TalksController < ApplicationController
     end
 
     def update_params
-      params.require(:talk).permit(:title, :description, :tag_list)
+      params.require(:talk).permit(:title, :description, :topic_id, :tag_list)
     end
 
 end

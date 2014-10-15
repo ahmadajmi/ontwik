@@ -6,8 +6,6 @@ New Talk
 
   <%= form_for @talk, url: talks_path do |f| %>
 
-
-
   <div class="row">
 
     <div class="large-6 column column--center">
@@ -26,7 +24,7 @@ New Talk
         <div class="row">
           <div class="large-12 column">
             <div class="form-group">
-              <%= f.text_field :url, :type => 'url', :placeholder => 'Talk URL (Youtube , Vimeo)', :class => 'form-control', :required => 'true' %>
+              <%= f.text_field :url, :type => 'url', :placeholder => 'URL (Youtube , Vimeo)', :class => 'form-control', :required => 'true' %>
             </div>
           </div>
 
@@ -34,12 +32,12 @@ New Talk
             <div class="row">
               <div class="large-6 column">
                 <div class="form-group">
-                <%= f.collection_select :topic_id, Topic.all, :id, :name, {}, {:class => 'form-control'} %>
+                  <%= f.collection_select :topic_id, Topic.all, :id, :name, {}, {:class => 'form-control'} %>
                 </div>
               </div>
               <div class="large-6 column">
                 <div class="form-group">
-                  <%= f.text_field :tag_list, :type => 'text', :placeholder => 'Talk Tags', :class => 'form-control', :required => 'true' %>
+                  <%= f.text_field :tag_list, :type => 'text', :placeholder => 'Tags', :class => 'form-control', :required => 'true' %>
                 </div>
               </div>
             </div>
