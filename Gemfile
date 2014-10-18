@@ -28,6 +28,7 @@ gem "autoprefixer-rails"
 gem 'autosize-rails'
 gem 'turbolinks'
 gem 'jquery-turbolinks'
+gem 'kaminari'
 
 gem 'friendly_id', '~> 5.0.0'
 

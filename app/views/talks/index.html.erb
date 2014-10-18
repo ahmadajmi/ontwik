@@ -29,8 +29,10 @@ Talks
         <%= render 'shared/talk_card', :talk => talk %>
         <% end %>
       </div>
+      <% unless params[:search] %>
+      <%= render 'shared/pagination' %>
+      <% end %>
     </div>
 
   </div>
-
 </div>

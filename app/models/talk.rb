@@ -4,6 +4,8 @@ class Talk < ActiveRecord::Base
   belongs_to :speaker
   belongs_to :topic
 
+  paginates_per 25
+
   # validates :url, :uniqueness => { :message => "is already used before." }, :on => :create
   validates :url, :tag_list, :presence => true, :on => :create
   validates :title, :tag_list, :presence => true, :on => :update

@@ -6,7 +6,7 @@ class TalksController < ApplicationController
   require 'json'
 
   def home
-    @talks = Talk.order('created_at DESC').all
+    @talks = Talk.order('created_at DESC').all.page params[:page]
   end
 
   def index
@@ -14,9 +14,9 @@ class TalksController < ApplicationController
       @talks = Talk.tagged_with(params[:search]).order('created_at DESC') \
              | Talk.search(params[:search]).order('created_at DESC')
     elsif params[:tag]
-      @talks = Talk.tagged_with(params[:tag]).order('created_at DESC')
+      @talks = Talk.tagged_with(params[:tag]).order('created_at DESC').page params[:page]
     else
-      @talks = Talk.all
+      @talks = Talk.all.page params[:page]
     end
   end
 
