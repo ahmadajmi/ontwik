@@ -1,25 +1,27 @@
-<h1>Listing topics</h1>
+<% content_for :title do %>
+Topics
+<% end %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="row">
+  <div class="large-12 column">
+   <h3>Topics</h3>
+ </div>
 
-  <tbody>
-    <% @topics.each do |topic| %>
-      <tr>
-        <td><%= topic.name %></td>
-        <td><%= link_to 'Show', topic %></td>
-        <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
-        <td><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+ <% @topics.each do |topic| %>
+ <div class="large-3 column">
+ <%= link_to topic, :class=> "block border-all padding-one margin-bottom-two dark-gray" do %>
+   <%= topic.name %>
+   <span class="right" title="<%= pluralize(topic.talks.length, 'talk') %>"><%= topic.talks.length %></span>
+   <% end %>
+ </div>
+ <% end %>
 
-<br>
+</div>
 
-<%= link_to 'New Topic', new_topic_path %>
+<div class="hide">
+  <% @topics.each do |topic| %>
+  <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
+  <td><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <% end %>
+  <%= link_to 'New Topic', new_topic_path %>
+</div>

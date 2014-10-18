@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get '/signout' => 'sessions#destroy', :as => :signout
   get '/auth/failure' => 'sessions#failure'
 
+  get 'tags', to: 'talks#index'
   get 'tags/:tag', to: 'talks#index', as: :tag
 
   scope ":nickname" do
