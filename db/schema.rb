@@ -13,23 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20141014201648) do
 
-  create_table "comments", force: true do |t|
-    t.integer  "commentable_id"
-    t.string   "commentable_type"
-    t.string   "title"
-    t.text     "body"
-    t.string   "subject"
-    t.integer  "user_id",          null: false
-    t.integer  "parent_id"
-    t.integer  "lft"
-    t.integer  "rgt"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "comments", ["commentable_id", "commentable_type"], name: "index_comments_on_commentable_id_and_commentable_type"
-  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
-
   create_table "follows", force: true do |t|
     t.string   "follower_type"
     t.integer  "follower_id"
@@ -63,7 +46,7 @@ ActiveRecord::Schema.define(version: 20141014201648) do
   add_index "mentions", ["mentionable_id", "mentionable_type"], name: "fk_mentionables"
   add_index "mentions", ["mentioner_id", "mentioner_type"], name: "fk_mentions"
 
-  create_table "speakers", force: true do |t|
+  create_table "profiles", force: true do |t|
     t.string   "nickname"
     t.string   "name"
     t.string   "location"
@@ -116,13 +99,13 @@ ActiveRecord::Schema.define(version: 20141014201648) do
     t.string   "thumbnail_url"
     t.string   "thumbnail_width"
     t.string   "thumbnail_height"
-    t.integer  "speaker_id"
+    t.integer  "profile_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "topic_id"
   end
 
-  add_index "talks", ["speaker_id", "created_at"], name: "index_talks_on_speaker_id_and_created_at"
+  add_index "talks", ["profile_id", "created_at"], name: "index_talks_on_profile_id_and_created_at"
 
   create_table "topics", force: true do |t|
     t.string   "name"

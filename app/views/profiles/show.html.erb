@@ -1,12 +1,12 @@
 <% content_for :title do %>
-<%= @speaker.name %>
+<%= @profile.name %>
 <% end %>
 
 <% content_for :description do %>
-<%= truncate @speaker.description, length: 155 %>
+<%= truncate @profile.description, length: 155 %>
 <% end %>
 
-<div class="dark-bg relative media-cover" style="background-image: url(<%= @speaker.profile_banner_url if @speaker.profile_banner.present? %>)">
+<div class="dark-bg relative media-cover" style="background-image: url(<%= @profile.profile_banner_url if @profile.profile_banner.present? %>)">
   <div class="card__overlay"></div>
   <div class="row">
     <div class="large-10 column column--center">
@@ -15,8 +15,8 @@
     </div>
   </div><!-- row -->
 
-  <% if user_signed_in? and current_user == @speaker and not @speaker.profile_banner.present? %>
-  <%= link_to edit_speaker_path(current_user), :class=> "absolute pin-bottom-right padding-one white" do %>
+  <% if user_signed_in? and current_user == @profile and not @profile.profile_banner.present? %>
+  <%= link_to edit_profile_path(current_user), :class=> "absolute pin-bottom-right padding-one white" do %>
   <small class="border-all padding-right-one padding-left-one padding-top-half padding-bottom-half">
     <span class="iconicstroke-plus margin-right-half"></span>
     Add a header photo
@@ -34,19 +34,19 @@
       <div class="large-8 column">
         <div class="row">
           <div class="large-3 column">
-            <img src="<%= @speaker.image if @speaker.image %>" class="block">
+            <img src="<%= @profile.image if @profile.image %>" class="block">
           </div>
 
           <div class="large-9 column">
             <h3>
-              <%= @speaker.name if @speaker.name %>
+              <%= @profile.name if @profile.name %>
               <small>
-                <a href="<%= @speaker.twitter_url %>" target="_blank">
+                <a href="<%= @profile.twitter_url %>" target="_blank">
                   <img src="/assets/twitter-bird-blue-16x16.png">
                 </a>
               </small>
             </h3>
-            <p><%= @speaker.description if @speaker.description %></p>
+            <p><%= @profile.description if @profile.description %></p>
           </div>
         </div>
       </div>
@@ -54,23 +54,23 @@
       <div class="large-4 column">
 
         <div class="large-3 column text-center padding-top-three">
-          <strong class="block"><%= @speaker.talks.count %></strong>
+          <strong class="block"><%= @profile.talks.count %></strong>
           <small>Talks</small>
         </div>
 
         <div class="large-3 column text-center padding-top-three">
-          <strong class="block"><%= @speaker.followers(Speaker).count %></strong>
+          <strong class="block"><%= @profile.followers(Profile).count %></strong>
           <small>Followers</small>
         </div>
 
         <div class="large-3 column text-center padding-top-three">
-          <strong class="block"><%= @speaker.followees(Speaker).count %></strong>
+          <strong class="block"><%= @profile.followees(Profile).count %></strong>
           <small>Following</small>
         </div>
 
         <div class="large-3 column padding-top-three">
           <div class="text-center">
-            <%= render 'shared/follow_form' , speaker: @speaker %>
+            <%= render 'shared/follow_form' , profile: @profile %>
           </div>
         </div>
 
@@ -87,11 +87,11 @@
   <div class="large-10 column column--center">
     <div class="row">
 
-      <% if @speakerTalks.length == 0 %>
+      <% if @profileTalks.length == 0 %>
       <%= render 'shared/talk_card_placeholders' %>
       <% end %>
 
-      <% if @speakerTalks.length == 0 and user_signed_in? and current_user == @speaker %>
+      <% if @profileTalks.length == 0 and user_signed_in? and current_user == @profile %>
       <div class="large-12 column">
         <div class="margin-top-two margin-bottom-four text-center">
           <%= link_to({:action => 'new', :controller => 'talks'}, {:class => "button button-primary"}) do %>
@@ -101,11 +101,11 @@
       </div>
       <% end %>
 
-      <% if @speakerTalks.length > 0 %>
-      <% @speakerTalks.each do |talk| %>
+      <% if @profileTalks.length > 0 %>
+      <% @profileTalks.each do |talk| %>
       <%= render 'shared/talk_card', :talk => talk %>
       <% end %>
-      <% if user_signed_in? and current_user == @speaker %>
+      <% if user_signed_in? and current_user == @profile %>
       <%= render 'shared/talk_card_add_placeholder' %>
       <% end %>
       <% end %>

@@ -2,12 +2,12 @@ Rails.application.routes.draw do
   resources :topics
 
   resources :talks
-  resources :speakers
+  resources :profiles
 
-  get 'follow' => 'speakers#follow'
-  get 'unfollow' => 'speakers#unfollow'
-  get 'like' => 'speakers#like'
-  get 'unlike' => 'speakers#unlike'
+  get 'follow' => 'profiles#follow'
+  get 'unfollow' => 'profiles#unfollow'
+  get 'like' => 'profiles#like'
+  get 'unlike' => 'profiles#unlike'
   get 'talks/new'
 
   get 'talks/create'
@@ -22,11 +22,11 @@ Rails.application.routes.draw do
   get 'tags/:tag', to: 'talks#index', as: :tag
 
   scope ":nickname" do
-    get '', to: 'speakers#show'
+    get '', to: 'profiles#show'
   end
 
   scope ":nickname/:edit" do
-    get '', to: 'speakers#edit'
+    get '', to: 'profiles#edit'
   end
 
 end

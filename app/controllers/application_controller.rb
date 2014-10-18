@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
   private
     def current_user
       begin
-        @current_user ||= Speaker.find(session[:speaker_id]) if session[:speaker_id]
+        @current_user ||= Profile.find(session[:profile_id]) if session[:profile_id]
       rescue Exception => e
         nil
       end
@@ -33,14 +33,14 @@ class ApplicationController < ActionController::Base
     end
 
     def correct_user?
-      # @speaker = Speaker.friendly.find(params[:id])
-      @speaker = params[:id] ? Speaker.friendly.find(params[:id]) : Speaker.friendly.find(params[:nickname])
-      unless current_user == @speaker
+      # @profile = profile.friendly.find(params[:id])
+      @profile = params[:id] ? Profile.friendly.find(params[:id]) : Profile.friendly.find(params[:nickname])
+      unless current_user == @profile
         redirect_to root_url, :alert => "Access denied."
       end
     end
 
-    def authenticate_speaker!
+    def authenticate_profile!
       if !current_user
         redirect_to root_url, :alert => 'You need to sign in for access to this page.'
       end

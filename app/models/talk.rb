@@ -1,7 +1,7 @@
 require 'acts-as-taggable-on'
 
 class Talk < ActiveRecord::Base
-  belongs_to :speaker
+  belongs_to :profile
   belongs_to :topic
 
   paginates_per 25

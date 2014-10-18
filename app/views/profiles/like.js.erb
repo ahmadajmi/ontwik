@@ -1,2 +1,2 @@
 $('#like_form').html("<%= escape_javascript(render 'shared/unlike', likeable: @likeable) %>")
-$('.likes').html("<%= pluralize(@likeable.likers(Speaker).count, '')%>")
+$('.likes').html("<%= pluralize(@likeable.likers(Profile).count, '')%>")

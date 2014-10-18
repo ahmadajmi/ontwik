@@ -1,0 +1,9 @@
+<div class="column large-2 small-4 margin-bottom-two">
+  <%= link_to profile.nickname, :class=> "block dark-gray", :title => 'Profile' do %>
+  <div class="media-cover flex-embed flex-embed--16by9 margin-bottom-half gray-bg relative" style="background-image: url(<%= profile.image if profile.image %>)">
+  </div>
+  <div class="card-inside gray-bg padding-half text-center">
+    <%= profile.name %>
+  </div>
+  <% end %>
+</div>

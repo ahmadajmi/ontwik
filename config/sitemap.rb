@@ -22,10 +22,10 @@ SitemapGenerator::Sitemap.create do
     add talk_path(talk), :lastmod => talk.updated_at
   end
 
-  # Add Speakers
-  add speakers_path, :priority => 1.0, :changefreq => 'daily'
-  Speaker.find_each do |speaker|
-    add speaker_path(speaker), :lastmod => speaker.updated_at
+  # Add Profiles
+  add profiles_path, :priority => 1.0, :changefreq => 'daily'
+  Profile.find_each do |profiles|
+    add profile_path(profiles), :lastmod => profile.updated_at
   end
 
 end

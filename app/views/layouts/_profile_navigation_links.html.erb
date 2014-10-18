@@ -7,13 +7,13 @@
 </li>
 
 <li class="right">
-  <%= link_to edit_speaker_path(current_user), :class=> "border-left block padding-right-one padding-left-one padding-top-half padding-bottom-half dark-gray", :title => 'Profile Settings' do %>
+  <%= link_to edit_profile_path(current_user), :class=> "border-left block padding-right-one padding-left-one padding-top-half padding-bottom-half dark-gray", :title => 'Profile Settings' do %>
   <span class="iconicstroke-cog"></span>
   <% end %>
 </li>
 
 <li class="right">
-  <%= link_to current_user.nickname, :class=> "block padding-right-one padding-left-one padding-top-half padding-bottom-half dark-gray", :title => 'Profile' do %>
+  <%= link_to current_user, :class=> "block padding-right-one padding-left-one padding-top-half padding-bottom-half dark-gray", :title => 'Profile' do %>
   <span class="iconicstroke-user"></span>
   <% end %>
 </li>

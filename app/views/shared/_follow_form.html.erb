@@ -1,7 +1,7 @@
-<% if user_signed_in? and current_user!= speaker %>
-  <div class="speaker-<%= speaker.id %>">
+<% if user_signed_in? and current_user!= profile %>
+  <div class="profile-<%= profile.id %>">
     <div id="follow_form">
-      <% if current_user.follows?(speaker) %>
+      <% if current_user.follows?(profile) %>
         <%= render 'shared/unfollow' %>
       <% else %>
         <%= render 'shared/follow' %>

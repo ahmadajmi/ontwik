@@ -6,10 +6,10 @@ class SessionsController < ApplicationController
 
   def create
     auth = request.env["omniauth.auth"]
-    speaker = Speaker.where(:provider => auth['provider'],
-                      :uid => auth['uid'].to_s).first || Speaker.create_with_omniauth(auth)
+    profile = Profile.where(:provider => auth['provider'],
+                      :uid => auth['uid'].to_s).first || Profile.create_with_omniauth(auth)
     reset_session
-    session[:speaker_id] = speaker.id
+    session[:profile_id] = profile.id
     redirect_to current_user, :notice => 'Signed in!'
   end
 

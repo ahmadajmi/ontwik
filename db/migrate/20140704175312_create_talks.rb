@@ -21,12 +21,12 @@ class CreateTalks < ActiveRecord::Migration
       t.string :thumbnail_width
       t.string :thumbnail_height
 
-      t.integer :speaker_id
+      t.integer :profile_id
 
       t.timestamps
     end
 
-    add_index :talks, [:speaker_id, :created_at]
+    add_index :talks, [:profile_id, :created_at]
 
   end
 end
