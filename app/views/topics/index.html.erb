@@ -9,7 +9,7 @@ Topics
 
  <% @topics.each do |topic| %>
  <div class="large-3 column">
- <%= link_to topic, :class=> "block border-all padding-one margin-bottom-two dark-gray" do %>
+ <%= link_to topic, :class=> "block border-all padding-one margin-bottom-two" do %>
    <%= topic.name %>
    <span class="right" title="<%= pluralize(topic.talks.length, 'talk') %>"><%= topic.talks.length %></span>
    <% end %>

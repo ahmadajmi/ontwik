@@ -21,12 +21,12 @@ Rails.application.routes.draw do
   get 'tags', to: 'talks#index'
   get 'tags/:tag', to: 'talks#index', as: :tag
 
-  scope ":nickname" do
-    get '', to: 'profiles#show'
-  end
+  # scope ":nickname" do
+  #   get '', to: 'profiles#show'
+  # end
 
-  scope ":nickname/:edit" do
-    get '', to: 'profiles#edit'
-  end
+  # scope ":nickname/:edit" do
+  #   get '', to: 'profiles#edit'
+  # end
 
 end

@@ -17,7 +17,7 @@
 
   <% if user_signed_in? and current_user == @profile and not @profile.profile_banner.present? %>
   <%= link_to edit_profile_path(current_user), :class=> "absolute pin-bottom-right padding-one white" do %>
-  <small class="border-all padding-right-one padding-left-one padding-top-half padding-bottom-half">
+  <small class="border-all padding-right-one padding-left-one padding-top-half padding-bottom-half inline-block">
     <span class="iconicstroke-plus margin-right-half"></span>
     Add a header photo
   </small>
