@@ -1,6 +1,6 @@
 class TalksController < ApplicationController
 
-  # before_filter :correct_user?, :only => :edit
+  before_action :authenticate_profile!, only: [:new, :create, :edit, :update, :destroy]
 
   require 'net/http'
   require 'json'
@@ -87,7 +87,6 @@ class TalksController < ApplicationController
     unless current_user == @profile
       redirect_to root_url, :alert => "Access denied."
     end
-
   end
 
   def update
