@@ -22,7 +22,7 @@ Topics
           <h3 class="margin-top-none margin-bottom-one regular"><%= @topic.name %></h3>
         </div>
         <% @talks.each do |talk| %>
-        <%= render 'shared/talk_card', :talk => talk %>
+        <%= render 'shared/talk_card', :talk => talk, classes: "large-4" %>
         <% end %>
       </div>
       <%= render 'shared/pagination' %>

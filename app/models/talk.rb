@@ -4,6 +4,8 @@ class Talk < ActiveRecord::Base
   belongs_to :profile
   belongs_to :topic
 
+  is_impressionable counter_cache: true, column_name: :view_count, unique: :all
+
   paginates_per 25
 
   validates :url, :uniqueness => { :message => "is already used before." }, :on => :create

@@ -34,7 +34,7 @@ Talks
         <% end %>
 
         <% @talks.each do |talk| %>
-        <%= render 'shared/talk_card', :talk => talk %>
+        <%= render 'shared/talk_card', :talk => talk, classes: "large-4" %>
         <% end %>
       </div>
       <% unless params[:search] %>

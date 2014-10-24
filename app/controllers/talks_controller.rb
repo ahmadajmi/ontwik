@@ -2,11 +2,14 @@ class TalksController < ApplicationController
 
   before_action :authenticate_profile!, only: [:new, :create, :edit, :update, :destroy]
 
+  impressionist actions: [:show], unique: [:session_hash]
+
   require 'net/http'
   require 'json'
 
   def home
     @talks = Talk.order('created_at DESC').all.page params[:page]
+    @featured = Talk.order('view_count DESC').limit(3)
   end
 
   def index

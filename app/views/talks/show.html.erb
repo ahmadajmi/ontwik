@@ -58,14 +58,22 @@
 
                 <% end %>
 
-                <span class="likes padding-top-quarter padding-bottom-quarter padding-right-one padding-left-one white-bg border-right border-top border-bottom left">
+                <span class="likes padding-top-quarter padding-bottom-quarter padding-right-one padding-left-one white-bg border-right border-top border-bottom left small dark-gray">
                   <%= pluralize(@talk.likers(Profile).count, '')%>
                 </span>
                 <!-- End Like Button -->
 
+                <span class="padding-top-quarter padding-bottom-quarter padding-right-one padding-left-one white-bg border-all small margin-left-half left iconicstroke-eye dark-gray">
+                  <%= @talk.impressionist_count %>
+                </span>
+
+
+
                 <a href="http://twitter.com/share?url=<%= request.original_url %>&text=<%= @talk.title %> By @<%= @talk.profile.nickname %>" target="_blank" class="button button-icon button-info right" title="Share on Twitter">
                   <img src="/assets/twitter-bird-white-16x16.png">
                 </a>
+
+
               </div>
             </div>
 
@@ -130,7 +138,7 @@
       <div class="row">
         <% Talk.tagged_with([@talk.tag_list]).each do |talk| %>
         <% if talk.id != @talk.id %>
-        <%= render 'shared/talk_card', :talk => talk %>
+        <%= render 'shared/talk_card', :talk => talk, classes: "large-4" %>
         <% end %>
         <% end %>
       </div>

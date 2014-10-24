@@ -29,6 +29,7 @@ gem 'autosize-rails'
 gem 'turbolinks'
 gem 'jquery-turbolinks'
 gem 'kaminari'
+gem 'impressionist'
 
 gem 'friendly_id', '~> 5.0.0'
 

@@ -1,11 +1,31 @@
 <% unless user_signed_in? %>
-  <%= render 'shared/hero' %>
+<%= render 'shared/hero' %>
 <% end %>
+
+<div class="row hide">
+  <div class="large-12 column">
+    <h4>Featured</h4>
+  </div>
+</div>
+
+<div class="margin-top-one padding-bottom-one">
+  <div class="row">
+    <% @featured.each do |talk| %>
+    <%= render 'shared/talk_card', :talk => talk, classes: "large-4" %>
+    <% end %>
+  </div>
+</div>
+
+<div class="row hide">
+  <div class="large-12 column">
+    <h4>Latest</h4>
+  </div>
+</div>
 
 <div class="margin-top-one padding-bottom-one">
   <div class="row">
     <% @talks.each do |talk| %>
-    <%= render 'shared/talk_card', :talk => talk %>
+    <%= render 'shared/talk_card', :talk => talk, classes: "large-3" %>
     <% end %>
   </div>
 </div>

@@ -91,7 +91,11 @@ GEM
     hashie (2.1.2)
     high_voltage (2.2.0)
     hike (1.2.3)
+    httpclient (2.5.1)
     i18n (0.6.9)
+    impressionist (1.5.1)
+      httpclient (~> 2.2)
+      nokogiri (~> 1.5)
     inflecto (0.0.2)
     ipaddress (0.8.0)
     jbuilder (2.1.1)
@@ -227,6 +231,7 @@ DEPENDENCIES
   fog
   friendly_id (~> 5.0.0)
   high_voltage
+  impressionist
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks

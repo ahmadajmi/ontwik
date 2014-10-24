@@ -23,6 +23,8 @@ class CreateTalks < ActiveRecord::Migration
 
       t.integer :profile_id
 
+      t.integer :view_count, default: 0
+
       t.timestamps
     end
 
