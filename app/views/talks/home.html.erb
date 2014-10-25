@@ -8,7 +8,7 @@
   </div>
 </div>
 
-<div class="margin-top-one padding-bottom-one">
+<div class="margin-top-one padding-bottom-one hide">
   <div class="row">
     <% @featured.each do |talk| %>
     <%= render 'shared/talk_card', :talk => talk, classes: "large-4" %>
@@ -25,7 +25,7 @@
 <div class="margin-top-one padding-bottom-one">
   <div class="row">
     <% @talks.each do |talk| %>
-    <%= render 'shared/talk_card', :talk => talk, classes: "large-3" %>
+    <%= render 'shared/talk_card', :talk => talk, classes: "large-4" %>
     <% end %>
   </div>
 </div>
