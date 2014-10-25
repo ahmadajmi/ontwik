@@ -121,6 +121,7 @@ GEM
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.1)
+    newrelic_rpm (3.9.6.257)
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
     oauth (0.4.7)
@@ -236,6 +237,7 @@ DEPENDENCIES
   jquery-rails
   jquery-turbolinks
   kaminari
+  newrelic_rpm
   omniauth
   omniauth-twitter
   pg

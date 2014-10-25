@@ -20,7 +20,6 @@ gem "fog"
 # Front-end
 gem 'bower-rails'
 gem 'bootstrap-sass', '~> 3.2.0'
-# gem "twitter-bootstrap-rails"
 gem 'sass-rails', '~> 4.0.3'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
@@ -39,11 +38,10 @@ gem 'redcarpet'
 # Stntax hilight
 gem 'pygments.rb', '~> 0.6.0'
 
-# For making assets working on deployment
-gem 'rails_12factor', group: :production
-
 # SEO
 gem 'sitemap_generator'
+
+gem 'newrelic_rpm'
 
 group :development do
   gem 'sqlite3'
@@ -56,4 +54,5 @@ end
 
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
 end
