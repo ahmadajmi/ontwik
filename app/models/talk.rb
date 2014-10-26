@@ -4,6 +4,8 @@ class Talk < ActiveRecord::Base
   belongs_to :profile
   belongs_to :topic
 
+  include PublicActivity::Common
+
   is_impressionable counter_cache: true, column_name: :view_count, unique: :all
 
   paginates_per 25
