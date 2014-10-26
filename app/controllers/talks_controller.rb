@@ -10,6 +10,8 @@ class TalksController < ApplicationController
   def home
     @talks = Talk.order('created_at DESC').all.page params[:page]
     @featured = Talk.order('view_count DESC').limit(3)
+    followees_ids = current_user.followees(Profile)
+    @activities = PublicActivity::Activity.where(owner_id: followees_ids, owner_type: "Profile").order('created_at DESC')
   end
 
   def index
@@ -71,6 +73,7 @@ class TalksController < ApplicationController
     @talk.profile_id = current_user.id
 
     if @talk.save
+      @talk.create_activity :create, owner: current_user
       flash[:notice] = "You just published a new talk. Thanks!"
       redirect_to @talk
     else
