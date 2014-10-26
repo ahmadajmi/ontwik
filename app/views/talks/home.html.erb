@@ -1,6 +1,6 @@
 <div class="row">
   <div class="large-12 column">
-    <% if user_signed_in? %>
+    <% if user_signed_in? and @activities %>
     <% @activities.each do |activity| %>
     <div>
       <strong><%= link_to activity.owner.name, activity.owner if activity.owner %></strong>
