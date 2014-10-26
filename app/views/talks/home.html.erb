@@ -1,3 +1,16 @@
+<div class="row">
+  <div class="large-12 column">
+    <% if user_signed_in? %>
+    <% @activities.each do |activity| %>
+    <div>
+      <strong><%= link_to activity.owner.name, activity.owner if activity.owner %></strong>
+      <%= render_activity activity %>
+    </div>
+    <% end %>
+    <% end %>
+  </div>
+</div>
+
 <% unless user_signed_in? %>
 <%= render 'shared/hero' %>
 <% end %>
