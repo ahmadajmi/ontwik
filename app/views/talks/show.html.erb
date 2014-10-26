@@ -64,15 +64,12 @@
                 <!-- End Like Button -->
 
                 <span class="padding-top-quarter padding-bottom-quarter padding-right-one padding-left-one white-bg border-all small margin-left-half left iconicstroke-eye dark-gray">
-                  <%= @talk.impressionist_count %>
+                  <span class="padding-left-quarter"><%= @talk.impressionist_count %></span>
                 </span>
-
-
 
                 <a href="http://twitter.com/share?url=<%= request.original_url %>&text=<%= @talk.title %> By @<%= @talk.profile.nickname %>" target="_blank" class="button button-icon button-info right" title="Share on Twitter">
                   <img src="/assets/twitter-bird-white-16x16.png">
                 </a>
-
 
               </div>
             </div>
