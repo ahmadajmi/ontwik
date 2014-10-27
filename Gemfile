@@ -13,7 +13,7 @@ gem 'thin'
 gem 'acts-as-taggable-on'
 gem "socialization"
 gem 'carrierwave'
-gem 'public_activity'
+gem 'public_activity', git: 'https://github.com/pokonski/public_activity.git'
 
 # Fog is used to support Amazon S3
 gem "fog"
