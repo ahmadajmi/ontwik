@@ -1,18 +1,16 @@
-<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
+<div class="modal fade login-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
     <div class="modal-content">
 
-      <div class="modal-header gray-bg">
-        <button type="button" class="close" data-dismiss="modal">
-          <span aria-hidden="true">&times;</span>
-          <span class="sr-only hide">Close</span>
-        </button>
-        <h4 class="modal-title text-center" id="myModalLabel">Login</h4>
-      </div>
+      <button type="button" class="close" data-dismiss="modal">
+        <span aria-hidden="true">&times;</span>
+        <span class="sr-only hide">Close</span>
+      </button>
 
       <div class="modal-body text-center">
-        <p>To like this talk, you need to log in.</p>
-        <%= link_to 'Login with Twitter', '/signin', :class => 'button button-info' %>
+        <h3>You need to be logged in to do that.</h3>
+        <p class='dark-gray'>Connect now using</p>
+        <%= link_to 'Twitter', '/signin', :class => 'button button-info' %>
       </div>
 
     </div>

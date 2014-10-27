@@ -30,7 +30,11 @@
 @import 'bootstrap/mixins';
 @import 'bootstrap/modals';
 
+
 /* iconicstroke */
 [class*="iconicstroke-"]:before {
   font-family: 'IconicStroke', sans-serif;
 }
+
+
+@import 'overides';

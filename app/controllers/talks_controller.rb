@@ -10,8 +10,10 @@ class TalksController < ApplicationController
   def home
     @talks = Talk.order('created_at DESC').all.page params[:page]
     @featured = Talk.order('view_count DESC').limit(3)
-    followees_ids = current_user.followees(Profile)
-    @activities = PublicActivity::Activity.where(owner_id: followees_ids, owner_type: "Profile").order('created_at DESC')
+    if user_signed_in?
+      followees_ids = current_user.followees(Profile)
+      @activities = PublicActivity::Activity.where(owner_id: followees_ids, owner_type: "Profile").order('created_at DESC')
+    end
   end
 
   def index

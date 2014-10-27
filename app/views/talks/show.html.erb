@@ -6,7 +6,7 @@
 <%= truncate @talk.description, length: 155 %>
 <% end %>
 
-<div class="black-bg">
+<div class="dark-bg">
   <div class="row">
     <div class="large-10 column column--center">
       <div class="flex-embed flex-embed--16by9">
@@ -14,6 +14,14 @@
         <%= @talk.html.html_safe %>
         <% end %>
       </div>
+    </div>
+  </div>
+</div>
+
+<div class="dark-bg hide">
+  <div class="row">
+    <div class="large-10 column column--center white">
+      <h3 class="mt0"><%= @talk.title %></h3>
     </div>
   </div>
 </div>
@@ -50,7 +58,7 @@
                 <%= render 'shared/like_form', likeable: @talk %>
                 <% else %>
 
-                <%= link_to '', :class=> "button button-icon left", :'data-toggle'=>"modal", :'data-target'=>".bs-example-modal-sm", :title => "Like" do %>
+                <%= link_to '', :class=> "button button-icon left", :'data-toggle'=>"modal", :'data-target'=>".login-modal", :title => "Like" do %>
                 <span class="iconicstroke-heart-stroke"></span>
                 <% end %>
 
