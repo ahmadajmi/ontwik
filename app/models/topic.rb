@@ -3,4 +3,6 @@ class Topic < ActiveRecord::Base
   friendly_id :name
 
   has_many :talks
+
+  validates :name, :uniqueness => { :message => "is already used before." }, :on => :create
 end

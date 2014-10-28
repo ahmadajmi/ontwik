@@ -18,6 +18,10 @@ gem 'public_activity', git: 'https://github.com/pokonski/public_activity.git'
 # Fog is used to support Amazon S3
 gem "fog"
 
+# dump (parts) of your database to db/seeds.rb
+# rake db:seed:dump
+gem 'seed_dump'
+
 # Front-end
 gem 'bower-rails'
 gem 'bootstrap-sass', '~> 3.2.0'
