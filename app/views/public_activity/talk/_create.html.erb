@@ -1,5 +1,32 @@
+<div class="hide">
+  <% if activity.trackable %>
+  <%= link_to activity.trackable.title, activity.trackable %>
+  <% else %>
+  which has since been removed
+  <% end %>
+</div>
+
+
 <% if activity.trackable %>
-<%= link_to activity.trackable.title, activity.trackable %>
+<div class="column large-3 margin-bottom-two">
+  <%= link_to activity.trackable, :class=> "ell block talk-preview" do %>
+  <div class="media-cover flex-embed flex-embed--16by9 margin-bottom-half" style="background-image: url(<%= activity.trackable.thumbnail_url %>)">
+  </div>
+  <div class="card-inside">
+    <div class="left margin-right-half">
+      <%= link_to activity.owner, :title => activity.owner.name, :class=> "ell block" do %>
+      <img class="left radius-half" src="<%= activity.owner.image %>" alt="<%= activity.owner.name %>" style="height:24px;height:24px;">
+      <% end %>
+    </div>
+    <h3>
+      <%= link_to activity.trackable, :class=> "ell block" do %>
+      <%= activity.trackable.title %>
+      <% end %>
+    </h3>
+  </div>
+  <% end %>
+</div>
+
 <% else %>
 which has since been removed
 <% end %>

@@ -1,23 +1,25 @@
-<div class="row">
-  <div class="large-12 column">
-    <% if user_signed_in? and @activities %>
-    <% @activities.each do |activity| %>
-    <div>
-      <strong><%= link_to activity.owner.name, activity.owner if activity.owner %></strong>
-      <%= render_activity activity %>
-    </div>
-    <% end %>
-    <% end %>
-  </div>
-</div>
-
 <% unless user_signed_in? %>
 <%= render 'shared/hero' %>
 <% end %>
 
+<div class="row">
+  <div class="large-12 column">
+    <% if user_signed_in? and @activities.length > 0 %>
+    <h5>Feed - <span class="dark-gray">People you follow</span></h4>
+    <div class="row">
+      <% @activities.each do |activity| %>
+      <%= render_activity activity %>
+      <% end %>
+
+    </div>
+    <div class="border-bottom"></div>
+    <% end %>
+  </div>
+</div>
+
 <div class="row hide">
   <div class="large-12 column">
-    <h4>Featured</h4>
+    <h5>Featured</h5>
   </div>
 </div>
 
@@ -29,9 +31,9 @@
   </div>
 </div>
 
-<div class="row hide">
+<div class="row">
   <div class="large-12 column">
-    <h4>Latest</h4>
+    <h5 class="margin-bottom-none margin-top-one">Latest</h5>
   </div>
 </div>
 
