@@ -7,13 +7,13 @@ body {
 }
 
 a {
-  color: #2fc2ef;
+  color: #323232;
   text-decoration: none;
   transition: color 0.2s ease 0s;
 }
 
 a:hover:not(.button):not([class*="button-"]) {
-  color: #555;
+  color: #537d9d;
 }
 
 a:active,
