@@ -74,6 +74,11 @@
   bottom: 0;
 }
 
+.pin-top-right {
+  right: 0;
+  top: 0;
+}
+
 .pin-right {
   right: 0;
   top: 0;
@@ -307,7 +312,7 @@
 
 .padding-none           { padding: 0; }
 .padding-quarter        { padding: quarter($base-space-unit); }
-.padding-half          { padding: half($base-space-unit); }
+.padding-half           { padding: half($base-space-unit); }
 .padding-one            { padding: $base-space-unit; }
 .padding-two            { padding: double($base-space-unit); }
 .padding-three          { padding: threefold($base-space-unit); }

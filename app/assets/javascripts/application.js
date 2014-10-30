@@ -25,4 +25,27 @@ $(function(){
       $(this).closest('.alert').fadeOut();
     }
   });
+
+  // Add counter to the profile edit page bio
+  $('.profile-bio').keyup(function() {
+    var bio_length = $(this).val().length,
+        bio_limit = 140,
+        remainder = bio_limit - bio_length;
+
+    if (remainder < 10) {
+      console.log(remainder);
+      $('.profile-bio-count').addClass('notice');
+    } else {
+      $('.profile-bio-count').removeClass('notice');
+    }
+
+    if (remainder === 0) {
+      $('.profile-bio-count').addClass('danger');
+    } else {
+     $('.profile-bio-count').removeClass('danger');
+   }
+
+   $('.profile-bio-count').text(remainder);
+ });
+
 });

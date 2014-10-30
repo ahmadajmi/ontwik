@@ -38,7 +38,7 @@
           </div>
 
           <div class="large-9 column">
-            <h3>
+            <h3 class="margin-bottom-one">
               <%= @profile.name if @profile.name %>
               <small>
                 <a href="<%= @profile.twitter_url %>" target="_blank">
@@ -46,7 +46,7 @@
                 </a>
               </small>
             </h3>
-            <p><%= @profile.description if @profile.description %></p>
+            <p class="margin-none"><%= @profile.description if @profile.description %></p>
           </div>
         </div>
       </div>

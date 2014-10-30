@@ -46,9 +46,10 @@ Edit Profile
               </div>
             </div>
 
-            <div class="form-group">
+            <div class="form-group relative">
               <%= f.label :description, :class => 'hide'%>
-              <%= f.text_area :description, :class=>'form-control', :placeholder => "Bio" %>
+              <%= f.text_area :description, :class=>'form-control profile-bio', :placeholder => "Your Bio", :maxlength => '140' %>
+              <span class="profile-bio-count absolute pin-top-right small padding-right-quarter dark-gray"></span>
             </div>
 
             <%= f.submit "Update Profile",  class:'button button-primary'%>
