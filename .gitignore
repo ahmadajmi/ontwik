@@ -79,3 +79,5 @@ pickle-email-*.html
 
 # carrierwave uploads
 /public/uploads
+
+.json

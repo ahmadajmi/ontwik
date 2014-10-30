@@ -1,5 +1,7 @@
 class TalksController < ApplicationController
 
+  require 'cgi'
+
   before_action :authenticate_profile!, only: [:new, :create, :edit, :update, :destroy]
 
   impressionist actions: [:show], unique: [:session_hash]
@@ -36,7 +38,8 @@ class TalksController < ApplicationController
   end
 
   def create
-    req_url = URI.parse('http://api.embed.ly/1/oembed?key=a7716080853c4d6d945624885ceb9ab9&url=' + params[:talk][:url].to_s)
+    url_encoded = CGI.escape(params[:talk][:url])
+    req_url = URI.parse('http://api.embed.ly/1/oembed?key=a7716080853c4d6d945624885ceb9ab9&url=' + url_encoded)
     req = Net::HTTP::Get.new(req_url.to_s)
     res = Net::HTTP.start(req_url.host, req_url.port) {|http|
         http.request(req)
