@@ -1,13 +1,12 @@
 class TalksController < ApplicationController
 
+  require 'net/http'
+  require 'json'
   require 'cgi'
 
   before_action :authenticate_profile!, only: [:new, :create, :edit, :update, :destroy]
 
   impressionist actions: [:show], unique: [:session_hash]
-
-  require 'net/http'
-  require 'json'
 
   def home
     @talks = Talk.order('created_at DESC').all.page params[:page]
