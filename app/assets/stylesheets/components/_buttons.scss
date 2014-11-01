@@ -4,10 +4,10 @@
   border: medium none;
   display: inline-block;
   font-size: 0.875rem;
-  height: 42px;
-  line-height: 40px;
+  // height: 42px;
+  // line-height: 40px;
   outline: medium none;
-  padding: 0 24px;
+  padding: 1em 2em;
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -54,7 +54,7 @@
 
 .button-info {
   color: #fff;
-  background-color: #4fc1e9;
+  background-color: #00c0f0;
 
   &:hover {
     background-color: #5fccf3;
@@ -72,35 +72,10 @@
   }
 }
 
-// -- Bootstrap Modal close icon
-
-.close {
-  color: #000;
-  float: right;
-  font-size: 21px;
-  font-weight: 700;
-  line-height: 1;
-  text-shadow: 0 1px 0 #fff;
-}
-
-button.close {
-  background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
-  border: 0 none;
-  cursor: pointer;
-  padding: 0;
-}
-
-.modal .close {
-  position: absolute;
-  right: .5em;
-  top: .5em;
-  z-index: 100;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  cursor: pointer;
-  opacity: 0.5;
-  text-decoration: none;
+.button-twitter {
+  font-size: 1em;
+  padding: 1em 4em;
+  background-position: calc(100% - 16px) center;
+  background-repeat: no-repeat;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw%2FeHBhY2tldCBiZWdpbj0i77u%2FIiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8%2BIDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozOUY3REVFMkFCNUExMUUzQjVGMEMxMURBNjdBN0JGNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozOUY3REVFM0FCNUExMUUzQjVGMEMxMURBNjdBN0JGNiI%2BIDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjM5RjdERUUwQUI1QTExRTNCNUYwQzExREE2N0E3QkY2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjM5RjdERUUxQUI1QTExRTNCNUYwQzExREE2N0E3QkY2Ii8%2BIDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY%2BIDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8%2B%2B6QyTAAAAXBJREFUeNrslrtKA0EUQDMSBQniD4iFIBICNmKhtWIv6AcoooUfkPyAYGsXLGNjpSLYWCmIiGBlnTTaicEukpjxDEyxrGTn7u6AW8yFw13YuzOHea7SWpeKFGOlgkUQCkJBKAgVXkgpZVLZZBfEIrTgBW5hx%2FRh363DhNPIXB1J2Jpj2Ha0swHf%2Bm88QBuaov6EQo%2FwA4cjZMrwrkfHF5zBqi%2Bh%2B0jjN1CNCS3r5BjArs8RasQ6GFqxPajBmkPoQrxEhEJL8KyzR1MqJN32J1DLsZvffJ9D5zCZQ%2BhOXCmcMrOLLjNOVxfGvU4ZB9uA1IBr02bK0Tnl%2B760WLn%2Bqe0pa%2BznSK8pp%2B4TFmjjIzpCXu4yGm2TtqCbQuggKuNtDcXqp%2BFIsHbqmfqTCvE8Ze8rcwX0E0R6sJ95AFwFMA8tezonxdDuxGqeGUmzqGdIm7ACs1CBHnTgCa6o7UiWSK5dFv4Yg1AQCkJB6J%2FjV4ABAKp7wL59yekoAAAAAElFTkSuQmCC);
 }

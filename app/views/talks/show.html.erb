@@ -66,9 +66,17 @@
 
                 <% end %>
 
-                <span class="likes padding-top-quarter padding-bottom-quarter padding-right-one padding-left-one white-bg border-right border-top border-bottom left small dark-gray">
+                <span class="likes padding-top-quarter padding-bottom-quarter padding-right-one padding-left-one white-bg border-right border-top border-bottom left small">
+                  <% if @talk.likers(Profile).count > 0 %>
+                  <%= link_to '', :class=> "", :'data-toggle'=>"modal", :'data-target'=>".likers-modal", :title => "Likers" do %>
                   <%= pluralize(@talk.likers(Profile).count, '')%>
+                  <% end %>
+                  <%= render 'shared/likers_modal', :likers => @likers %>
+                  <% else %>
+                  <%= pluralize(@talk.likers(Profile).count, '')%>
+                  <% end %>
                 </span>
+
                 <!-- End Like Button -->
 
                 <span class="padding-top-quarter padding-bottom-quarter padding-right-one padding-left-one white-bg border-all small margin-left-half left iconicstroke-eye dark-gray">
@@ -95,11 +103,6 @@
 
           </div><!-- row -->
 
-          <div class="hide">
-            <% @likers.each do |profile|%>
-            <%= link_to profile.name, profile %>
-            <% end %>
-          </div>
 
           <%= link_to @talk.topic, :class=> "block gray-bg flag padding-one margin-bottom-one" do %>
           <%= @talk.topic.name %>
