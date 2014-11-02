@@ -32,7 +32,7 @@ New Talk
             <div class="row">
               <div class="large-6 column">
                 <div class="form-group">
-                  <%= f.collection_select :topic_id, Topic.all, :id, :name, {}, {:class => 'form-control'} %>
+                  <%= f.collection_select :topic_id, Topic.all, :id, :name, {prompt: "Choose category"}, {:class => 'form-control', :required => 'true'} %>
                 </div>
               </div>
               <div class="large-6 column">

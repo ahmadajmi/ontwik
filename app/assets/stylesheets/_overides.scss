@@ -22,7 +22,6 @@
 // -- Bootstrap Modal close icon
 
 .close {
-  color: #000;
   float: right;
   font-size: 21px;
   font-weight: 700;
@@ -31,7 +30,8 @@
 }
 
 button.close {
-  background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+  color: #000;
+  background-color: rgba(0, 0, 0, 0);
   border: 0 none;
   cursor: pointer;
   padding: 0;

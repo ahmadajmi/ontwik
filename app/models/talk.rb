@@ -11,8 +11,8 @@ class Talk < ActiveRecord::Base
   paginates_per 25
 
   validates :url, :uniqueness => { :message => "is already used before." }, :on => :create
-  validates :url, :tag_list, :presence => true, :on => :create
-  validates :title, :tag_list, :presence => true, :on => :update
+  validates :url, :topic_id, :tag_list, :presence => true, :on => :create
+  validates :title, :topic_id, :tag_list, :presence => true, :on => :update
 
   acts_as_taggable
   acts_as_likeable

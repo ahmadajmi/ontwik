@@ -34,7 +34,7 @@ Edit - <%= @talk.title %>
                   <div class="large-6 column">
                     <div class="form-group">
                       <%= f.label :tag_list, :class=> "hide" %>
-                      <%= f.collection_select :topic_id, Topic.all, :id, :name, {}, {:class => 'form-control'} %>
+                      <%= f.collection_select :topic_id, Topic.all, :id, :name, {prompt: "Choose category"}, {:class => 'form-control', :required => 'true'} %>
                     </div>
                   </div>
                   <div class="large-6 column">
@@ -49,15 +49,17 @@ Edit - <%= @talk.title %>
 
             <div class="form-group">
               <%= f.label :description, :class=> "hide" %>
-              <%= f.text_area :description, :autofocus => true, :placeholder => 'Description', :class=>'form-control', :hatch => true %>
-              <small class="dark-gray right">Markdown and syntax highlight are supported.</small>
+              <%= f.text_area :description, :autofocus => true, :placeholder => 'Description', :class=>'form-control margin-bottom-none', :hatch => true %>
+            </div>
+
+            <div class="margin-bottom-one text-right">
+              <small class="dark-gray">Markdown and syntax highlight are supported.</small>
             </div>
 
             <div class="form-group">
               <%= f.submit "Update", class:'button button-primary'%>
+              <%= link_to 'Delete', talk_path(@talk), method: :delete, data: { confirm: 'Are you sure you want to delete this talk?' }, :class => "button button-small right" %>
             </div>
-
-            <%= link_to 'Delete', talk_path(@talk), method: :delete, data: { confirm: 'Are you sure you want to delete this talk?' }, :class => "button hide" %>
 
             <% end %>
           </div>

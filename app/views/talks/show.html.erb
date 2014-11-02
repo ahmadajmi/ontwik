@@ -92,9 +92,6 @@
 
             <% if @talk.profile == current_user %>
             <div class="large-12 medium-6 small-6 column margin-bottom-one">
-              <%= link_to talk_path(@talk), method: :delete, data: { confirm: 'Are you sure you want to delete this talk?' }, :class=> "button button-icon", :title => "Delete" do %>
-              <span class="iconicstroke-x"></span>
-              <% end %>
               <%= link_to edit_talk_path(@talk), :class=> "button button-icon", :title => "Edit" do %>
               <span class="iconicstroke-pen-alt2"></span>
               <% end %>
