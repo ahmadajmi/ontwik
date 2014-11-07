@@ -149,6 +149,19 @@
   @extend .no-bullets;
 }
 
+//
+// On Hover
+//
+
+.on-hover:hover  .on-hover-inner {
+  display: block;
+
+}
+
+.on-hover-inner {
+
+}
+
 
 //
 // Color

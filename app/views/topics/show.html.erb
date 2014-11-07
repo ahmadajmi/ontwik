@@ -8,10 +8,12 @@ Topics
     <div class="large-2 column">
       <ul class="list-bare">
         <% @topics.each do |topic| %>
-        <%= link_to topic.name, :class=> "small border-bottom padding-top-half padding-bottom-half block dark-gray" do %>
-        <%= topic.name %>
-        <span class="right"><%= topic.talks.length %></span>
-        <% end %>
+        <li>
+          <%= link_to topic.name, :class=> "small border-bottom padding-top-half padding-bottom-half block dark-gray" do %>
+          <%= topic.name %>
+          <span class="right"><%= topic.talks.length %></span>
+          <% end %>
+        </li>
         <% end %>
       </ul>
     </div>

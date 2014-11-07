@@ -1,0 +1,41 @@
+<% if user_signed_in? %>
+
+<li class="right">
+  <%= link_to '/signout', :class=> "border-right border-left inline-block padding-right-one padding-left-one padding-top-half padding-bottom-half dark-gray", :title => 'Logout' do %>
+  <span class="iconicstroke-arrow-right"></span>
+  <% end %>
+</li>
+
+<li class="right">
+  <%= link_to edit_profile_path(current_user), :class=> "border-left block padding-right-one padding-left-one padding-top-half padding-bottom-half dark-gray", :title => 'Profile Settings' do %>
+  <span class="iconicstroke-cog"></span>
+  <% end %>
+</li>
+
+<li class="right">
+  <%= link_to current_user, :class=> "block padding-right-one padding-left-one padding-top-half padding-bottom-half dark-gray", :title => 'Profile' do %>
+  <span class="iconicstroke-user"></span>
+  <% end %>
+</li>
+
+<li class="right">
+  <%= link_to({:action => 'new', :controller => 'talks'}, {:class => "border-right border-left block padding-right-one padding-left-one padding-top-half padding-bottom-half dark-gray", :title => 'Add new talk'}) do %>
+  <span class="iconicstroke-plus"></span>
+  <% end %>
+</li>
+
+<% else %>
+
+<li class="right">
+  <%= link_to 'Sign in', '/signin', :class => 'border-right border-left dark-gray padding-top-half inline-block block padding-right-one padding-left-one padding-top-half padding-bottom-half dark-gray' %>
+</li>
+
+<li class="right relative on-hover">
+  <%= link_to({:action => 'new', :controller => 'talks'}, {:class => "border-left block padding-right-one padding-left-one padding-top-half padding-bottom-half dark-gray", :title => 'Add new talk'}) do %>
+  <span class="iconicstroke-list"></span>
+  <% end %>
+  <ul class="absolute list-bare zindex-2 white-bg padding-top-one padding-right-two padding-bottom-one padding-left-two text-left border-top topics-menu on-hover-inner hide">
+    <%= render 'shared/topics_list' %>
+  </ul>
+</li>
+<% end %>

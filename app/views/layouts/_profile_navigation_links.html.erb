@@ -1,33 +1,20 @@
+
 <% if user_signed_in? %>
 
-<li class="right">
-  <%= link_to '/signout', :class=> "border-right border-left inline-block padding-right-one padding-left-one padding-top-half padding-bottom-half dark-gray", :title => 'Logout' do %>
-  <span class="iconicstroke-arrow-right"></span>
-  <% end %>
+<li>
+	<%=link_to "Add", :controller => :videos, :action => :new %>
 </li>
 
-<li class="right">
-  <%= link_to edit_profile_path(current_user), :class=> "border-left block padding-right-one padding-left-one padding-top-half padding-bottom-half dark-gray", :title => 'Profile Settings' do %>
-  <span class="iconicstroke-cog"></span>
-  <% end %>
+<li>
+	<%= link_to current_user.name, current_user %>		
 </li>
 
-<li class="right">
-  <%= link_to current_user, :class=> "block padding-right-one padding-left-one padding-top-half padding-bottom-half dark-gray", :title => 'Profile' do %>
-  <span class="iconicstroke-user"></span>
-  <% end %>
-</li>
-
-<li class="right">
-  <%= link_to({:action => 'new', :controller => 'talks'}, {:class => "border-right border-left block padding-right-one padding-left-one padding-top-half padding-bottom-half dark-gray", :title => 'Add new talk'}) do %>
-  <span class="iconicstroke-plus"></span>
-  <% end %>
-</li>
+<li><%= link_to 'Signout', '/signout' %></li>
 
 <% else %>
 
-<li class="">
-<%= link_to 'Sign in', '/signin', :class => 'dark-gray padding-top-half inline-block' %>
+<li>
+<%= link_to 'Sign in with Twitter', '/signin', :class => 'btn-twitter' %>
 </li>
 
 <% end %>
