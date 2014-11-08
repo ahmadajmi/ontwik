@@ -24,8 +24,6 @@
 @import 'talks';
 @import 'base';
 
-@import 'helpers';
-
 @import 'bootstrap/variables';
 @import 'bootstrap/mixins';
 @import 'bootstrap/modals';
@@ -38,3 +36,5 @@
 
 
 @import 'overides';
+
+@import 'helpers';

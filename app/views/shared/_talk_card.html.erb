@@ -1,5 +1,33 @@
 <div class="column <%= classes %> margin-bottom-two">
 
+  <%= link_to talk, :class=> "ell block uppercase" do %>
+  <div class="media-cover flex-embed flex-embed--16by9" style="background-image: url(<%= talk.thumbnail_url %>)">
+
+    <div class="overlay"></div>
+
+    <div class="absolute pin-bottom padding-one">
+      <small>
+        <%= link_to talk.profile, :title => talk.profile.name, :class=> "ell block white" do %>
+        <%= talk.profile.name %>
+        <img class="hide left radius-half" src="<%= talk.profile.image %>" alt="<%= talk.profile.name %>" style="height:24px;height:24px;">
+        <% end %>
+      </small>
+      <h3 class="card-title">
+        <%= link_to talk, :class=> "ell block white", :title=> talk.title do %>
+        <%= talk.title %>
+        <% end %>
+      </h3>
+    </div>
+
+  </div>
+  <% end %>
+
+</div>
+
+
+
+<div class="column <%= classes %> margin-bottom-two hide">
+
   <%= link_to talk, :class=> "ell block thumb-holder talk-preview margin-bottom-half" do %>
   <div class="media-cover flex-embed flex-embed--16by9" style="background-image: url(<%= talk.thumbnail_url %>)"></div>
   <% end %>
@@ -17,3 +45,4 @@
   </h3>
 
 </div>
+
