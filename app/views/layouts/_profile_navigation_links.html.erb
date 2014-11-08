@@ -31,11 +31,11 @@
   <%= link_to 'Sign in', '/signin', :class => 'border-right border-left dark-gray padding-top-half inline-block block padding-right-one padding-left-one padding-top-half padding-bottom-half dark-gray' %>
 </li>
 
-<li class="right relative on-hover">
+<li class="right relative on-hover hide">
   <%= link_to({:action => 'new', :controller => 'talks'}, {:class => "border-left block padding-right-one padding-left-one padding-top-half padding-bottom-half dark-gray", :title => 'Add new talk'}) do %>
   <span class="iconicstroke-list"></span>
   <% end %>
-  <ul class="absolute list-bare zindex-2 white-bg padding-top-one padding-right-two padding-bottom-one padding-left-two text-left border-top topics-menu on-hover-inner hide">
+  <ul class="absolute list-bare zindex-2 white-bg padding-top-one padding-right-one padding-bottom-one padding-left-one text-left border-top topics-menu on-hover-inner">
     <%= render 'shared/topics_list' %>
   </ul>
 </li>
