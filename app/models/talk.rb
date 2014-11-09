@@ -3,6 +3,7 @@ require 'acts-as-taggable-on'
 class Talk < ActiveRecord::Base
   belongs_to :profile
   belongs_to :topic
+  has_many :comments
 
   include PublicActivity::Common
 

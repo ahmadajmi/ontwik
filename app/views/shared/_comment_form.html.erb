@@ -1,0 +1,42 @@
+<%= link_to pluralize(@comments.count, 'comment'), @talk %>
+
+<% @comments.each do |comment| %>
+
+<div class="border-bottom padding-bottom-one margin-bottom-one">
+
+  <div class="row">
+    <div class="column large-1">
+      <%= link_to comment.profile, :class=> "" do %>
+      <img src="<%= comment.profile.image %>" alt="<%= comment.profile.name %>" style="">
+      <% end %>
+    </div>
+    <div class="column large-11 padding-left-none">
+      <%= comment.content %>
+    </div>
+  </div>
+
+</div>
+
+<% end %>
+
+<%= form_for @comment do |f| %>
+<% if @comment.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this talk from being saved:</h2>
+
+  <ul>
+    <% @comment.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+<%= f.hidden_field :talk_id, value: @talk.id %>
+
+<div class="field">
+  <%= f.text_area :content,:class => 'form-control' %>
+</div>
+<div class="actions">
+  <%= f.submit class: 'button button-primary' %>
+</div>
+<% end %>

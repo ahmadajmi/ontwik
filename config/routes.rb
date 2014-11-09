@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :talks
   resources :profiles
+  resources :comments
 
   get 'follow' => 'profiles#follow'
   get 'unfollow' => 'profiles#unfollow'

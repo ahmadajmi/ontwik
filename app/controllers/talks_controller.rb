@@ -89,6 +89,8 @@ class TalksController < ApplicationController
     @talk    = Talk.find(params[:id])
     @likeable = @talk
     @likers   = @talk.likers(Profile)
+    @comment = Comment.new
+    @comments = @talk.comments
   end
 
   def edit

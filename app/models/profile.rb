@@ -7,6 +7,7 @@ class Profile < ActiveRecord::Base
   mount_uploader :profile_banner, ProfileBannerUploader
 
   has_many :talks
+  has_many :comments
 
   acts_as_follower
   acts_as_followable

@@ -33,6 +33,7 @@
       <div class="large-9 column">
         <h3 class="mt0"><%= @talk.title %></h3>
         <p><%= markdown(@talk.description) %></p>
+        <%= render 'shared/comment_form' %>
         <% if @talk.profile == current_user %>
         <%= link_to edit_talk_path(@talk), :title => "Edit" do %>
         <p class="border-all padding-one inline-block">
