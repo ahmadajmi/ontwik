@@ -5,13 +5,21 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     @comment.talk = @talk
     @comment.profile = current_user
-    @comment.save
-    redirect_to @talk
+
+    respond_to do |format|
+      if @comment.save
+        format.html { redirect_to @talk }
+        format.js
+      else
+        format.html { render action: "new" }
+        format.json { render json: @comment.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   private
-    def comment_params
-      params.require(:comment).permit(:content)
-    end
+  def comment_params
+    params.require(:comment).permit(:content)
+  end
 
 end

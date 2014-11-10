@@ -1,0 +1,14 @@
+<div class="border-bottom padding-bottom-one margin-bottom-one comment">
+
+  <div class="row">
+    <div class="column large-1">
+      <%= link_to comment.profile, :class=> "" do %>
+      <img src="<%= comment.profile.image %>" alt="<%= comment.profile.name %>" class="border-all padding-quarter">
+      <% end %>
+    </div>
+    <div class="column large-11 padding-left-none small">
+      <%= comment.content %>
+    </div>
+  </div>
+
+</div>
