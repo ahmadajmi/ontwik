@@ -1,13 +1,12 @@
-<%= link_to pluralize(@comments.count, 'comment'), @talk %>
-
-<div id="comments-list">
-<% @comments.each do |comment| %>
-
-<%= render 'comments/comment', :comment => comment %>
-
-<% end %>
+<div class="hide">
+  <%= pluralize(@comments.count, 'comment') %>
 </div>
 
+<div id="comments-list">
+  <% @comments.each do |comment| %>
+  <%= render 'comments/comment', :comment => comment %>
+  <% end %>
+</div>
 
 <%= form_for(@comment, remote: true) do |f| %>
 <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
@@ -24,7 +23,7 @@
 <%= f.hidden_field :talk_id, value: @talk.id %>
 
 <div class="field">
-  <%= f.text_area :content, :class => 'form-control', :required => 'true', :placeholder => 'Comment' %>
+  <%= f.text_area :content, :class => 'form-control', :required => 'true', :placeholder => 'Comment. Markdown support' %>
 </div>
 <div class="actions">
   <%= f.submit class: 'button button-primary' %>

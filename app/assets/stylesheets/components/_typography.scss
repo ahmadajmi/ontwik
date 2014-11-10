@@ -40,10 +40,12 @@ h4 {
   margin-bottom: 1.5rem;
 }
 
-p, ul, ol, pre, table, blockquote {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+ul, ol, pre, table, blockquote {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
+
+p { margin-top: 0; margin-bottom: 1rem; }
 
 // Sanitation
 
@@ -80,4 +82,4 @@ blockquote {
   border-left: 5px solid $gray;
 }
 
-.small { font-size: 80%; }
+.small { font-size: 85%; }
