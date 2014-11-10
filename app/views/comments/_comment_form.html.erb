@@ -8,6 +8,8 @@
   <% end %>
 </div>
 
+<% if user_signed_in? %>
+
 <%= form_for(@comment, remote: true) do |f| %>
 <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
 <% if @comment.errors.any? %>
@@ -29,3 +31,15 @@
   <%= f.submit class: 'button button-primary' %>
 </div>
 <% end %>
+
+<% else %>
+
+<div class="border-all padding-one">
+  <%= link_to 'Connect with Twitter', '/signin', :class => 'button button-small button-info margin-right-half' %>
+  <small>to start discussion and join Ontwik.</small>
+</div>
+
+
+<% end %>
+
+
