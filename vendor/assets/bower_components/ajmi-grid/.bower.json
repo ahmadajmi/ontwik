@@ -5,7 +5,7 @@
     "λhmad λjmi <ahmadajmi@outlook.com>"
   ],
   "description": "A very simple CSS grid system inspired and simplified version of Foundation",
-  "main": "ajmi-grid.scss",
+  "main": "grid.scss",
   "moduleType": [
     "globals"
   ],
@@ -16,11 +16,11 @@
     "mobile-first"
   ],
   "license": "MIT",
-  "_release": "244d8f5bc1",
+  "_release": "8726f36205",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "244d8f5bc1bf40de1d72cac43a4f2486bea46f28"
+    "commit": "8726f36205822884186de7e17c62d2a4b0c6cc94"
   },
   "_source": "git://github.com/ahmadajmi/ajmi-grid.git",
   "_target": "*",

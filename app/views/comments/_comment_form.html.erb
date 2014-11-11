@@ -2,6 +2,10 @@
   <%= pluralize(@comments.count, 'comment') %>
 </div>
 
+<div id="comments-count">
+
+</div>
+
 <div id="comments-list">
   <% @comments.each do |comment| %>
   <%= render 'comments/comment', :comment => comment %>

@@ -1,8 +1,8 @@
 var comments_list = $('#comments-list');
 
 $('<%= escape_javascript(render partial: @comment) %>').appendTo(comments_list).hide().fadeIn(300);
-
-comments_list.find('.comment:last-child').addClass('last-comment border-right').fadeIn('slow');
+$('#comments-count').html('This article has <%= escape_javascript(pluralize(@talk.comments.count, 'comment')) %>');
+comments_list.find('.comment:last-child').addClass('last-comment').fadeIn('slow');
 
 $('#comment_content').val('');
 $('#comment_content').attr( 'required', false );

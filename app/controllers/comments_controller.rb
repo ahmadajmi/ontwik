@@ -17,6 +17,19 @@ class CommentsController < ApplicationController
     end
   end
 
+  def destroy
+    @comment = Comment.find(params[:id])
+    @talk = @comment.talk
+    @comment.destroy
+    respond_to do |format|
+      format.html do
+        flash[:success] = 'Comment deleted.'
+        redirect_to @talk
+      end
+      format.js # JavaScript response
+    end
+  end
+
   private
   def comment_params
     params.require(:comment).permit(:content)

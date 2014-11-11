@@ -6,7 +6,7 @@
     "λhmad λjmi <ahmadajmi@outlook.com>"
   ],
   "description": "A very simple CSS grid system inspired and simplified version of Foundation",
-  "main": "ajmi-grid.scss",
+  "main": "grid.scss",
   "moduleType": [
     "globals"
   ],
