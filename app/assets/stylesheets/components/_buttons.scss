@@ -4,8 +4,6 @@
   border: medium none;
   display: inline-block;
   font-size: 0.875rem;
-  // height: 42px;
-  // line-height: 40px;
   outline: medium none;
   padding: 1em 2em;
   position: relative;
@@ -15,6 +13,7 @@
   vertical-align: middle;
 
   &:hover {
+    color: #666;
     background-color: #f5f5f5;
   }
 
@@ -35,6 +34,7 @@
   background-color: #1abc9c;
 
   &:hover {
+    color: #fff;
     background-color: #14dcb4;
   }
 
@@ -57,6 +57,7 @@
   background-color: #00c0f0;
 
   &:hover {
+    color: #fff;
     background-color: #5fccf3;
   }
 }
@@ -68,6 +69,7 @@
   background-color: #e74c3c;
 
   &:hover {
+    color: #fff;
     background-color: #f25b4b;
   }
 }

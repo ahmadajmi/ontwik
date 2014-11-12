@@ -7,13 +7,14 @@ body {
 }
 
 a {
-  color: #323232;
+  color: #EE5125;
   text-decoration: none;
   transition: color 0.2s ease 0s;
 }
 
-a:hover:not(.button):not([class*="button-"]) {
-  color: #537d9d;
+a:hover {
+  color: #FF5A5F;
+  text-decoration: underline;
 }
 
 a:active,

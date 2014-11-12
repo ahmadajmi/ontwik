@@ -1,29 +1,29 @@
 <% if activity.trackable %>
 
 <div class="column large-3 medium-6 margin-bottom-two">
+  <div class="card">
+    <%= link_to activity.trackable, :class=> "ell block uppercase" do %>
+    <div class="media-cover flex-embed flex-embed--16by9" style="background-image: url(<%= activity.trackable.thumbnail_url %>)">
 
-  <%= link_to activity.trackable, :class=> "ell block uppercase" do %>
-  <div class="media-cover flex-embed flex-embed--16by9" style="background-image: url(<%= activity.trackable.thumbnail_url %>)">
+      <div class="overlay absolute pin-all"></div>
 
-    <div class="overlay absolute pin-all"></div>
+      <div class="absolute pin-bottom padding-one">
+        <small>
+          <%= link_to activity.owner, :title => activity.owner.name, :class=> "ell block white" do %>
+          <%= activity.owner.name %>
+          <img class="hide left radius-half" src="<%= activity.owner.image %>" alt="<%= activity.owner.name %>" style="height:24px;height:24px;">
+          <% end %>
+        </small>
+        <h3 class="card-title">
+          <%= link_to activity.trackable, :class=> "ell block white", :title=> activity.trackable.title do %>
+          <%= activity.trackable.title %>
+          <% end %>
+        </h3>
+      </div>
 
-    <div class="absolute pin-bottom padding-one">
-      <small>
-        <%= link_to activity.owner, :title => activity.owner.name, :class=> "ell block white" do %>
-        <%= activity.owner.name %>
-        <img class="hide left radius-half" src="<%= activity.owner.image %>" alt="<%= activity.owner.name %>" style="height:24px;height:24px;">
-        <% end %>
-      </small>
-      <h3 class="card-title">
-        <%= link_to activity.trackable, :class=> "ell block white", :title=> activity.trackable.title do %>
-        <%= activity.trackable.title %>
-        <% end %>
-      </h3>
     </div>
-
+    <% end %>
   </div>
-  <% end %>
-
 </div>
 
 <% else %>

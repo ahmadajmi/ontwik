@@ -6,8 +6,19 @@
   text-transform: uppercase;
 }
 
+.card a:hover,
+.card:hover a {
+  color: #fff;
+  text-decoration: underline;
+}
+
 .overlay {
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) 90%);
+  transition: all 0.3s ease-out;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4) 90%);
+
+  &:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6) 90%);
+  }
 }
 
 .talk-title {
