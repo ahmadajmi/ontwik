@@ -1,10 +1,10 @@
 <div class='row'>
 
-  <div class="large-6 column">
+  <div class="small-3 medium-3 large-6 column">
     <%= link_to 'Ontwik', root_path, class: 'brand brand padding-top-half padding-bottom-half inline-block' %>
   </div>
 
-  <div class="large-3 column">
+  <div class="small-9 medium-5 large-3 column">
     <%= form_tag talks_path, :method => 'get', :class => "navbar-form navbar-left" do %>
     <div class="form-group">
       <%= text_field_tag :search, params[:search], class: 'form-control padding-right-one padding-left-one margin-bottom-none', placeholder: "Search", required: 'true' %>
@@ -14,7 +14,7 @@
     <% end %>
   </div>
 
-  <div class="large-3 column text-right">
+  <div class="small-12 medium-4 large-3 column text-right">
     <ul class="nav list-bare">
       <%= render 'layouts/profile_navigation_links' %>
     </ul>

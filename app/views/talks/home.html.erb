@@ -5,7 +5,7 @@
 <div class="row">
   <div class="large-12 column">
     <% if user_signed_in? and @activities.length > 0 %>
-    <h5>Feed - <span class="dark-gray">People you follow</span></h4>
+    <h5 class="margin-top-one margin-bottom-one">Feed - <span class="dark-gray">People you follow</span></h4>
     <div class="row">
       <% @activities.each do |activity| %>
       <%= render_activity activity %>

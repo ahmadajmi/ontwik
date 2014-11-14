@@ -1,0 +1,2598 @@
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+@import url(http://weloveiconfonts.com/api/?family=iconicstroke);
+/* line 10, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+/* line 20, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+/* line 44, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+/* line 56, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 66, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+/* line 77, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 88, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+a {
+  background: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 97, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+/* line 108, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+/* line 117, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+/* line 125, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+/* line 134, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 143, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 152, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 161, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 168, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+sup {
+  top: -0.5em;
+}
+
+/* line 172, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+/* line 183, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+/* line 191, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+/* line 202, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 210, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+/* line 220, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+/* line 231, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+/* line 255, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+/* line 265, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+/* line 277, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 292, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 302, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 311, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 321, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+/* line 334, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+input[type="checkbox"],
+input[type="radio"] {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+/* line 346, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 356, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+/* line 370, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 378, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 389, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+/* line 398, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+/* line 407, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 418, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 424, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/normalize-css/normalize.css */
+td,
+th {
+  padding: 0;
+}
+
+/***********************/
+/* SYNTAX HIGHLIGHTING */
+/***********************/
+/* line 7, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight {
+  padding: 16px;
+  margin: 0 0 16px 0;
+  text-align: left;
+  direction: ltr;
+  background-color: whitesmoke;
+}
+
+/* line 15, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight pre {
+  /* overflow: scroll; Prefer no word wrap? Uncomment this line and comment out the 2 lines below. */
+  word-break: break-all;
+  word-wrap: break-word;
+  margin: 0;
+  font-size: 14px;
+}
+
+/* line 23, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+code {
+  font-family: 'Courier', monospace;
+  font-size: 14px;
+  color: #999999;
+}
+
+/* Comment */
+/* line 32, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .c, .highlight .c1 {
+  color: #586e75;
+}
+
+/* Error */
+/* line 34, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .err {
+  color: #93a1a1;
+}
+
+/* Generic */
+/* line 36, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .g {
+  color: #93a1a1;
+}
+
+/* Keyword */
+/* line 38, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .k {
+  color: #859900;
+}
+
+/* Literal */
+/* line 40, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .l {
+  color: #93a1a1;
+}
+
+/* Name */
+/* line 42, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .n {
+  color: #93a1a1;
+}
+
+/* Operator */
+/* line 44, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .o {
+  color: #859900;
+}
+
+/* Other */
+/* line 46, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .x {
+  color: #cb4b16;
+}
+
+/* Punctuation */
+/* line 48, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .p {
+  color: #93a1a1;
+}
+
+/* Comment.Multiline */
+/* line 50, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .cm {
+  color: #586e75;
+}
+
+/* Comment.Preproc */
+/* line 52, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .cp {
+  color: #859900;
+}
+
+/* Comment.Single */
+/* line 54, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .c1 {
+  color: #586e75;
+}
+
+/* Comment.Special */
+/* line 56, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .cs {
+  color: #859900;
+}
+
+/* Generic.Deleted */
+/* line 58, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .gd {
+  color: #2aa198;
+}
+
+/* Generic.Emph */
+/* line 60, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .ge {
+  color: #93A1A1;
+  font-style: italic;
+}
+
+/* Generic.Error */
+/* line 62, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .gr {
+  color: #dc322f;
+}
+
+/* Generic.Heading */
+/* line 64, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .gh {
+  color: #cb4b16;
+}
+
+/* Generic.Inserted */
+/* line 66, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .gi {
+  color: #859900;
+}
+
+/* Generic.Output */
+/* line 68, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .go {
+  color: #93a1a1;
+}
+
+/* Generic.Prompt */
+/* line 70, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .gp {
+  color: #93a1a1;
+}
+
+/* Generic.Strong */
+/* line 72, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .gs {
+  color: #93A1A1;
+  font-weight: bold;
+}
+
+/* Generic.Subheading */
+/* line 74, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .gu {
+  color: #cb4b16;
+}
+
+/* Generic.Traceback */
+/* line 76, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .gt {
+  color: #93a1a1;
+}
+
+/* Keyword.Constant */
+/* line 78, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .kc {
+  color: #cb4b16;
+}
+
+/* Keyword.Declaration */
+/* line 80, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .kd {
+  color: #268bd2;
+}
+
+/* Keyword.Namespace */
+/* line 82, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .kn {
+  color: #859900;
+}
+
+/* Keyword.Pseudo */
+/* line 84, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .kp {
+  color: #859900;
+}
+
+/* Keyword.Reserved */
+/* line 86, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .kr {
+  color: #268bd2;
+}
+
+/* Keyword.Type */
+/* line 88, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .kt {
+  color: #dc322f;
+}
+
+/* Literal.Date */
+/* line 90, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .ld {
+  color: #93a1a1;
+}
+
+/* Literal.Number */
+/* line 92, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .m {
+  color: #2aa198;
+}
+
+/* Literal.String */
+/* line 94, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .s {
+  color: #2aa198;
+}
+
+/* Name.Attribute */
+/* line 96, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .na {
+  color: #93a1a1;
+}
+
+/* Name.Builtin */
+/* line 98, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .nb {
+  color: #b58900;
+}
+
+/* Name.Class */
+/* line 100, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .nc {
+  color: #268bd2;
+}
+
+/* Name.Constant */
+/* line 102, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .no {
+  color: #cb4b16;
+}
+
+/* Name.Decorator */
+/* line 104, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .nd {
+  color: #268bd2;
+}
+
+/* Name.Entity */
+/* line 106, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .ni {
+  color: #cb4b16;
+}
+
+/* Name.Exception */
+/* line 108, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .ne {
+  color: #cb4b16;
+}
+
+/* Name.Function */
+/* line 110, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .nf {
+  color: #268bd2;
+}
+
+/* Name.Label */
+/* line 112, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .nl {
+  color: #93a1a1;
+}
+
+/* Name.Namespace */
+/* line 114, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .nn {
+  color: #93a1a1;
+}
+
+/* Name.Other */
+/* line 116, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .nx {
+  color: #555555;
+}
+
+/* Name.Property */
+/* line 118, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .py {
+  color: #93a1a1;
+}
+
+/* Name.Tag */
+/* line 120, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .nt {
+  color: #268bd2;
+}
+
+/* Name.Variable */
+/* line 122, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .nv {
+  color: #268bd2;
+}
+
+/* Operator.Word */
+/* line 124, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .ow {
+  color: #859900;
+}
+
+/* Text.Whitespace */
+/* line 126, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .w {
+  color: #93a1a1;
+}
+
+/* Literal.Number.Float */
+/* line 128, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .mf {
+  color: #2aa198;
+}
+
+/* Literal.Number.Hex */
+/* line 130, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .mh {
+  color: #2aa198;
+}
+
+/* Literal.Number.Integer */
+/* line 132, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .mi {
+  color: #2aa198;
+}
+
+/* Literal.Number.Oct */
+/* line 134, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .mo {
+  color: #2aa198;
+}
+
+/* Literal.String.Backtick */
+/* line 136, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .sb {
+  color: #586e75;
+}
+
+/* Literal.String.Char */
+/* line 138, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .sc {
+  color: #2aa198;
+}
+
+/* Literal.String.Doc */
+/* line 140, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .sd {
+  color: #93a1a1;
+}
+
+/* Literal.String.Double */
+/* line 142, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .s2 {
+  color: #2aa198;
+}
+
+/* Literal.String.Escape */
+/* line 144, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .se {
+  color: #cb4b16;
+}
+
+/* Literal.String.Heredoc */
+/* line 146, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .sh {
+  color: #93a1a1;
+}
+
+/* Literal.String.Interpol */
+/* line 148, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .si {
+  color: #2aa198;
+}
+
+/* Literal.String.Other */
+/* line 150, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .sx {
+  color: #2aa198;
+}
+
+/* Literal.String.Regex */
+/* line 152, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .sr {
+  color: #dc322f;
+}
+
+/* Literal.String.Single */
+/* line 154, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .s1 {
+  color: #2aa198;
+}
+
+/* Literal.String.Symbol */
+/* line 156, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .ss {
+  color: #2aa198;
+}
+
+/* Name.Builtin.Pseudo */
+/* line 158, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .bp {
+  color: #268bd2;
+}
+
+/* Name.Variable.Class */
+/* line 160, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .vc {
+  color: #268bd2;
+}
+
+/* Name.Variable.Global */
+/* line 162, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .vg {
+  color: #268bd2;
+}
+
+/* Name.Variable.Instance */
+/* line 164, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .vi {
+  color: #268bd2;
+}
+
+/* Literal.Number.Integer.Long */
+/* line 166, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_highlights.scss */
+.highlight .il {
+  color: #2aa198;
+}
+
+/* line 20, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 26, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+.row {
+  margin: 0 auto;
+  max-width: 77rem;
+}
+/* line 31, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+.row:before, .row:after {
+  display: table;
+  clear: both;
+  content: " ";
+}
+/* line 37, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+.row .row {
+  margin-right: -1rem;
+  margin-left: -1rem;
+}
+
+/* line 43, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+.column {
+  position: relative;
+  float: left;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  width: 100%;
+}
+
+/* line 51, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+.column--center {
+  float: none;
+  margin: 0 auto;
+}
+
+@media only screen {
+  /* line 61, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .small-1 {
+    width: 8.3333333333%;
+  }
+
+  /* line 61, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .small-2 {
+    width: 16.6666666667%;
+  }
+
+  /* line 61, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .small-3 {
+    width: 25%;
+  }
+
+  /* line 61, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .small-4 {
+    width: 33.3333333333%;
+  }
+
+  /* line 61, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .small-5 {
+    width: 41.6666666667%;
+  }
+
+  /* line 61, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .small-6 {
+    width: 50%;
+  }
+
+  /* line 61, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .small-7 {
+    width: 58.3333333333%;
+  }
+
+  /* line 61, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .small-8 {
+    width: 66.6666666667%;
+  }
+
+  /* line 61, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .small-9 {
+    width: 75%;
+  }
+
+  /* line 61, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .small-10 {
+    width: 83.3333333333%;
+  }
+
+  /* line 61, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .small-11 {
+    width: 91.6666666667%;
+  }
+
+  /* line 61, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .small-12 {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 40em) {
+  /* line 73, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .medium-1 {
+    width: 8.3333333333%;
+  }
+
+  /* line 73, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .medium-2 {
+    width: 16.6666666667%;
+  }
+
+  /* line 73, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .medium-3 {
+    width: 25%;
+  }
+
+  /* line 73, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .medium-4 {
+    width: 33.3333333333%;
+  }
+
+  /* line 73, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .medium-5 {
+    width: 41.6666666667%;
+  }
+
+  /* line 73, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .medium-6 {
+    width: 50%;
+  }
+
+  /* line 73, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .medium-7 {
+    width: 58.3333333333%;
+  }
+
+  /* line 73, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .medium-8 {
+    width: 66.6666666667%;
+  }
+
+  /* line 73, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .medium-9 {
+    width: 75%;
+  }
+
+  /* line 73, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .medium-10 {
+    width: 83.3333333333%;
+  }
+
+  /* line 73, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .medium-11 {
+    width: 91.6666666667%;
+  }
+
+  /* line 73, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .medium-12 {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 64em) {
+  /* line 85, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .large-1 {
+    width: 8.3333333333%;
+  }
+
+  /* line 85, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .large-2 {
+    width: 16.6666666667%;
+  }
+
+  /* line 85, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .large-3 {
+    width: 25%;
+  }
+
+  /* line 85, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .large-4 {
+    width: 33.3333333333%;
+  }
+
+  /* line 85, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .large-5 {
+    width: 41.6666666667%;
+  }
+
+  /* line 85, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .large-6 {
+    width: 50%;
+  }
+
+  /* line 85, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .large-7 {
+    width: 58.3333333333%;
+  }
+
+  /* line 85, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .large-8 {
+    width: 66.6666666667%;
+  }
+
+  /* line 85, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .large-9 {
+    width: 75%;
+  }
+
+  /* line 85, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .large-10 {
+    width: 83.3333333333%;
+  }
+
+  /* line 85, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .large-11 {
+    width: 91.6666666667%;
+  }
+
+  /* line 85, /Users/ahmadajmi/Dropbox/www/ontwik/vendor/assets/bower_components/ajmi-grid/grid.scss */
+  .large-12 {
+    width: 100%;
+  }
+}
+/* line 1, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_alerts.scss */
+.alert--notice {
+  background-color: #3498db;
+}
+
+/* line 5, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_alerts.scss */
+.alert--success {
+  background-color: #1abc9c;
+}
+
+/* line 9, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_alerts.scss */
+.alert--danger {
+  background-color: #e74c3c;
+}
+
+/* line 1, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_buttons.scss */
+.button {
+  color: #666;
+  background-color: #ebebeb;
+  border: medium none;
+  display: inline-block;
+  font-size: 0.875rem;
+  outline: medium none;
+  padding: 1em 2em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: border 0.2s ease-out 0s, background 0.2s ease-out 0s;
+          transition: border 0.2s ease-out 0s, background 0.2s ease-out 0s;
+  vertical-align: middle;
+}
+/* line 15, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_buttons.scss */
+.button:hover {
+  color: #666;
+  background-color: #f5f5f5;
+}
+/* line 21, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_buttons.scss */
+.button:active, .button:focus {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15) inset;
+}
+
+/* line 26, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_buttons.scss */
+.button-icon {
+  height: 34px;
+  line-height: 34px;
+  padding: 0 14px;
+}
+
+/* line 32, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_buttons.scss */
+.button-primary {
+  color: #fff;
+  background-color: #1abc9c;
+}
+/* line 36, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_buttons.scss */
+.button-primary:hover {
+  color: #fff;
+  background-color: #14dcb4;
+}
+/* line 41, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_buttons.scss */
+.button-primary:visited {
+  color: #fff;
+}
+/* line 46, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_buttons.scss */
+.button-primary:active, .button-primary:focus {
+  color: #0f6b59;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15) inset;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+/* line 55, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_buttons.scss */
+.button-info {
+  color: #fff;
+  background-color: #00c0f0;
+}
+/* line 59, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_buttons.scss */
+.button-info:hover {
+  color: #fff;
+  background-color: #5fccf3;
+}
+
+/* line 67, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_buttons.scss */
+.button-alert {
+  color: #fff;
+  background-color: #e74c3c;
+}
+/* line 71, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_buttons.scss */
+.button-alert:hover {
+  color: #fff;
+  background-color: #f25b4b;
+}
+
+/* line 77, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_buttons.scss */
+.button-small {
+  padding: .5em 1em;
+}
+
+/* line 81, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_buttons.scss */
+.button-twitter {
+  font-size: 1em;
+  padding: 1em 4em;
+  background-position: calc(100% - 16px) center;
+  background-repeat: no-repeat;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw%2FeHBhY2tldCBiZWdpbj0i77u%2FIiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8%2BIDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozOUY3REVFMkFCNUExMUUzQjVGMEMxMURBNjdBN0JGNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozOUY3REVFM0FCNUExMUUzQjVGMEMxMURBNjdBN0JGNiI%2BIDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjM5RjdERUUwQUI1QTExRTNCNUYwQzExREE2N0E3QkY2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjM5RjdERUUxQUI1QTExRTNCNUYwQzExREE2N0E3QkY2Ii8%2BIDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY%2BIDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8%2B%2B6QyTAAAAXBJREFUeNrslrtKA0EUQDMSBQniD4iFIBICNmKhtWIv6AcoooUfkPyAYGsXLGNjpSLYWCmIiGBlnTTaicEukpjxDEyxrGTn7u6AW8yFw13YuzOHea7SWpeKFGOlgkUQCkJBKAgVXkgpZVLZZBfEIrTgBW5hx%2FRh363DhNPIXB1J2Jpj2Ha0swHf%2Bm88QBuaov6EQo%2FwA4cjZMrwrkfHF5zBqi%2Bh%2B0jjN1CNCS3r5BjArs8RasQ6GFqxPajBmkPoQrxEhEJL8KyzR1MqJN32J1DLsZvffJ9D5zCZQ%2BhOXCmcMrOLLjNOVxfGvU4ZB9uA1IBr02bK0Tnl%2B760WLn%2Bqe0pa%2BznSK8pp%2B4TFmjjIzpCXu4yGm2TtqCbQuggKuNtDcXqp%2BFIsHbqmfqTCvE8Ze8rcwX0E0R6sJ95AFwFMA8tezonxdDuxGqeGUmzqGdIm7ACs1CBHnTgCa6o7UiWSK5dFv4Yg1AQCkJB6J%2FjV4ABAKp7wL59yekoAAAAAElFTkSuQmCC);
+}
+
+/* line 1, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_tags.scss */
+.tag {
+  color: #155fad;
+  background-color: #f0f7fd;
+  padding: .5rem 1rem;
+  margin: 0 3px 3px 0;
+  font-size: 0.8125rem;
+  border-radius: 5px;
+  display: inline-block;
+}
+/* line 10, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_tags.scss */
+.tag:hover {
+  color: #fff;
+  background-color: #ddeffd;
+}
+
+/* line 1, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_forms.scss */
+label {
+  color: #383838;
+  display: block;
+  font-size: 0.875rem;
+  font-weight: normal;
+  margin: 0 0 6px;
+  padding: 0;
+}
+
+/* line 10, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_forms.scss */
+.form-control {
+  background-color: #fff;
+  border: 1px solid #d1d1d1;
+  border-radius: 2px;
+  font-size: 0.8125rem;
+  margin: 0 0 1rem;
+  outline: medium none;
+  padding: 12px;
+  width: 100%;
+}
+/* line 20, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_forms.scss */
+.form-control:focus {
+  outline: none;
+}
+
+/* line 26, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_forms.scss */
+select {
+  height: 44px;
+}
+
+/* line 1, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_card.scss */
+.talk-preview {
+  display: block;
+  position: relative;
+}
+
+/* line 6, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_card.scss */
+.talk-preview:before {
+  background-color: rgba(20, 20, 20, 0.6);
+  border-radius: 20px;
+  content: "";
+  display: block;
+  height: 40px;
+  left: 50%;
+  margin: -20px 0 0 -20px;
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  z-index: 1;
+}
+
+/* line 20, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_card.scss */
+.talk-preview:after {
+  border-bottom: 9px solid transparent;
+  border-left: 15px solid rgba(255, 255, 255, 0.9);
+  border-top: 9px solid transparent;
+  content: "";
+  display: block;
+  height: 0;
+  left: 50%;
+  margin: -9px 0 0 -6px;
+  position: absolute;
+  top: 50%;
+  width: 0;
+  z-index: 2;
+}
+
+/* line 35, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_card.scss */
+.talk-preview:hover:before {
+  background-color: rgba(20, 20, 20, 0.7);
+}
+
+/* line 1, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_flag.scss */
+.flag {
+  display: table;
+  width: 100%;
+}
+
+/* line 7, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_flag.scss */
+.flag__image,
+.flag__body {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 11, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_flag.scss */
+.flag--top .flag__image, .flag--top
+.flag__body {
+  vertical-align: top;
+}
+/* line 15, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_flag.scss */
+.flag--bottom .flag__image, .flag--bottom
+.flag__body {
+  vertical-align: bottom;
+}
+
+/* line 21, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_flag.scss */
+.flag__image {
+  padding-right: 10px;
+}
+/* line 24, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_flag.scss */
+.flag__image > img {
+  display: block;
+  max-width: none;
+}
+/* line 29, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_flag.scss */
+.flag--rev .flag__image {
+  padding-right: 0;
+  padding-left: 10px;
+}
+
+/* line 36, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_flag.scss */
+.flag__body {
+  width: 100%;
+}
+
+/* line 5, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_typography.scss */
+html {
+  font-size: 100%;
+}
+
+/* line 9, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_typography.scss */
+body {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 15, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_typography.scss */
+h1, h2, h3, h4, h5 {
+  margin-top: 0;
+  font-weight: 300;
+}
+
+/* line 20, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_typography.scss */
+h1 {
+  font-size: 1.4375rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* line 26, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_typography.scss */
+h2 {
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+/* line 32, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_typography.scss */
+h3 {
+  font-size: 1.4375rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* line 38, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_typography.scss */
+h4 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* line 44, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_typography.scss */
+ul, ol, pre, table, blockquote {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* line 49, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_typography.scss */
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* line 53, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_typography.scss */
+hr {
+  border: 1px solid;
+  margin: -1px 0;
+}
+
+/* line 58, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_typography.scss */
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* line 63, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_typography.scss */
+b, strong, em, small, code {
+  line-height: 1;
+}
+
+/* line 67, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_typography.scss */
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+
+/* line 73, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_typography.scss */
+sub {
+  top: 0.4em;
+}
+
+/* line 77, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_typography.scss */
+blockquote {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-left: 5px solid whitesmoke;
+}
+
+/* line 86, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/components/_typography.scss */
+.small {
+  font-size: 85%;
+}
+
+/* line 1, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/sections/_header.scss */
+header {
+  border-bottom: 1px solid whitesmoke;
+}
+/* line 3, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/sections/_header.scss */
+header a {
+  color: #2c3e50;
+}
+
+/* line 8, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/sections/_header.scss */
+.brand {
+  color: #ee5125;
+  font-size: 1.2em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+/* line 13, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/sections/_header.scss */
+.brand:hover {
+  text-decoration: none;
+}
+
+/* line 18, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/sections/_header.scss */
+.logged_out:not(.index) header {
+  border-bottom: 0;
+}
+
+/* line 36, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/sections/_header.scss */
+[name="search"] {
+  margin-top: 6px;
+  padding: 5px;
+}
+
+/* line 41, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/sections/_header.scss */
+.btn-search {
+  border: 0 none;
+  height: 25px;
+  width: 25px;
+  right: 20px;
+  top: 8px;
+}
+
+/* line 49, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/sections/_header.scss */
+.topics-menu {
+  top: 100%;
+  right: 0;
+  width: 250px;
+}
+
+/* line 6, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/sections/_footer.scss */
+.index footer .large-10,
+.home footer .large-10 {
+  width: 100%;
+}
+
+/* line 1, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/sections/_hero.scss */
+.hero {
+  background-color: #1A1B1F;
+  background-image: url("/assets/hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+/* line 10, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/sections/_hero.scss */
+.hero h1,
+.hero h4 {
+  font-weight: 300;
+}
+
+/* line 21, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_flex-embed.scss */
+.flex-embed {
+  position: relative;
+  overflow: hidden;
+}
+/* line 25, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_flex-embed.scss */
+.flex-embed:after {
+  content: "";
+  display: block;
+  width: 100%;
+}
+
+/* line 34, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_flex-embed.scss */
+.flex-embed--3by1 {
+  padding-bottom: 30%;
+}
+
+/* line 38, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_flex-embed.scss */
+.flex-embed--2by1 {
+  padding-bottom: 50%;
+}
+
+/* line 42, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_flex-embed.scss */
+.flex-embed--16by9 {
+  padding-bottom: 56.25%;
+}
+
+/* line 46, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_flex-embed.scss */
+.flex-embed--4by3 {
+  padding-bottom: 75%;
+}
+
+/* line 49, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_flex-embed.scss */
+.flex-embed iframe,
+.flex-embed__object {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 1, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/talks.css.scss */
+.card-title {
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 0;
+  color: #0367b0;
+  text-transform: uppercase;
+}
+
+/* line 10, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/talks.css.scss */
+.card a:hover,
+.card:hover a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* line 15, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/talks.css.scss */
+.overlay {
+  -webkit-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4) 90%);
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4) 90%);
+}
+/* line 19, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/talks.css.scss */
+.overlay:hover {
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6) 90%);
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6) 90%);
+}
+
+/* line 24, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/talks.css.scss */
+.talk-title {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+/* line 32, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/talks.css.scss */
+.talks-new-view,
+.talks-create-view,
+.talks-edit-view,
+.profiles-edit-view {
+  background-color: whitesmoke;
+}
+
+/* line 1, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/base.scss */
+body, html {
+  height: 100%;
+}
+
+/* line 5, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/base.scss */
+body {
+  font-weight: 300;
+}
+
+/* line 9, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/base.scss */
+a {
+  color: #EE5125;
+  text-decoration: none;
+  -webkit-transition: color 0.2s ease 0s;
+          transition: color 0.2s ease 0s;
+}
+
+/* line 15, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/base.scss */
+a:not(.button):hover {
+  color: #FF5A5F;
+  text-decoration: underline;
+}
+
+/* line 22, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/base.scss */
+a:hover
+a:active,
+a:hover {
+  outline: 0 none;
+}
+
+/* line 26, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/base.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 28, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/base.scss */
+svg {
+  max-height: 100%;
+}
+
+/* line 30, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/base.scss */
+.main {
+  min-height: 100%;
+}
+
+/* line 34, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/base.scss */
+p:empty {
+  display: none;
+}
+
+/* line 11, /Users/ahmadajmi/.rvm/gems/ruby-2.1.2@ontwik/gems/bootstrap-sass-3.2.0.0/assets/stylesheets/bootstrap/_modals.scss */
+.modal-open {
+  overflow: hidden;
+}
+
+/* line 16, /Users/ahmadajmi/.rvm/gems/ruby-2.1.2@ontwik/gems/bootstrap-sass-3.2.0.0/assets/stylesheets/bootstrap/_modals.scss */
+.modal {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+/* line 32, /Users/ahmadajmi/.rvm/gems/ruby-2.1.2@ontwik/gems/bootstrap-sass-3.2.0.0/assets/stylesheets/bootstrap/_modals.scss */
+.modal.fade .modal-dialog {
+  -webkit-transform: translate3d(0, -25%, 0);
+  transform: translate3d(0, -25%, 0);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+/* line 36, /Users/ahmadajmi/.rvm/gems/ruby-2.1.2@ontwik/gems/bootstrap-sass-3.2.0.0/assets/stylesheets/bootstrap/_modals.scss */
+.modal.in .modal-dialog {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 38, /Users/ahmadajmi/.rvm/gems/ruby-2.1.2@ontwik/gems/bootstrap-sass-3.2.0.0/assets/stylesheets/bootstrap/_modals.scss */
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* line 44, /Users/ahmadajmi/.rvm/gems/ruby-2.1.2@ontwik/gems/bootstrap-sass-3.2.0.0/assets/stylesheets/bootstrap/_modals.scss */
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+
+/* line 51, /Users/ahmadajmi/.rvm/gems/ruby-2.1.2@ontwik/gems/bootstrap-sass-3.2.0.0/assets/stylesheets/bootstrap/_modals.scss */
+.modal-content {
+  position: relative;
+  background-color: white;
+  border: 1px solid #999999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  background-clip: padding-box;
+  outline: 0;
+}
+
+/* line 64, /Users/ahmadajmi/.rvm/gems/ruby-2.1.2@ontwik/gems/bootstrap-sass-3.2.0.0/assets/stylesheets/bootstrap/_modals.scss */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: black;
+}
+/* line 73, /Users/ahmadajmi/.rvm/gems/ruby-2.1.2@ontwik/gems/bootstrap-sass-3.2.0.0/assets/stylesheets/bootstrap/_modals.scss */
+.modal-backdrop.fade {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+/* line 74, /Users/ahmadajmi/.rvm/gems/ruby-2.1.2@ontwik/gems/bootstrap-sass-3.2.0.0/assets/stylesheets/bootstrap/_modals.scss */
+.modal-backdrop.in {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+/* line 79, /Users/ahmadajmi/.rvm/gems/ruby-2.1.2@ontwik/gems/bootstrap-sass-3.2.0.0/assets/stylesheets/bootstrap/_modals.scss */
+.modal-header {
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+  min-height: 16.428571429px;
+}
+
+/* line 85, /Users/ahmadajmi/.rvm/gems/ruby-2.1.2@ontwik/gems/bootstrap-sass-3.2.0.0/assets/stylesheets/bootstrap/_modals.scss */
+.modal-header .close {
+  margin-top: -2px;
+}
+
+/* line 90, /Users/ahmadajmi/.rvm/gems/ruby-2.1.2@ontwik/gems/bootstrap-sass-3.2.0.0/assets/stylesheets/bootstrap/_modals.scss */
+.modal-title {
+  margin: 0;
+  line-height: 1.428571429;
+}
+
+/* line 97, /Users/ahmadajmi/.rvm/gems/ruby-2.1.2@ontwik/gems/bootstrap-sass-3.2.0.0/assets/stylesheets/bootstrap/_modals.scss */
+.modal-body {
+  position: relative;
+  padding: 15px;
+}
+
+/* line 103, /Users/ahmadajmi/.rvm/gems/ruby-2.1.2@ontwik/gems/bootstrap-sass-3.2.0.0/assets/stylesheets/bootstrap/_modals.scss */
+.modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+}
+/* line 15, /Users/ahmadajmi/.rvm/gems/ruby-2.1.2@ontwik/gems/bootstrap-sass-3.2.0.0/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+.modal-footer:before, .modal-footer:after {
+  content: " ";
+  display: table;
+}
+/* line 19, /Users/ahmadajmi/.rvm/gems/ruby-2.1.2@ontwik/gems/bootstrap-sass-3.2.0.0/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+.modal-footer:after {
+  clear: both;
+}
+/* line 110, /Users/ahmadajmi/.rvm/gems/ruby-2.1.2@ontwik/gems/bootstrap-sass-3.2.0.0/assets/stylesheets/bootstrap/_modals.scss */
+.modal-footer .btn + .btn {
+  margin-left: 5px;
+  margin-bottom: 0;
+}
+/* line 115, /Users/ahmadajmi/.rvm/gems/ruby-2.1.2@ontwik/gems/bootstrap-sass-3.2.0.0/assets/stylesheets/bootstrap/_modals.scss */
+.modal-footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+/* line 119, /Users/ahmadajmi/.rvm/gems/ruby-2.1.2@ontwik/gems/bootstrap-sass-3.2.0.0/assets/stylesheets/bootstrap/_modals.scss */
+.modal-footer .btn-block + .btn-block {
+  margin-left: 0;
+}
+
+/* line 125, /Users/ahmadajmi/.rvm/gems/ruby-2.1.2@ontwik/gems/bootstrap-sass-3.2.0.0/assets/stylesheets/bootstrap/_modals.scss */
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+@media (min-width: 768px) {
+  /* line 136, /Users/ahmadajmi/.rvm/gems/ruby-2.1.2@ontwik/gems/bootstrap-sass-3.2.0.0/assets/stylesheets/bootstrap/_modals.scss */
+  .modal-dialog {
+    width: 600px;
+    margin: 30px auto;
+  }
+
+  /* line 140, /Users/ahmadajmi/.rvm/gems/ruby-2.1.2@ontwik/gems/bootstrap-sass-3.2.0.0/assets/stylesheets/bootstrap/_modals.scss */
+  .modal-content {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+
+  /* line 145, /Users/ahmadajmi/.rvm/gems/ruby-2.1.2@ontwik/gems/bootstrap-sass-3.2.0.0/assets/stylesheets/bootstrap/_modals.scss */
+  .modal-sm {
+    width: 300px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 149, /Users/ahmadajmi/.rvm/gems/ruby-2.1.2@ontwik/gems/bootstrap-sass-3.2.0.0/assets/stylesheets/bootstrap/_modals.scss */
+  .modal-lg {
+    width: 900px;
+  }
+}
+/* iconicstroke */
+/* line 33, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/application.css.scss */
+[class*="iconicstroke-"]:before {
+  font-family: 'IconicStroke', sans-serif;
+}
+
+/* line 3, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_overides.scss */
+.modal-content {
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* line 14, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_overides.scss */
+.modal-body {
+  padding: 50px;
+}
+
+/* line 18, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_overides.scss */
+.modal-sm {
+  width: 400px;
+}
+
+/* line 24, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_overides.scss */
+.close {
+  float: right;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1;
+  text-shadow: 0 1px 0 #fff;
+}
+
+/* line 32, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_overides.scss */
+button.close {
+  color: #000;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0 none;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* line 40, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_overides.scss */
+.modal .close {
+  position: absolute;
+  right: 1em;
+  top: .6em;
+  z-index: 100;
+}
+
+/* line 48, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/_overides.scss */
+.close:hover,
+.close:focus {
+  color: #000;
+  cursor: pointer;
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+/* line 8, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.left {
+  float: left;
+}
+
+/* line 9, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.right {
+  float: right;
+}
+
+/* line 12, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+/* line 17, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 24, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.fixed {
+  position: fixed;
+}
+
+/* line 25, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.relative {
+  position: relative;
+}
+
+/* line 26, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.absolute {
+  position: absolute;
+}
+
+/* line 27, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.static {
+  position: static;
+}
+
+/* line 28, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.fixed-background {
+  background-attachment: fixed;
+}
+
+/* line 34, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.text-left {
+  text-align: left;
+}
+
+/* line 35, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.text-right {
+  text-align: right;
+}
+
+/* line 36, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 37, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.text-just {
+  text-align: justify;
+}
+
+/* line 39, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.v-middle {
+  vertical-align: middle;
+}
+
+/* line 40, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.v-bottom {
+  vertical-align: bottom;
+}
+
+/* line 46, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.full-width {
+  width: 100%;
+}
+
+/* line 47, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.full-min-height {
+  min-height: 100%;
+}
+
+/* line 48, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.full-height {
+  height: 100vh;
+}
+
+/* line 58, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.inline {
+  display: inline;
+}
+
+/* line 59, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.block {
+  display: block;
+}
+
+/* line 60, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.inline-block {
+  display: inline-block;
+}
+
+/* line 61, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.hide {
+  display: none;
+}
+
+/* line 62, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 64, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.pin-all {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* line 71, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.pin-bottom {
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+/* line 77, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.pin-top-right {
+  right: 0;
+  top: 0;
+}
+
+/* line 82, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.pin-right {
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+/* line 88, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.pin-bottom-right {
+  right: 0;
+  bottom: 0;
+}
+
+/* line 93, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+/* line 100, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.vertical-align {
+  display: table;
+  width: 100%;
+}
+
+/* line 105, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.vertical-align__inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* line 114, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.bold {
+  font-weight: bold;
+}
+
+/* line 115, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.regular {
+  font-weight: normal;
+}
+
+/* line 116, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.italic {
+  font-style: italic;
+}
+
+/* line 117, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* line 119, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.ell {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* line 125, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.media-cover {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* line 136, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.zindex-1 {
+  z-index: 1;
+}
+
+/* line 137, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.zindex-2 {
+  z-index: 2;
+}
+
+/* line 145, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.no-bullets, .list-bare {
+  list-style: none;
+}
+
+/* line 146, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.bullets-inside {
+  list-style: inside;
+}
+
+/* line 147, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.list-bare {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 157, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.on-hover:hover .on-hover-inner {
+  display: block;
+}
+
+/* line 162, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.on-hover-inner {
+  display: none;
+}
+
+/* line 172, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.white {
+  color: white;
+}
+
+/* line 173, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.gray {
+  color: whitesmoke;
+}
+
+/* line 174, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.dark-gray {
+  color: #95a5a6;
+}
+
+/* line 176, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.notice {
+  color: #3498db;
+}
+
+/* line 177, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.success {
+  color: #1abc9c;
+}
+
+/* line 178, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.danger {
+  color: #e74c3c;
+}
+
+/* line 180, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.black-bg {
+  background-color: black;
+}
+
+/* line 181, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.white-bg {
+  background-color: white;
+}
+
+/* line 182, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.gray-bg {
+  background-color: whitesmoke;
+}
+
+/* line 183, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.dark-bg {
+  background-color: #2c3e50;
+}
+
+/* line 184, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.notice-bg {
+  background-color: #3498db;
+}
+
+/* line 185, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.success-bg {
+  background-color: #1abc9c;
+}
+
+/* line 186, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.danger-bg {
+  background-color: #e74c3c;
+}
+
+/* line 187, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.white-transparent {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* line 189, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.border-none {
+  border: 0;
+}
+
+/* line 190, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.border-none:focus {
+  border: 0;
+}
+
+/* line 191, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.border-all {
+  border: 1px solid whitesmoke;
+}
+
+/* line 192, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.border-top {
+  border-top: 1px solid whitesmoke;
+}
+
+/* line 193, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.border-bottom {
+  border-bottom: 1px solid whitesmoke;
+}
+
+/* line 194, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.border-right {
+  border-right: 1px solid whitesmoke;
+}
+
+/* line 195, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.border-left {
+  border-left: 1px solid whitesmoke;
+}
+
+/* line 201, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.radius {
+  border-radius: 3px;
+}
+
+/* line 202, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.radius-half {
+  border-radius: 50%;
+}
+
+/* line 203, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.radius-top {
+  border-radius: 3px 3px 0 0;
+}
+
+/* line 204, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.radius-right {
+  border-radius: 0 3px 3px 0;
+}
+
+/* line 205, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.radius-bottom {
+  border-radius: 0 0 3px 3px;
+}
+
+/* line 206, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.radius-left {
+  border-radius: 3px 0 0 3px;
+}
+
+/* line 209, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.pointer {
+  cursor: pointer;
+}
+
+/* line 218, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-top-none {
+  margin-top: 0;
+}
+
+/* line 219, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-top-quarter {
+  margin-top: 0.25rem;
+}
+
+/* line 220, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-top-half {
+  margin-top: 0.5rem;
+}
+
+/* line 221, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-top-one {
+  margin-top: 1rem;
+}
+
+/* line 222, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-top-two {
+  margin-top: 2rem;
+}
+
+/* line 223, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-top-three {
+  margin-top: 3rem;
+}
+
+/* line 224, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-top-four {
+  margin-top: 4rem;
+}
+
+/* line 230, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-bottom-none {
+  margin-bottom: 0;
+}
+
+/* line 231, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-bottom-quarter {
+  margin-bottom: 0.25rem;
+}
+
+/* line 232, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-bottom-half {
+  margin-bottom: 0.5rem;
+}
+
+/* line 233, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-bottom-one {
+  margin-bottom: 1rem;
+}
+
+/* line 234, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-bottom-two {
+  margin-bottom: 2rem;
+}
+
+/* line 235, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-bottom-three {
+  margin-bottom: 3rem;
+}
+
+/* line 236, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-bottom-four {
+  margin-bottom: 4rem;
+}
+
+/* line 241, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-right-none {
+  margin-right: 0;
+}
+
+/* line 242, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-right-quarter {
+  margin-right: 0.25rem;
+}
+
+/* line 243, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-right-half {
+  margin-right: 0.5rem;
+}
+
+/* line 244, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-right-one {
+  margin-right: 1rem;
+}
+
+/* line 245, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-right-two {
+  margin-right: 2rem;
+}
+
+/* line 246, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-right-three {
+  margin-right: 3rem;
+}
+
+/* line 247, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-right-four {
+  margin-right: 4rem;
+}
+
+/* line 253, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-left-none {
+  margin-left: 0;
+}
+
+/* line 254, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-left-quarter {
+  margin-left: 0.25rem;
+}
+
+/* line 255, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-left-half {
+  margin-left: 0.5rem;
+}
+
+/* line 256, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-left-one {
+  margin-left: 1rem;
+}
+
+/* line 257, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-left-two {
+  margin-left: 2rem;
+}
+
+/* line 258, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-left-three {
+  margin-left: 3rem;
+}
+
+/* line 259, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-left-four {
+  margin-left: 4rem;
+}
+
+/* line 264, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-none {
+  margin: 0;
+}
+
+/* line 265, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-quarter {
+  margin: 0.25rem;
+}
+
+/* line 266, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-half {
+  margin: 0.5rem;
+}
+
+/* line 267, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-one {
+  margin: 1rem;
+}
+
+/* line 268, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-two {
+  margin: 2rem;
+}
+
+/* line 269, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-three {
+  margin: 3rem;
+}
+
+/* line 270, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.margin-four {
+  margin: 4rem;
+}
+
+/* line 280, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-top-none {
+  padding-top: 0;
+}
+
+/* line 281, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-top-quarter {
+  padding-top: 0.25rem;
+}
+
+/* line 282, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-top-half {
+  padding-top: 0.5rem;
+}
+
+/* line 283, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-top-one {
+  padding-top: 1rem;
+}
+
+/* line 284, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-top-two {
+  padding-top: 2rem;
+}
+
+/* line 285, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-top-three {
+  padding-top: 3rem;
+}
+
+/* line 286, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-top-four {
+  padding-top: 4rem;
+}
+
+/* line 292, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-bottom-none {
+  padding-bottom: 0;
+}
+
+/* line 293, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-bottom-quarter {
+  padding-bottom: 0.25rem;
+}
+
+/* line 294, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-bottom-half {
+  padding-bottom: 0.5rem;
+}
+
+/* line 295, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-bottom-one {
+  padding-bottom: 1rem;
+}
+
+/* line 296, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-bottom-two {
+  padding-bottom: 2rem;
+}
+
+/* line 297, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-bottom-three {
+  padding-bottom: 3rem;
+}
+
+/* line 298, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-bottom-four {
+  padding-bottom: 4rem;
+}
+
+/* line 304, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-right-none {
+  padding-right: 0;
+}
+
+/* line 305, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-right-quarter {
+  padding-right: 0.25rem;
+}
+
+/* line 306, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-right-half {
+  padding-right: 0.5rem;
+}
+
+/* line 307, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-right-one {
+  padding-right: 1rem;
+}
+
+/* line 308, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-right-two {
+  padding-right: 2rem;
+}
+
+/* line 309, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-right-three {
+  padding-right: 3rem;
+}
+
+/* line 310, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-right-four {
+  padding-right: 4rem;
+}
+
+/* line 315, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-left-none {
+  padding-left: 0;
+}
+
+/* line 316, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-left-quarter {
+  padding-left: 0.25rem;
+}
+
+/* line 317, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-left-half {
+  padding-left: 0.5rem;
+}
+
+/* line 318, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-left-one {
+  padding-left: 1rem;
+}
+
+/* line 319, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-left-two {
+  padding-left: 2rem;
+}
+
+/* line 320, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-left-three {
+  padding-left: 3rem;
+}
+
+/* line 321, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-left-four {
+  padding-left: 4rem;
+}
+
+/* line 327, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-none {
+  padding: 0;
+}
+
+/* line 328, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-quarter {
+  padding: 0.25rem;
+}
+
+/* line 329, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-half {
+  padding: 0.5rem;
+}
+
+/* line 330, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-one {
+  padding: 1rem;
+}
+
+/* line 331, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-two {
+  padding: 2rem;
+}
+
+/* line 332, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-three {
+  padding: 3rem;
+}
+
+/* line 333, /Users/ahmadajmi/Dropbox/www/ontwik/app/assets/stylesheets/helpers.scss */
+.padding-four {
+  padding: 4rem;
+}
