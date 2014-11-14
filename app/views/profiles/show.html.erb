@@ -29,16 +29,17 @@
   <div class="row margin-bottom-two">
    <div class="large-10 column column--center">
 
-    <div class="row">
+     <div class="row">
 
-      <div class="large-8 column">
+      <div class="small-12 medium-6 large-8 column">
+
         <div class="row">
-          <div class="large-3 column">
+          <div class="small-4 large-3 column">
             <img src="<%= @profile.image if @profile.image %>" class="block">
           </div>
 
-          <div class="large-9 column">
-            <h3 class="margin-bottom-one">
+          <div class="small-8 large-9 column">
+            <h3 class="margin-bottom-one margin-top-one">
               <%= @profile.name if @profile.name %>
               <small>
                 <a href="<%= @profile.twitter_url %>" target="_blank">
@@ -49,26 +50,25 @@
             <p class="margin-none"><%= @profile.description if @profile.description %></p>
           </div>
         </div>
+
       </div>
 
-      <div class="large-4 column">
+      <div class="small-12 medium-6 large-4 column padding-top-two padding-bottom-two">
 
-        <div class="large-3 column text-center padding-top-three">
+        <div class="small-3 large-3 column text-center">
           <strong class="block"><%= @profile.talks.count %></strong>
-          <small>Talks</small>
+          <small><%= 'Talk'.pluralize(@profile.talks.count)%></small>
         </div>
 
-        <div class="large-3 column text-center padding-top-three">
-          <strong class="block"><%= @profile.followers(Profile).count %></strong>
-          <small>Followers</small>
+        <div class="small-3 large-3 column text-center">
+          <%= render 'followers' %>
         </div>
 
-        <div class="large-3 column text-center padding-top-three">
-          <strong class="block"><%= @profile.followees(Profile).count %></strong>
-          <small>Following</small>
+        <div class="small-3 large-3 column text-center">
+          <%= render 'following' %>
         </div>
 
-        <div class="large-3 column padding-top-three">
+        <div class="small-3 large-3 column">
           <div class="text-center">
             <%= render 'shared/follow_form' , profile: @profile %>
           </div>
@@ -103,7 +103,7 @@
 
       <% if @profileTalks.length > 0 %>
       <% @profileTalks.each do |talk| %>
-      <%= render 'shared/talk_card', :talk => talk, classes: "large-4" %>
+      <%= render 'shared/talk_card', :talk => talk, classes: "large-4 large-4 medium-6" %>
       <% end %>
       <% if user_signed_in? and current_user == @profile %>
       <%= render 'shared/talk_card_add_placeholder' %>

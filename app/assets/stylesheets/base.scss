@@ -12,7 +12,7 @@ a {
   transition: color 0.2s ease 0s;
 }
 
-a:not(.button):hover {
+a:hover {
   color: #FF5A5F;
   text-decoration: underline;
 }

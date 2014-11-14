@@ -2,6 +2,9 @@ header {
   border-bottom: 1px solid $border-color;
   a {
     color: #2c3e50;
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 
@@ -10,9 +13,6 @@ header {
   font-size: 1.2em;
   font-weight: bold;
   letter-spacing: 1px;
-  &:hover {
-    text-decoration: none;
-  }
 }
 
 .logged_out:not(.index) header {

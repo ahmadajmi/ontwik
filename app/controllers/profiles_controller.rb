@@ -10,6 +10,8 @@ class ProfilesController < ApplicationController
   def show
     @profile = params[:id] ? Profile.friendly.find(params[:id]) : Profile.friendly.find(params[:nickname])
     @profileTalks = @profile.talks.order('created_at DESC').all
+    @followers = @profile.followers(Profile)
+    @following = @profile.followees(Profile)
   end
 
   def edit
