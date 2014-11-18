@@ -8,8 +8,10 @@ html {
 
 body {
   font-size: 1rem;
-  line-height: 1.5rem;
+  font-weight: 300;
   font-family: $base-font-family;
+  line-height: 1.5rem;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5 {
