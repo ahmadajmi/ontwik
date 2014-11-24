@@ -36,6 +36,14 @@
 .text-center { text-align: center; }
 .text-just   { text-align: justify; }
 
+@media only screen and (min-width: 40em) {
+ .text-right-md { text-align: right; }
+}
+
+@media only screen and (min-width: 64em) {
+  .text-right-lg { text-align: right; }
+}
+
 .v-middle    { vertical-align: middle; }
 .v-bottom    { vertical-align: bottom; }
 
