@@ -8,9 +8,10 @@
       %h5.margin-top-one.margin-bottom-one
         Feed -
         %span.dark-gray People you follow
-        .row
-          - @activities.each do |activity|
-            = render_activity activity
+      .row
+        - @activities.each do |activity|
+          = render_activity activity
+      .border-bottom
 
 .row.hide
   .large-12.column
@@ -25,13 +26,12 @@
 
 .row
   .large-12.column
-    %h5{ class: 'margin-bottom-none margin-top-one' } Latest
+    %h5{ class: 'margin-bottom-one margin-top-none' } Latest
 
 
-.margin-top-one.padding-bottom-one
-  .row
-    - @talks.each do |talk|
-      = render 'shared/talk_card', :talk => talk, classes: "large-4 medium-6"
+.row
+  - @talks.each do |talk|
+    = render 'shared/talk_card', :talk => talk, classes: "large-4 medium-6"
 
 
 = render 'shared/pagination'

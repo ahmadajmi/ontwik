@@ -30,7 +30,6 @@
 }
 
 button.close {
-  color: #000;
   background-color: rgba(0, 0, 0, 0);
   border: 0 none;
   cursor: pointer;
@@ -38,6 +37,7 @@ button.close {
 }
 
 .modal .close {
+  color: #000;
   position: absolute;
   right: 1em;
   top: .6em;
