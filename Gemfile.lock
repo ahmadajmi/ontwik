@@ -114,6 +114,8 @@ GEM
       em-websocket (~> 0.5)
       guard (~> 2.0)
       multi_json (~> 1.8)
+    haml (4.0.5)
+      tilt
     hashie (2.1.2)
     high_voltage (2.2.0)
     hike (1.2.3)
@@ -282,6 +284,7 @@ DEPENDENCIES
   friendly_id (~> 5.0.0)
   guard
   guard-livereload
+  haml
   high_voltage
   impressionist
   jbuilder (~> 2.0)
