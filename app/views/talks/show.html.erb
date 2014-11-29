@@ -18,14 +18,6 @@
   </div>
 </div>
 
-<div class="dark-bg hide">
-  <div class="row">
-    <div class="large-10 column column--center white">
-      <h3 class="mt0"><%= @talk.title %></h3>
-    </div>
-  </div>
-</div>
-
 <div class="row">
   <div class="large-10 column column--center">
 
@@ -147,7 +139,7 @@
 
 <!-- related talks by the current talk tags -->
 <% if Talk.tagged_with([@talk.tag_list]).length  > 1 %>
-<div class="gray-bg padding-top-two padding-bottom-two">
+<div class="gray-bg margin-top-two padding-top-two padding-bottom-one">
   <div class="row">
     <div class="large-10 column column--center">
       <h3>Related Talks</h3>

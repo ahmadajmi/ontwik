@@ -23,8 +23,13 @@ Topics
         <div class="large-12 column">
           <h3 class="margin-top-none margin-bottom-one regular"><%= @topic.name %></h3>
         </div>
+        <% if @talks.length > 0 %>
         <% @talks.each do |talk| %>
         <%= render 'shared/talk_card', :talk => talk, classes: "large-4" %>
+        <% end %>
+        <% else %>
+        <%= render 'shared/talk_card_placeholders' %>
+        <%= render 'shared/talk_card_placeholders' %>
         <% end %>
       </div>
       <%= render 'shared/pagination' %>

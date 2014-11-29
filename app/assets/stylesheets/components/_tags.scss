@@ -8,7 +8,7 @@
   display: inline-block;
 
   &:hover {
-    color: #fff;
+    text-decoration: none;
     background-color: $tag-hover-background;
   }
 }
