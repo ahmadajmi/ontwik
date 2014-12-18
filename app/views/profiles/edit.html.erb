@@ -7,12 +7,35 @@ Edit Profile
   <div class="row">
 
     <div class="medium-8 large-6 column column--center">
+
+      <div class="form-group">
+        <%= f.label :profile_banner, :class => 'hide'%>
+        <div class="row">
+          <div class="medium-6 large-8 column hide">
+            <%= f.file_field :profile_banner, :class => 'form-control margin-bottom-none' %>
+            <small class="dark-gray">Recommended dimensions of 1500×500</small>
+          </div>
+          <label for="profile_profile_banner">
+            <div class="medium-12 large-12 column">
+              <% if @profile.profile_banner.present? %>
+              <img src="<%= @profile.profile_banner_url %>" class="pointer block" title="Click to change Profile Header">
+              <% else %>
+              <div class="padding-top-four white-bg border-bottom padding-bottom-four text-center pointer bold" title="Click to change Profile Header">
+                <h2 class="dark-gray inline iconicstroke-camera margin-none"></h2>
+              </div>
+              <% end %>
+            </div>
+          </label>
+        </div>
+      </div>
+
       <div class="white-bg padding-two">
+
         <div class="row">
 
           <div class="large-12 column">
 
-            <h3 class="text-center margin-top-none margin-bottom-one">Profile</h3>
+            <h3 class="text-center margin-top-none margin-bottom-one hide">Profile</h3>
 
             <% if @profile.errors.any? %>
             <ul class="list-bare">
@@ -25,25 +48,6 @@ Edit Profile
             <div class="form-group">
               <%= f.label :name, :class => 'hide'%>
               <%= f.text_field :name, :type => 'text', :autofocus => true, :placeholder => 'Name', :class => 'form-control', :required => 'true' %>
-            </div>
-
-            <div class="form-group">
-              <%= f.label :profile_banner, :class => 'hide'%>
-              <div class="row margin-bottom-one">
-                <div class="medium-6 large-8 column">
-                  <%= f.file_field :profile_banner, :class => 'form-control margin-bottom-none' %>
-                  <small class="dark-gray">Recommended dimensions of 1500×500</small>
-                </div>
-                <label for="profile_profile_banner">
-                  <div class="medium-6 large-4 column">
-                    <% if @profile.profile_banner.present? %>
-                    <img src="<%= @profile.profile_banner_url %>" class="pointer" title="Click to change Profile Header">
-                    <% else %>
-                    <div class="gray-bg padding-top-one padding-bottom-one text-center pointer" title="Click to change Profile Header">Profile Header</div>
-                    <% end %>
-                  </div>
-                </label>
-              </div>
             </div>
 
             <div class="form-group relative">
