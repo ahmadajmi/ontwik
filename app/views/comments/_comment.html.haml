@@ -11,4 +11,4 @@
         %span.dark-gray.small{ :title => comment.created_at}= time_ago_in_words(comment.created_at)
         = markdown(comment.content)
         - if user_signed_in? and current_user == comment.profile
-          = link_to '', comment, method: :delete, :class => 'small dark-gray iconicstroke-x absolute pin-top-right on-hover-inner', :remote => true, data: { confirm: 'Are you sure?' }
+          = link_to '', comment, method: :delete, :class => 'small dark-gray ion-close absolute pin-top-right on-hover-inner', :remote => true, data: { confirm: 'Are you sure?' }

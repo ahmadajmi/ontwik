@@ -3,7 +3,6 @@
 @import 'functions';
 @import 'highlights';
 @import 'ajmi-grid/grid';
-@import url(http://weloveiconfonts.com/api/?family=iconicstroke);
 
 // Components
 
@@ -27,13 +26,6 @@
 @import 'bootstrap/variables';
 @import 'bootstrap/mixins';
 @import 'bootstrap/modals';
-
-
-/* iconicstroke */
-[class*="iconicstroke-"]:before {
-  font-family: 'IconicStroke', sans-serif;
-}
-
 
 @import 'overides';
 

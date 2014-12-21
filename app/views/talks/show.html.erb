@@ -36,7 +36,7 @@
         <% if @talk.profile == current_user %>
         <%= link_to edit_talk_path(@talk), :title => 'Edit', :class => 'dark-gray' do %>
         <p class="border-all padding-one inline-block">
-          <span class="iconicstroke-info dark-gray margin-right-half"></span>
+          <span class="ion-information dark-gray margin-right-half"></span>
           <small>
             You can edit the talk description, markdown and syntax hilight are supported.
           </small>
@@ -47,7 +47,7 @@
 
       <div class="large-3 column">
 
-      <div class="margin-bottom-one padding-top-two padding-bottom-one border-bottom">
+        <div class="margin-bottom-one padding-top-two padding-bottom-one border-bottom">
 
           <div class="row">
             <div class="large-12 medium-6 small-12 column text-left">
@@ -60,7 +60,7 @@
                 <% else %>
 
                 <%= link_to '', :class=> "button button-icon left", :'data-toggle'=>"modal", :'data-target'=>".login-modal", :title => "Like" do %>
-                <span class="iconicstroke-heart-stroke"></span>
+                <span class="ion-android-favorite-outline"></span>
                 <% end %>
 
                 <%= render 'shared/login_modal' %>
@@ -81,15 +81,18 @@
                 <!-- End Like Button -->
 
                 <!-- Views Count -->
-                <span class="padding-top-quarter padding-bottom-quarter padding-right-one padding-left-one white-bg border-all small margin-left-half left iconicstroke-eye dark-gray">
+                <span class="padding-top-quarter padding-bottom-quarter padding-right-one padding-left-one white-bg border-all small margin-left-half left ion-eye dark-gray">
                   <span class="padding-left-quarter"><%= @talk.impressionist_count %></span>
                 </span>
                 <!-- / Views Count -->
 
                 <!-- Share Button -->
-                <a href="http://twitter.com/share?url=<%= request.original_url %>&text=<%= @talk.title %> By @<%= @talk.profile.nickname %>" target="_blank" class="button button-icon button-info right" title="Share on Twitter">
-                  <img src="/assets/twitter-bird-white-16x16.png">
-                </a>
+                <span class="padding-top-quarter hide padding-bottom-quarter padding-right-one padding-left-one white-bg border-all small margin-left-half right">
+                  <a href="http://twitter.com/share?url=<%= request.original_url %>&text=<%= @talk.title %> By @<%= @talk.profile.nickname %>" class="" title="share" target="_blank">
+                    <span class="ion-social-twitter notice"></span>
+                  </a>
+                </span>
+
                 <!-- / Share Button -->
               </div>
               <!-- Talk Like & views & Share -->
@@ -125,7 +128,7 @@
         <!-- Talk Edit Button -->
         <% if @talk.profile == current_user %>
         <%= link_to edit_talk_path(@talk), :class=> "button button-icon", :title => "Edit" do %>
-        <span class="iconicstroke-pen-alt2"></span>
+        <span class="ion-edit"></span>
         <% end %>
         <% end %>
         <!-- / Talk Edit Button -->

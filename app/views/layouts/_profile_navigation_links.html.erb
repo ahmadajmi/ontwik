@@ -2,26 +2,26 @@
 
 <li class="right">
   <%= link_to '/signout', :class=> "border-right border-left inline-block padding-right-one padding-left-one padding-top-half padding-bottom-half dark-gray", :title => 'Logout' do %>
-  <span class="iconicstroke-arrow-right"></span>
+  <span class="ion-log-out"></span>
   <% end %>
 </li>
 
 <li class="right">
   <%= link_to edit_profile_path(current_user), :class=> "border-left block padding-right-one padding-left-one padding-top-half padding-bottom-half dark-gray", :title => 'Profile Settings' do %>
-  <span class="iconicstroke-cog"></span>
+  <span class="ion-gear-a"></span>
   <% end %>
 </li>
 
 <li class="right">
   <%= link_to current_user, :class=> "block padding-right-one padding-left-one padding-top-half padding-bottom-half dark-gray", :title => 'Profile' do %>
-  <span class="iconicstroke-user"></span>
+  <span class="ion-person"></span>
   <% end %>
 
 </li>
 
 <li class="right">
   <%= link_to({:action => 'new', :controller => 'talks'}, {:class => "border-right border-left block padding-right-one padding-left-one padding-top-half padding-bottom-half dark-gray", :title => 'Add new talk'}) do %>
-  <span class="iconicstroke-plus"></span>
+  <span class="ion-plus"></span>
   <% end %>
 </li>
 
@@ -33,7 +33,7 @@
 
 <li class="right relative on-hover hide">
   <%= link_to({:action => 'new', :controller => 'talks'}, {:class => "border-left block padding-right-one padding-left-one padding-top-half padding-bottom-half dark-gray", :title => 'Add new talk'}) do %>
-  <span class="iconicstroke-list"></span>
+  <span class="ion-ios-list-outline"></span>
   <% end %>
   <ul class="absolute list-bare zindex-2 white-bg padding-top-one padding-right-one padding-bottom-one padding-left-one text-left border-top topics-menu on-hover-inner">
     <%= render 'shared/topics_list' %>

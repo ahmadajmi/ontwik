@@ -18,7 +18,7 @@
   <% if user_signed_in? and current_user == @profile and not @profile.profile_banner.present? %>
   <%= link_to edit_profile_path(current_user), :class=> "absolute pin-bottom-right padding-one white" do %>
   <small class="border-all padding-right-one padding-left-one padding-top-half padding-bottom-half inline-block">
-    <span class="iconicstroke-plus margin-right-half"></span>
+    <span class="ion-plus margin-right-half"></span>
     Add a header photo
   </small>
   <% end %>
@@ -42,9 +42,7 @@
             <h3 class="margin-bottom-one margin-top-one">
               <%= @profile.name if @profile.name %>
               <small>
-                <a href="<%= @profile.twitter_url %>" target="_blank">
-                  <img src="/assets/twitter-bird-blue-16x16.png">
-                </a>
+                <a href="<%= @profile.twitter_url %>" target="_blank" class="ion-social-twitter notice"></a>
               </small>
             </h3>
             <p class="margin-none"><%= @profile.description if @profile.description %></p>
@@ -95,7 +93,7 @@
       <div class="large-12 column">
         <div class="margin-top-two margin-bottom-four text-center">
           <%= link_to({:action => 'new', :controller => 'talks'}, {:class => "button button-primary"}) do %>
-          <span class="iconicstroke-plus margin-right-one"></span> Add Your First Talk
+          <span class="ion-plus margin-right-one"></span> Add Your First Talk
           <% end %>
         </div>
       </div>
