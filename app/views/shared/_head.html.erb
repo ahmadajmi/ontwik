@@ -8,6 +8,7 @@
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="shortcut icon" href="/favicon.ico?v=3">
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= controller.controller_name %> <%= controller.action_name %> <%= body_css_class %> <% if user_signed_in? %> logged_in <% else %> logged_out <% end %>">

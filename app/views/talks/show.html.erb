@@ -19,7 +19,7 @@
 </div>
 
 <div class="row">
-  <div class="large-10 column column--center">
+  <div class="large-10 column column--center margin-bottom-two">
 
     <div class="row">
       <div class="large-9 column">
@@ -35,7 +35,7 @@
 
         <% if @talk.profile == current_user %>
         <%= link_to edit_talk_path(@talk), :title => 'Edit', :class => 'dark-gray' do %>
-        <p class="border-all padding-one inline-block">
+        <p class="border-all padding-one block">
           <span class="ion-information dark-gray margin-right-half"></span>
           <small>
             You can edit the talk description, markdown and syntax hilight are supported.
@@ -88,8 +88,8 @@
 
                 <!-- Share Button -->
                 <span class="padding-top-quarter hide padding-bottom-quarter padding-right-one padding-left-one white-bg border-all small margin-left-half right">
-                  <a href="http://twitter.com/share?url=<%= request.original_url %>&text=<%= @talk.title %> By @<%= @talk.profile.nickname %>" class="" title="share" target="_blank">
-                    <span class="ion-social-twitter notice"></span>
+                  <a href="http://twitter.com/share?url=<%= request.original_url %>&amp;text=<%= @talk.title %> By @<%= @talk.profile.nickname %>" class="" title="share" target="_blank">
+                    <span class="notice">Share</span>
                   </a>
                 </span>
 
@@ -142,7 +142,7 @@
 
 <!-- related talks by the current talk tags -->
 <% if Talk.tagged_with([@talk.tag_list]).length  > 1 %>
-<div class="gray-bg margin-top-two padding-top-two padding-bottom-one">
+<div class="gray-bg padding-top-two padding-bottom-one">
   <div class="row">
     <div class="large-10 column column--center">
       <h3>Related Talks</h3>

@@ -78,6 +78,8 @@ GEM
     excon (0.40.0)
     execjs (2.2.1)
     ffi (1.9.6)
+    figaro (1.0.0)
+      thor (~> 0.14)
     fog (1.23.0)
       fog-brightbox
       fog-core (~> 1.23)
@@ -280,6 +282,7 @@ DEPENDENCIES
   bower-rails
   carrierwave
   coffee-rails (~> 4.0.0)
+  figaro
   fog
   friendly_id (~> 5.0.0)
   guard

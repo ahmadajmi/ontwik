@@ -81,3 +81,7 @@ pickle-email-*.html
 /public/uploads
 
 .json
+
+# Ignore application configuration
+/config/application.yml
+/config/secrets.yml
