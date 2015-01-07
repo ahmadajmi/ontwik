@@ -18,12 +18,18 @@ Edit Profile
           <label for="profile_profile_banner">
             <div class="medium-12 large-12 column">
               <% if @profile.profile_banner.present? %>
-              <div class="flex-embed flex-embed--3by1 white-bg media-cover pointer on-hover"style="background-image: url(<%= @profile.profile_banner_url if @profile.profile_banner.present? %>)" title="Click to change Profile Header">
-              <h2 class="white white inline ion-camera margin-none center on-hover-inner"></h2>
+              <div class="flex-embed flex-embed--3by1 white-bg media-cover pointer on-hover"style="background-image: url(<%= @profile.profile_banner_url if @profile.profile_banner.present? %>)" title="Change your profile header">
+                <div class="overlay-on-hover absolute pin-all">
+                  <div class="on-hover-inner center">
+                    <h2 class="white ion-camera margin-none text-center"></h2>
+                    <p class="white">Maximum file size of 2MB</p>
+                  </div>
+                </div>
               </div>
               <% else %>
               <div class="padding-top-four white-bg border-bottom padding-bottom-four text-center pointer bold" title="Click to change Profile Header">
                 <h2 class="dark-gray inline ion-camera margin-none"></h2>
+                <p class="dark-gray">Maximum file size of 2MB</p>
               </div>
               <% end %>
             </div>

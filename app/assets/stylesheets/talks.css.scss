@@ -20,6 +20,10 @@
   }
 }
 
+.overlay-on-hover:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4) 90%);
+}
+
 .talk-title {
   font-size: 2rem;
   font-weight: 300;
@@ -28,6 +32,7 @@
 .talks-new-view,
 .talks-create-view,
 .talks-edit-view,
-.profiles-edit-view {
+.profiles-edit-view,
+.profiles-update-view {
   background-color: $gray;
 }

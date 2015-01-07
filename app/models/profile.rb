@@ -1,3 +1,5 @@
+require 'file_size_validator'
+
 class Profile < ActiveRecord::Base
   extend FriendlyId
   friendly_id :nickname
@@ -5,6 +7,11 @@ class Profile < ActiveRecord::Base
   validates :name, :presence => true, :on => :update
 
   mount_uploader :profile_banner, ProfileBannerUploader
+
+  validates :profile_banner,
+    :file_size => {
+      :maximum => 2.megabytes.to_i
+    }
 
   has_many :talks
   has_many :comments

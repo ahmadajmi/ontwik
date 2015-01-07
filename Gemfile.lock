@@ -70,9 +70,6 @@ GEM
     coffee-script-source (1.7.0)
     daemons (1.1.9)
     debug_inspector (0.0.2)
-    em-websocket (0.5.1)
-      eventmachine (>= 0.12.9)
-      http_parser.rb (~> 0.6.0)
     erubis (2.7.0)
     eventmachine (1.0.3)
     excon (0.40.0)
@@ -112,17 +109,12 @@ GEM
       lumberjack (~> 1.0)
       pry (>= 0.9.12)
       thor (>= 0.18.1)
-    guard-livereload (2.3.1)
-      em-websocket (~> 0.5)
-      guard (~> 2.0)
-      multi_json (~> 1.8)
     haml (4.0.5)
       tilt
     hashie (2.1.2)
     high_voltage (2.2.0)
     hike (1.2.3)
     hitimes (1.2.2)
-    http_parser.rb (0.6.0)
     httpclient (2.5.1)
     i18n (0.6.9)
     impressionist (1.5.1)
@@ -185,8 +177,6 @@ GEM
     quiet_assets (1.0.3)
       railties (>= 3.1, < 5.0)
     rack (1.5.2)
-    rack-livereload (0.3.15)
-      rack
     rack-test (0.6.2)
       rack (>= 1.0)
     rails (4.1.2)
@@ -286,7 +276,6 @@ DEPENDENCIES
   fog
   friendly_id (~> 5.0.0)
   guard
-  guard-livereload
   haml
   high_voltage
   impressionist
@@ -301,7 +290,6 @@ DEPENDENCIES
   public_activity!
   pygments.rb (~> 0.6.0)
   quiet_assets
-  rack-livereload
   rails (= 4.1.2)
   rails_12factor
   rails_layout

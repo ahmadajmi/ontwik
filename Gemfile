@@ -58,8 +58,6 @@ group :development do
   gem 'quiet_assets'
   gem 'rails_layout'
   gem 'guard'
-  gem "rack-livereload"
-  gem 'guard-livereload', require: false
 end
 
 group :production do
