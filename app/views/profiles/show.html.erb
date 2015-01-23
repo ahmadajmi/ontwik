@@ -6,6 +6,10 @@
 <%= truncate @profile.description, length: 155 %>
 <% end %>
 
+<% content_for :graph_image do %>
+<%= @profile.image if @profile.image %>
+<% end %>
+
 <div class="dark-bg relative media-cover" style="background-image: url(<%= @profile.profile_banner_url if @profile.profile_banner.present? %>)">
   <div class="card__overlay"></div>
   <div class="row">

@@ -6,6 +6,10 @@
 <%= truncate @talk.description, length: 155 %>
 <% end %>
 
+<% content_for :graph_image do %>
+<%= @talk.thumbnail_url if @talk.thumbnail_url %>
+<% end %>
+
 <div class="dark-bg">
   <div class="row">
     <div class="large-10 column column--center">
@@ -87,7 +91,7 @@
                 <!-- / Views Count -->
 
                 <!-- Share Button -->
-                <span class="padding-top-quarter hide padding-bottom-quarter padding-right-one padding-left-one white-bg border-all small margin-left-half right">
+                <span class="padding-top-quarter padding-bottom-quarter padding-right-one padding-left-one white-bg border-all small margin-left-half right">
                   <a href="http://twitter.com/share?url=<%= request.original_url %>&amp;text=<%= @talk.title %> By @<%= @talk.profile.nickname %>" class="" title="share" target="_blank">
                     <span class="notice">Share</span>
                   </a>

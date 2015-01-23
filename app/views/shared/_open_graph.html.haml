@@ -1,0 +1,21 @@
+/ Twitter Card data
+
+%meta{:content => "summary", :name => "twitter:card"}
+%meta{:content => "@ontwiik", :name => "twitter:site"}
+%meta{:content => content_for?(:title) ? yield(:title) : 'Ontwik', :name => "twitter:title"}
+%meta{:content => content_for?(:description) ? yield(:description) : 'Ontwik', :name => "twitter:description"}
+%meta{:content => content_for?(:graph_image) ? yield(:graph_image) : 'https://pbs.twimg.com/profile_images/522341796827787265/hBepU7Da_400x400.png', :name => "twitter:image"}
+%meta{:content => request.original_url, :name => "twitter:url"}
+
+/ Open Graph data
+%meta{:content => content_for?(:title) ? yield(:title) : 'Ontwik', :property => "og:title"}
+%meta{:content => "video.movie", :property => "og:type"}
+%meta{:content => request.original_url, :property => "og:url"}
+%meta{:content => content_for?(:graph_image) ? yield(:graph_image) : 'https://pbs.twimg.com/profile_images/522341796827787265/hBepU7Da_400x400.png', :property => "og:image"}
+%meta{:content => content_for?(:description) ? yield(:description) : 'Ontwik', :property => "og:description"}
+%meta{:content => "ontwik", :property => "og:site_name"}
+-# %meta{:content => "2013-09-17T05:59:00+01:00", :property => "article:published_time"}/
+-# %meta{:content => "2013-09-16T19:08:47+01:00", :property => "article:modified_time"}/
+-# %meta{:content => "Article Section", :property => "article:section"}/
+-# %meta{:content => "Article Tag", :property => "article:tag"}/
+-# %meta{:content => "100004581546633", :property => "fb:admins"}/
