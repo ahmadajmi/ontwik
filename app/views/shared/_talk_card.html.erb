@@ -6,10 +6,9 @@
       <div class="overlay absolute pin-all"></div>
 
       <div class="absolute pin-bottom padding-one">
-        <small>
+        <small class="<%= hideAuthor if defined?(hideAuthor) %>">
           <%= link_to talk.profile, :title => talk.profile.name, :class=> "ell block white" do %>
           <%= talk.profile.name %>
-          <img class="hide left radius-half" src="<%= talk.profile.image %>" alt="<%= talk.profile.name %>" style="height:24px;height:24px;">
           <% end %>
         </small>
         <h3 class="card-title">
@@ -24,25 +23,4 @@
   </div>
 </div>
 
-
-
-<div class="column <%= classes %> margin-bottom-two hide">
-
-  <%= link_to talk, :class=> "ell block thumb-holder talk-preview margin-bottom-half" do %>
-  <div class="media-cover flex-embed flex-embed--16by9" style="background-image: url(<%= talk.thumbnail_url %>)"></div>
-  <% end %>
-
-  <div class="left margin-right-half">
-    <%= link_to talk.profile, :title => talk.profile.name, :class=> "ell block" do %>
-    <img class="left radius-half" src="<%= talk.profile.image %>" alt="<%= talk.profile.name %>" style="height:24px;height:24px;">
-    <% end %>
-  </div>
-
-  <h3 class="card-title">
-    <%= link_to talk, :class=> "ell block" do %>
-    <%= talk.title %>
-    <% end %>
-  </h3>
-
-</div>
 

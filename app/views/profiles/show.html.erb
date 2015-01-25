@@ -105,7 +105,7 @@
 
       <% if @profileTalks.length > 0 %>
       <% @profileTalks.each do |talk| %>
-      <%= render 'shared/talk_card', :talk => talk, classes: "large-4 large-4 medium-6" %>
+      <%= render 'shared/talk_card', :talk => talk, hideAuthor: 'hide', classes: "large-4 large-4 medium-6" %>
       <% end %>
       <% if user_signed_in? and current_user == @profile %>
       <%= render 'shared/talk_card_add_placeholder' %>
