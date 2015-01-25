@@ -18,7 +18,7 @@
         <% @followers.each do |profile|%>
 
         <div class="margin-bottom-one ell">
-          <%= link_to profile, :class=> "block flag" do %>
+          <%= link_to profile_show_path_helper(profile), :class=> "block flag" do %>
           <div class="flag__image">
             <img src="<%= profile.image %>" alt="<%= profile.name %>" style="width:64px;height:64px;">
           </div>

@@ -13,14 +13,14 @@
 </li>
 
 <li class="right">
-  <%= link_to current_user, :class=> "block padding-right-one padding-left-one padding-top-half padding-bottom-half dark-gray", :title => 'Profile' do %>
+  <%= link_to profile_show_path_helper(current_user), :class=> "block padding-right-one padding-left-one padding-top-half padding-bottom-half dark-gray", :title => 'Profile' do %>
   <span class="ion-person"></span>
   <% end %>
 
 </li>
 
 <li class="right">
-  <%= link_to({:action => 'new', :controller => 'talks'}, {:class => "border-right border-left block padding-right-one padding-left-one padding-top-half padding-bottom-half dark-gray", :title => 'Add new talk'}) do %>
+  <%= link_to({:action => 'new', :controller => 'talks'}, {:class => "border-right border-left block padding-right-one padding-left-one padding-top-half padding-bottom-half danger", :title => 'Add new talk'}) do %>
   <span class="ion-plus"></span>
   <% end %>
 </li>

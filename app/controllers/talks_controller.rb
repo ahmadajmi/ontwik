@@ -78,7 +78,7 @@ class TalksController < ApplicationController
 
     if @talk.save
       @talk.create_activity :create, owner: current_user
-      flash[:notice] = "You just published a new talk. Thanks!"
+      # flash[:notice] = "You just published a new talk. Thanks!"
       redirect_to @talk
     else
       render 'new'

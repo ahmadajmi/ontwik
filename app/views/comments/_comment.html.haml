@@ -1,12 +1,12 @@
 .border-bottom.margin-bottom-one.comment.on-hover
   .row
     .column.small-2.medium-1.large-1
-      = link_to comment.profile do
+      = link_to profile_show_path_helper(comment.profile) do
         %img{ :alt => comment.profile.name, :src => comment.profile.image }
 
     .column.small-10.large-11.padding-left-none
       .relative
-        = link_to comment.profile, :class=> "" do
+        = link_to profile_show_path_helper(comment.profile), :class=> "" do
           = comment.profile.name
         %span.dark-gray.small{ :title => comment.created_at}= time_ago_in_words(comment.created_at)
         = markdown(comment.content)

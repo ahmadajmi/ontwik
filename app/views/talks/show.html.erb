@@ -103,7 +103,7 @@
 
               <!-- Talk Author block -->
               <div class="margin-bottom-one padding-bottom-one border-bottom ell">
-                <%= link_to @talk.profile, :class=> "block gray-bg flag" do %>
+                <%= link_to profile_show_path_helper(@talk.profile), :class=> "block gray-bg flag" do %>
                 <div class="flag__image">
                   <img src="<%= @talk.profile.image %>" alt="<%= @talk.profile.name %>" style="width:64px;height:64px;">
                 </div>

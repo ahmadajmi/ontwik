@@ -46,4 +46,8 @@ class ApplicationController < ActionController::Base
       end
     end
 
+    def profile_show_path_helper(user_id)
+      "/#{user_id.nickname}"
+    end
+
 end

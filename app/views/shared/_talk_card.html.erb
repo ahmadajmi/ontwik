@@ -7,7 +7,7 @@
 
       <div class="absolute pin-bottom padding-one">
         <small class="<%= hideAuthor if defined?(hideAuthor) %>">
-          <%= link_to talk.profile, :title => talk.profile.name, :class=> "ell block white" do %>
+          <%= link_to profile_show_path_helper(talk.profile), :title => talk.profile.name, :class=> "ell block white" do %>
           <%= talk.profile.name %>
           <% end %>
         </small>

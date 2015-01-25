@@ -27,4 +27,8 @@ module ApplicationHelper
     @body_css_classes.unshift(view_css_class).join(' ')
   end
 
+  def profile_show_path_helper(user_id)
+    "/#{user_id.nickname}"
+  end
+
 end

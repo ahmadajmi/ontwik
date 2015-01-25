@@ -22,7 +22,7 @@ class ProfilesController < ApplicationController
     @profile = Profile.friendly.find(params[:id])
 
     if @profile.update(profile_params)
-      redirect_to @profile, :notice => 'Successfully updated your profile.'
+      redirect_to profile_show_path_helper(@profile), :notice => 'Successfully updated your profile.'
     else
       render 'edit'
     end
