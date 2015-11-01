@@ -3,22 +3,22 @@ $row-max-width:         77rem;
  // Space unit
 $base-space-unit:       1rem !default;
 $base-radius-unit:       3px !default;
-$base-font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$base-font-family: 'Source Sans Pro', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 
 //
 // Colors
 //
 
-$white:   #fff;
-$gray:    #F5F5F5;
-$darkgray:#95a5a6;
-$dark:    #2c3e50;
-$black:   #000000;
-$notice:  #3498db;
-$success: #1abc9c;
-$danger:  #e74c3c;
-$border-color: #f5f5f5;
+$white        : #fff;
+$gray         : #F5F5F5;
+$darkgray     : #95a5a6;
+$dark         : #2c3e50;
+$black        : #000000;
+$notice       : #3498db;
+$success      : #1abc9c;
+$danger       : #e74c3c;
+$border-color : #f5f5f5;
 
-$tag-color: #155fad;
-$tag-background: #f0f7fd;
-$tag-hover-background: #DDEFFD;
+$tag-color            : #155fad;
+$tag-background       : #f0f7fd;
+$tag-hover-background : #DDEFFD;

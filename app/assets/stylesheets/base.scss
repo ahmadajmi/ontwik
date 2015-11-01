@@ -1,6 +1,5 @@
-body, html {
-  height: 100%;
-}
+body,
+html { height: 100%; }
 
 a {
   color: #EE5125;
@@ -15,18 +14,12 @@ a:hover {
 
 a:hover
 a:active,
-a:hover {
-  outline: 0 none;
-}
+a:hover { outline: none; }
 
 img { max-width: 100%; }
 
 svg { max-height: 100%; }
 
-.main {
-  min-height: 100%;
-}
+.main { min-height: 100%; }
 
-p:empty {
-  display: none;
-}
+p:empty { display: none; }

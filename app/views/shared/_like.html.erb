@@ -1,3 +1,3 @@
-<%= link_to like_path(likeable_id: likeable.id, likeable_type: likeable.class) , remote: true, method: :get, :class=> "button button-icon", :title => "Like" do %>
-<span class="ion-android-favorite-outline"></span>
+<%= link_to like_path(likeable_id: likeable.id, likeable_type: likeable.class) , remote: true, method: :get, class: 'button button-icon', title: 'Like' do %>
+<span class='ion-android-favorite-outline'></span>
 <% end %>

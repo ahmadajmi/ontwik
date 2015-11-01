@@ -156,15 +156,8 @@ ActiveRecord::Schema.define(version: 20141109184917) do
     t.integer  "view_count",       default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "topic_id"
   end
 
   add_index "talks", ["profile_id", "created_at"], name: "index_talks_on_profile_id_and_created_at"
-
-  create_table "topics", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
 end

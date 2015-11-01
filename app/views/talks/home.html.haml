@@ -1,7 +1,6 @@
 - unless user_signed_in?
   = render 'shared/hero'
 
-
 .row
   .large-12.column
     - if user_signed_in? and @activities.length > 0
@@ -17,21 +16,17 @@
   .large-12.column
     %h5 Featured
 
-
 .margin-top-one.padding-bottom-one.hide
   .row
     - @featured.each do |talk|
-      = render 'shared/talk_card', :talk => talk, classes: "large-4"
-
+      = render 'shared/talk_card', talk: talk, classes: 'large-4'
 
 .row
   .large-12.column
     %h5{ class: 'margin-bottom-one margin-top-one' } Latest
 
-
 .row
   - @talks.each do |talk|
-    = render 'shared/talk_card', :talk => talk, classes: "large-4 medium-6"
-
+    = render 'shared/talk_card', talk: talk, classes: 'large-4 medium-6'
 
 = render 'shared/pagination'

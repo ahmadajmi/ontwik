@@ -1,28 +1,25 @@
 class ProfilesController < ApplicationController
-  before_filter :authenticate_profile!, except: [:show, :index]
-  before_filter :correct_user?, :only => :edit
-
+  before_action :authenticate_profile!, except: [:show, :index]
+  before_action :correct_user?, :only => :edit
+  before_action :set_profile, only: [:show, :edit, :update]
+  before_action :set_darker_background, only: [:edit, :update]
   def index
     @profiles = Profile.all
     redirect_to root_url
   end
 
   def show
-    @profile = params[:id] ? Profile.friendly.find(params[:id]) : Profile.friendly.find(params[:nickname])
     @profileTalks = @profile.talks.order('created_at DESC').all
     @followers = @profile.followers(Profile)
     @following = @profile.followees(Profile)
   end
 
   def edit
-    @profile = params[:id] ? Profile.friendly.find(params[:id]) : Profile.friendly.find(params[:nickname])
   end
 
   def update
-    @profile = Profile.friendly.find(params[:id])
-
     if @profile.update(profile_params)
-      redirect_to profile_show_path_helper(@profile), :notice => 'Successfully updated your profile.'
+      redirect_to profile_url(@profile), notice: t('profile_successfully_updated')
     else
       render 'edit'
     end
@@ -49,8 +46,12 @@ class ProfilesController < ApplicationController
   end
 
   private
-    def profile_params
-      params.require(:profile).permit(:name, :profile_banner, :description)
-    end
 
+  def profile_params
+    params.require(:profile).permit(:name, :profile_banner, :description)
+  end
+
+  def set_profile
+    @profile = Profile.friendly.find(params[:id])
+  end
 end

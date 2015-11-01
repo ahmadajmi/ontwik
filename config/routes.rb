@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :topics
+
+  root to: 'talks#home'
 
   resources :talks
   resources :profiles
@@ -13,7 +14,6 @@ Rails.application.routes.draw do
 
   get 'talks/create'
 
-  root to: 'talks#home'
   get '/auth/:provider/callback' => 'sessions#create'
   get '/signin' => 'sessions#new', :as => :signin
   get '/signout' => 'sessions#destroy', :as => :signout

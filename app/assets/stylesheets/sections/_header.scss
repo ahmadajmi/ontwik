@@ -8,9 +8,7 @@ header {
   }
 }
 
-.profiles-show-view header {
-  border-bottom: 0;
-}
+.profiles-show-view header { border-bottom: 0; }
 
 .brand {
   img {
@@ -20,9 +18,7 @@ header {
   }
 }
 
-.logged_out:not(.index) header {
-  border-bottom: 0;
-}
+.logged_out:not(.index) header { border-bottom: 0; }
 
 // .profiles.show header,
 // .talks.show header {
@@ -38,7 +34,7 @@ header {
 //   }
 // }
 
-[name="search"] {
+[name='search'] {
   margin-top: 6px;
   padding: 5px;
 }
@@ -49,10 +45,4 @@ header {
   width: 25px;
   right: 20px;
   top: 8px;
-}
-
-.topics-menu {
-  top: 100%;
-  right: 0;
-  width: 250px;
 }

@@ -23,5 +23,7 @@ module Ontwik
     # For Foundation 5
     config.assets.precompile += %w( vendor/modernizr )
 
+    # Auto-loading lib files
+    config.autoload_paths << Rails.root.join('lib')
   end
 end

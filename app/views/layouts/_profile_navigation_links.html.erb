@@ -1,42 +1,32 @@
 <% if user_signed_in? %>
 
-<li class="right">
-  <%= link_to '/signout', :class=> "border-right border-left inline-block padding-right-one padding-left-one padding-top-half padding-bottom-half dark-gray", :title => 'Logout' do %>
-  <span class="ion-log-out"></span>
+<li class='right'>
+  <%= link_to '/signout', class: 'border-right border-left inline-block padding-right-one padding-left-one padding-top-half padding-bottom-half dark-gray', title: 'Logout' do %>
+  <span class='ion-log-out'></span>
   <% end %>
 </li>
 
-<li class="right">
-  <%= link_to edit_profile_path(current_user), :class=> "border-left block padding-right-one padding-left-one padding-top-half padding-bottom-half dark-gray", :title => 'Profile Settings' do %>
-  <span class="ion-gear-a"></span>
+<li class='right'>
+  <%= link_to edit_profile_path(current_user), class: 'border-left block padding-right-one padding-left-one padding-top-half padding-bottom-half dark-gray', title: 'Profile Settings' do %>
+  <span class='ion-gear-a'></span>
   <% end %>
 </li>
 
-<li class="right">
-  <%= link_to profile_show_path_helper(current_user), :class=> "block padding-right-one padding-left-one padding-top-half padding-bottom-half dark-gray", :title => 'Profile' do %>
-  <span class="ion-person"></span>
+<li class='right'>
+  <%= link_to profile_url(current_user), class: 'block padding-right-one padding-left-one padding-top-half padding-bottom-half dark-gray', title: 'Profile' do %>
+  <span class='ion-person'></span>
   <% end %>
-
 </li>
 
-<li class="right">
-  <%= link_to({:action => 'new', :controller => 'talks'}, {:class => "border-right border-left block padding-right-one padding-left-one padding-top-half padding-bottom-half danger", :title => 'Add new talk'}) do %>
-  <span class="ion-plus"></span>
+<li class='right'>
+  <%= link_to({action: 'new', controller: 'talks'}, {class: 'border-right border-left block padding-right-one padding-left-one padding-top-half padding-bottom-half danger', title: 'Add new talk'}) do %>
+  <span class='ion-plus'></span>
   <% end %>
 </li>
 
 <% else %>
 
-<li class="right">
-  <%= link_to 'Sign in', '/signin', :class => 'border-right border-left dark-gray padding-top-half inline-block block padding-right-one padding-left-one padding-top-half padding-bottom-half dark-gray' %>
-</li>
-
-<li class="right relative on-hover hide">
-  <%= link_to({:action => 'new', :controller => 'talks'}, {:class => "border-left block padding-right-one padding-left-one padding-top-half padding-bottom-half dark-gray", :title => 'Add new talk'}) do %>
-  <span class="ion-ios-list-outline"></span>
-  <% end %>
-  <ul class="absolute list-bare zindex-2 white-bg padding-top-one padding-right-one padding-bottom-one padding-left-one text-left border-top topics-menu on-hover-inner">
-    <%= render 'shared/topics_list' %>
-  </ul>
+<li class='right'>
+  <%= link_to 'Sign in', '/signin', class: 'border-right border-left dark-gray padding-top-half inline-block block padding-right-one padding-left-one padding-top-half padding-bottom-half dark-gray' %>
 </li>
 <% end %>

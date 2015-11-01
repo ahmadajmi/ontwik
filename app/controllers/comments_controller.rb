@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
   # before_filter :authenticate_user!, only: [:create, :destroy]
+
   def create
     @talk = Talk.find(params[:comment][:talk_id])
     @comment = Comment.new(comment_params)
@@ -11,7 +12,7 @@ class CommentsController < ApplicationController
         format.html { redirect_to @talk }
         format.js
       else
-        format.html { render action: "new" }
+        format.html { render action: 'new' }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
     end
@@ -31,6 +32,7 @@ class CommentsController < ApplicationController
   end
 
   private
+
   def comment_params
     params.require(:comment).permit(:content)
   end

@@ -20,7 +20,23 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  app_name: 'Ontwik'
+  app_tagline: ''
+  app_descroption: 'Ontwik makes it easy to share and find the best and latest talks, interviews for Developers & Designers and Creatives.'
+
+  access_denied: 'Access denied'
+  login_to_access_message: 'You need to sign in for access to this page'
+
+  # Profile
+  signed_in: 'Signed in'
+  signed_out: 'Signed out'
+  profile_successfully_updated: 'Successfully updated your profile'
+
+  # Videos
+  video_successfully_published: 'You just published a new video'
+  video_successfully_updated: 'Successfully updated your video'
+  video_url_is_not_supported: 'This URL is not supported, videos from Youtube, or Vimeo are well supported'
+
   errors:
     messages:
       wrong_size: "is the wrong size (should be %{file_size})"

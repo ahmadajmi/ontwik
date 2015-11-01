@@ -5,7 +5,7 @@ class TalksController < ApplicationController
   require 'cgi'
 
   before_action :authenticate_profile!, only: [:new, :create, :edit, :update, :destroy]
-
+  before_action :set_darker_background, only: [:new, :create, :edit]
   impressionist actions: [:show], unique: [:session_hash]
 
   def home
@@ -13,7 +13,7 @@ class TalksController < ApplicationController
     @featured = Talk.order('view_count DESC').limit(3)
     if user_signed_in?
       followees_ids = current_user.followees(Profile)
-      @activities = PublicActivity::Activity.where(owner_id: followees_ids, owner_type: "Profile").order('created_at DESC')
+      @activities = PublicActivity::Activity.where(owner_id: followees_ids, owner_type: 'Profile').order('created_at DESC')
     end
   end
 
@@ -38,7 +38,7 @@ class TalksController < ApplicationController
 
   def create
     url_encoded = CGI.escape(params[:talk][:url])
-    req_url = URI.parse('http://api.embed.ly/1/oembed?key=a7716080853c4d6d945624885ceb9ab9&url=' + url_encoded)
+    req_url = URI.parse('http://api.embed.ly/1/oembed?key=' + ENV['EMBEDLY_API_KEY'] + '&url=' + url_encoded)
     req = Net::HTTP::Get.new(req_url.to_s)
     res = Net::HTTP.start(req_url.host, req_url.port) {|http|
         http.request(req)
@@ -52,8 +52,8 @@ class TalksController < ApplicationController
     @talk.url_type         = @json['type']
 
     if @talk.url_type != 'video'
-      flash[:danger] = "This URL is not supported, talks from Youtube or Vimeo are well supported"
-      redirect_to(:action => "new") and return
+      flash[:danger] = t('video_url_is_not_supported')
+      redirect_to(:action => 'new')
     end
 
     @talk.version          = @json['version']
@@ -78,7 +78,7 @@ class TalksController < ApplicationController
 
     if @talk.save
       @talk.create_activity :create, owner: current_user
-      # flash[:notice] = "You just published a new talk. Thanks!"
+      flash[:notice] = t('video_successfully_published')
       redirect_to @talk
     else
       render 'new'
@@ -97,7 +97,7 @@ class TalksController < ApplicationController
     @profile = Talk.find(params[:id]).profile
     @talk = Talk.find(params[:id])
     unless current_user == @profile
-      redirect_to root_url, :alert => "Access denied."
+      redirect_to root_url, alert: t('access_denied')
     end
   end
 
@@ -105,7 +105,7 @@ class TalksController < ApplicationController
     @talk = Talk.find(params[:id])
 
     if @talk.update(update_params)
-      redirect_to @talk, :notice => 'Successfully updated.'
+      redirect_to @talk, notice: t('video_successfully_updated')
     else
       render 'edit'
     end
@@ -119,12 +119,11 @@ class TalksController < ApplicationController
   end
 
   private
-    def talk_params
-      params.require(:talk).permit(:url, :topic_id, :tag_list)
-    end
+  def talk_params
+    params.require(:talk).permit(:url, :tag_list)
+  end
 
-    def update_params
-      params.require(:talk).permit(:title, :description, :topic_id, :tag_list)
-    end
-
+  def update_params
+    params.require(:talk).permit(:title, :description, :tag_list)
+  end
 end

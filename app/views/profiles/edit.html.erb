@@ -2,34 +2,34 @@
 Edit Profile
 <% end %>
 
-<div class="margin-top-two">
+<div class='margin-top-two'>
   <%= form_for :profile, url: profile_path(@profile), html: { multipart: true }, method: :patch do |f| %>
-  <div class="row">
+  <div class='row'>
 
-    <div class="medium-8 large-6 column column--center">
+    <div class='medium-8 large-6 column column--center'>
 
-      <div class="form-group">
+      <div class='form-group'>
         <%= f.label :profile_banner, :class => 'hide'%>
-        <div class="row">
-          <div class="medium-6 large-8 column hide">
-            <%= f.file_field :profile_banner, :class => 'form-control margin-bottom-none' %>
-            <small class="dark-gray">Recommended dimensions of 1500×500</small>
+        <div class='row'>
+          <div class='medium-6 large-8 column hide'>
+            <%= f.file_field :profile_banner, class: 'form-control margin-bottom-none' %>
+            <small class='dark-gray'>Recommended dimensions of 1500×500</small>
           </div>
-          <label for="profile_profile_banner">
-            <div class="medium-12 large-12 column">
+          <label for='profile_profile_banner'>
+            <div class='medium-12 large-12 column'>
               <% if @profile.profile_banner.present? %>
-              <div class="flex-embed flex-embed--3by1 white-bg media-cover pointer on-hover"style="background-image: url(<%= @profile.profile_banner_url if @profile.profile_banner.present? %>)" title="Change your profile header">
-                <div class="overlay-on-hover absolute pin-all">
-                  <div class="on-hover-inner center">
-                    <h2 class="white ion-camera margin-none text-center"></h2>
-                    <p class="white">Maximum file size of 2MB</p>
+              <div class='flex-embed flex-embed--3by1 white-bg media-cover pointer on-hover'style='background-image: url(<%= @profile.profile_banner_url if @profile.profile_banner.present? %>)' title='Change your profile header'>
+                <div class='overlay-on-hover absolute pin-all'>
+                  <div class='on-hover-inner center'>
+                    <h2 class='white ion-camera margin-none text-center'></h2>
+                    <p class='white'>Maximum file size of 2MB</p>
                   </div>
                 </div>
               </div>
               <% else %>
-              <div class="padding-top-four white-bg border-bottom padding-bottom-four text-center pointer bold" title="Click to change Profile Header">
-                <h2 class="dark-gray inline ion-camera margin-none"></h2>
-                <p class="dark-gray">Maximum file size of 2MB</p>
+              <div class='padding-top-four white-bg border-bottom padding-bottom-four text-center pointer bold' title='Click to change Profile Header'>
+                <h2 class='dark-gray inline ion-camera margin-none'></h2>
+                <p class='dark-gray'>Maximum file size of 2MB</p>
               </div>
               <% end %>
             </div>
@@ -37,40 +37,40 @@ Edit Profile
         </div>
       </div>
 
-      <div class="white-bg padding-two">
+      <div class='white-bg padding-two'>
 
-        <div class="row">
+        <div class='row'>
 
-          <div class="large-12 column">
+          <div class='large-12 column'>
 
-            <h3 class="text-center margin-top-none margin-bottom-one hide">Profile</h3>
+            <h3 class='text-center margin-top-none margin-bottom-one hide'>Profile</h3>
 
             <% if @profile.errors.any? %>
-            <ul class="list-bare">
+            <ul class='list-bare'>
               <% @profile.errors.full_messages.each do |msg| %>
-              <li class="margin-bottom-one danger"><%= msg %></li>
+              <li class='margin-bottom-one danger'><%= msg %></li>
               <% end %>
             </ul>
             <% end %>
 
-            <div class="form-group">
-              <%= f.label :name, :class => 'hide'%>
-              <%= f.text_field :name, :type => 'text', :autofocus => true, :placeholder => 'Name', :class => 'form-control', :required => 'true' %>
+            <div class='form-group'>
+            <%= f.label :name, class: 'hide'%>
+              <%= f.text_field :name, type: 'text', autofocus: true, placeholder: 'Name', class: 'form-control',required: 'true' %>
             </div>
 
-            <div class="form-group relative">
-              <%= f.label :description, :class => 'hide'%>
-              <%= f.text_area :description, :class=>'form-control profile-bio', :placeholder => "Your Bio", :maxlength => '140' %>
-              <span class="profile-bio-count absolute pin-top-right small padding-right-quarter dark-gray"></span>
+            <div class='form-group relative'>
+              <%= f.label :description, class: 'hide'%>
+              <%= f.text_area :description, class: 'form-control profile-bio', placeholder: 'Your Bio', maxlength: '140' %>
+              <span class='profile-bio-count absolute pin-top-right small padding-right-quarter dark-gray'></span>
             </div>
 
-            <%= f.submit "Update Profile",  class:'button button-primary'%>
+            <%= f.submit 'Update Profile',  class:'button button-primary'%>
 
           </div>
 
         </div>
-      </div><!-- white-bg padding-two -->
-    </div><!-- large-6 -->
+      </div>
+    </div>
 
   </div>
   <% end %>

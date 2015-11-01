@@ -10,68 +10,68 @@
 <%= @profile.image if @profile.image %>
 <% end %>
 
-<div class="dark-bg relative media-cover" style="background-image: url(<%= @profile.profile_banner_url if @profile.profile_banner.present? %>)">
-  <div class="card__overlay"></div>
-  <div class="row">
-    <div class="large-10 column column--center">
-      <div class="flex-embed flex-embed--16by9">
+<div class='dark-bg relative media-cover' style='background-image: url(<%= @profile.profile_banner_url if @profile.profile_banner.present? %>)'>
+  <div class='card__overlay'></div>
+  <div class='row'>
+    <div class='large-10 column column--center'>
+      <div class='flex-embed flex-embed--16by9'>
       </div>
     </div>
   </div><!-- row -->
 
   <% if user_signed_in? and current_user == @profile and not @profile.profile_banner.present? %>
-  <%= link_to edit_profile_path(current_user), :class=> "absolute pin-bottom-right padding-one white" do %>
-  <small class="border-all padding-right-one padding-left-one padding-top-half padding-bottom-half inline-block">
-    <span class="ion-plus margin-right-half"></span>
+  <%= link_to edit_profile_path(current_user), :class=> 'absolute pin-bottom-right padding-one white' do %>
+  <small class='border-all padding-right-one padding-left-one padding-top-half padding-bottom-half inline-block'>
+    <span class='ion-plus margin-right-half'></span>
     Add a header photo
   </small>
   <% end %>
   <% end %>
 </div><!-- media-cover -->
 
-<div class="gray-bg">
-  <div class="row margin-bottom-two">
-   <div class="large-10 column column--center">
+<div class='gray-bg'>
+  <div class='row margin-bottom-two'>
+   <div class='large-10 column column--center'>
 
-     <div class="row">
+     <div class='row'>
 
-      <div class="small-12 medium-6 large-8 column">
+      <div class='small-12 medium-6 large-8 column'>
 
-        <div class="row">
-          <div class="small-4 large-3 column">
-            <img src="<%= @profile.image if @profile.image %>" class="block">
+        <div class='row'>
+          <div class='small-4 large-3 column'>
+            <img src='<%= @profile.image if @profile.image %>' class='block'>
           </div>
 
-          <div class="small-8 large-9 column">
-            <h3 class="margin-bottom-one margin-top-one">
+          <div class='small-8 large-9 column'>
+            <h3 class='margin-bottom-one margin-top-one'>
               <%= @profile.name if @profile.name %>
               <small>
-                <a href="<%= @profile.twitter_url %>" target="_blank" class="ion-social-twitter notice"></a>
+                <a href='<%= @profile.twitter_url %>' target='_blank' class='ion-social-twitter notice'></a>
               </small>
             </h3>
-            <p class="margin-none"><%= @profile.description if @profile.description %></p>
+            <p class='margin-none'><%= @profile.description if @profile.description %></p>
           </div>
         </div>
 
       </div>
 
-      <div class="small-12 medium-6 large-4 column padding-top-three padding-bottom-two">
+      <div class='small-12 medium-6 large-4 column padding-top-three padding-bottom-two'>
 
-        <div class="small-3 large-3 column text-center">
-          <strong class="block"><%= @profile.talks.count %></strong>
+        <div class='small-3 large-3 column text-center'>
+          <strong class='block'><%= @profile.talks.count %></strong>
           <small><%= 'Talk'.pluralize(@profile.talks.count)%></small>
         </div>
 
-        <div class="small-3 large-3 column text-center">
+        <div class='small-3 large-3 column text-center'>
           <%= render 'followers' %>
         </div>
 
-        <div class="small-3 large-3 column text-center">
+        <div class='small-3 large-3 column text-center'>
           <%= render 'following' %>
         </div>
 
-        <div class="small-3 large-3 column">
-          <div class="text-center">
+        <div class='small-3 large-3 column'>
+          <div class='text-center'>
             <%= render 'shared/follow_form' , profile: @profile %>
           </div>
         </div>
@@ -85,19 +85,19 @@
 </div><!-- gray-bg -->
 
 
-<div class="row">
-  <div class="large-10 column column--center">
-    <div class="row">
+<div class='row'>
+  <div class='large-10 column column--center'>
+    <div class='row'>
 
       <% if @profileTalks.length == 0 %>
       <%= render 'shared/talk_card_placeholders' %>
       <% end %>
 
       <% if @profileTalks.length == 0 and user_signed_in? and current_user == @profile %>
-      <div class="large-12 column">
-        <div class="margin-top-two margin-bottom-four text-center">
-          <%= link_to({:action => 'new', :controller => 'talks'}, {:class => "button button-primary"}) do %>
-          <span class="ion-plus margin-right-one"></span> Add Your First Talk
+      <div class='large-12 column'>
+        <div class='margin-top-two margin-bottom-four text-center'>
+          <%= link_to({:action => 'new', :controller => 'talks'}, {:class => 'button button-primary'}) do %>
+          <span class='ion-plus margin-right-one'></span> Add Your First Talk
           <% end %>
         </div>
       </div>
@@ -105,7 +105,7 @@
 
       <% if @profileTalks.length > 0 %>
       <% @profileTalks.each do |talk| %>
-      <%= render 'shared/talk_card', :talk => talk, hideAuthor: 'hide', classes: "large-4 large-4 medium-6" %>
+      <%= render 'shared/talk_card', :talk => talk, hideAuthor: 'hide', classes: 'large-4 large-4 medium-6' %>
       <% end %>
       <% if user_signed_in? and current_user == @profile %>
       <%= render 'shared/talk_card_add_placeholder' %>

@@ -2,70 +2,57 @@
 Edit - <%= @talk.title %>
 <% end %>
 
-<div class="margin-top-two margin-bottom-two">
+<div class='margin-top-two margin-bottom-two'>
 
-  <div class="row">
+  <div class='row'>
 
-    <div class="medium-10 large-8 column column--center">
-      <div class="white-bg padding-two">
+    <div class='medium-10 large-8 column column--center'>
+      <div class='white-bg padding-two'>
 
-        <h3 class="text-center margin-top-none margin-bottom-one">Edit</h3>
+        <h3 class='text-center margin-top-none margin-bottom-one'>Edit</h3>
 
         <% if @talk.errors.any? %>
-        <ul class="list-bare">
+        <ul class='list-bare'>
           <% @talk.errors.full_messages.each do |msg| %>
-          <li class="margin-bottom-one danger"><%= msg %></li>
+          <li class='margin-bottom-one danger'><%= msg %></li>
           <% end %>
         </ul>
         <% end %>
 
-        <div class="row">
-          <div class="large-12 column">
+        <div class='row'>
+          <div class='large-12 column'>
             <%= form_for :talk, url: talk_path(@talk), method: :patch do |f| %>
 
-            <div class="form-group">
-              <%= f.label :title, :class=> "hide" %>
-              <%= f.text_field :title, :type => 'text', :placeholder => 'Title', :class => 'form-control', :required => 'true' %>
+            <div class='form-group'>
+              <%= f.label :title, :class=> 'hide' %>
+              <%= f.text_field :title, type: 'text', placeholder: 'Title', class: 'form-control', required: 'true' %>
             </div>
 
-            <div class="row">
-              <div class="large-12 column">
-                <div class="row">
-                  <div class="large-6 column">
-                    <div class="form-group">
-                      <%= f.label :tag_list, :class=> "hide" %>
-                      <%= f.collection_select :topic_id, Topic.all, :id, :name, {prompt: "Choose category"}, {:class => 'form-control', :required => 'true'} %>
-                    </div>
-                  </div>
-                  <div class="large-6 column">
-                    <div class="form-group">
-                      <%= f.label :tag_list, :class=> "hide" %>
-                      <%= f.text_field :tag_list, :type => 'text', :placeholder => 'Tags', :class => 'form-control', :required => 'true' %>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class='form-group'>
+              <%= f.label :tag_list, class: 'hide' %>
+              <%= f.text_field :tag_list, type: 'text', placeholder: 'Tags', class: 'form-control', required: 'true' %>
             </div>
 
-            <div class="form-group">
-              <%= f.label :description, :class=> "hide" %>
-              <%= f.text_area :description, :autofocus => true, :placeholder => 'Description', :class=>'form-control margin-bottom-none', :hatch => true %>
+            <div class='form-group'>
+              <%= f.label :description, class: 'hide' %>
+              <%= f.text_area :description, autofocus: true, placeholder: 'Description', class: 'form-control margin-bottom-none', hatch: true %>
             </div>
 
-            <div class="margin-bottom-one text-right">
-              <small class="dark-gray">Markdown and syntax highlight are supported.</small>
+            <div class='margin-bottom-one text-right'>
+              <small class='dark-gray'>Markdown and syntax highlight are supported.</small>
             </div>
 
-            <div class="form-group">
-              <%= f.submit "Update", class:'button button-primary'%>
-              <%= link_to 'Delete', talk_path(@talk), method: :delete, data: { confirm: 'Are you sure you want to delete this talk?' }, :class => "button button-small right" %>
+            <div class='form-group'>
+              <%= f.submit 'Update', class:'button button-primary'%>
+              <%= link_to 'Delete', talk_path(@talk), method: :delete, data: { confirm: 'Are you sure you want to delete this video?' }, class: 'button button-small right' %>
             </div>
 
             <% end %>
           </div>
         </div>
-      </div><!-- white-bg padding-two -->
-    </div><!-- large-6 -->
+
+      </div>
+    </div>
 
   </div>
 

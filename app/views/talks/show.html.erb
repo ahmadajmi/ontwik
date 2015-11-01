@@ -10,10 +10,10 @@
 <%= @talk.thumbnail_url if @talk.thumbnail_url %>
 <% end %>
 
-<div class="dark-bg">
-  <div class="row">
-    <div class="large-10 column column--center">
-      <div class="flex-embed flex-embed--16by9">
+<div class='dark-bg'>
+  <div class='row'>
+    <div class='large-10 column column--center'>
+      <div class='flex-embed flex-embed--16by9'>
         <% if @talk.html %>
         <%= @talk.html.html_safe %>
         <% end %>
@@ -22,58 +22,59 @@
   </div>
 </div>
 
-<div class="row">
-  <div class="large-10 column column--center margin-bottom-two">
+<div class='row'>
+  <div class='large-10 column column--center margin-bottom-two'>
 
-    <div class="row">
-      <div class="large-9 column">
-        <h3 class="margin-top-two"><%= @talk.title %></h3>
-        <div class="border-bottom margin-bottom-one padding-bottom-one">
+    <div class='row'>
+      <div class='large-9 column'>
+        <h3 class='margin-top-two'><%= @talk.title %></h3>
+        <div class='border-bottom margin-bottom-one padding-bottom-one'>
           <%= markdown(@talk.description) %>
         </div>
 
-        <div class="margin-bottom-one">
-          <h3>Comments <span class="dark-gray"><small class="comments-count"><%= @talk.comments.count %></small></span></h3>
+        <div class='margin-bottom-one'>
+          <h3>Comments <span class='dark-gray'><small class='comments-count'><%= @talk.comments.count %></small></span></h3>
           <%= render 'comments/comment_form' %>
         </div>
 
         <% if @talk.profile == current_user %>
         <%= link_to edit_talk_path(@talk), :title => 'Edit', :class => 'dark-gray' do %>
-        <p class="border-all padding-one block">
-          <span class="ion-information dark-gray margin-right-half"></span>
+        <p class='border-all padding-one block'>
+          <span class='ion-information dark-gray margin-right-half'></span>
           <small>
-            You can edit the talk description, markdown and syntax hilight are supported.
+            You can edit the video description, markdown and syntax highlight are supported.
           </small>
         </p>
         <% end %>
         <% end %>
       </div>
 
-      <div class="large-3 column">
+      <div class='large-3 column'>
 
-        <div class="margin-bottom-one padding-top-two padding-bottom-one border-bottom">
+        <div class='margin-bottom-one padding-top-two padding-bottom-one border-bottom'>
 
-          <div class="row">
-            <div class="large-12 medium-6 small-12 column text-left">
+          <div class='row'>
+            <div class='large-12 medium-6 small-12 column text-left'>
 
               <!-- Talk Like & views & Share -->
-              <div class="margin-bottom-one padding-bottom-one border-bottom clearfix">
+              <div class='margin-bottom-one padding-bottom-one border-bottom clearfix'>
+
                 <!-- Like Button -->
                 <% if user_signed_in? %>
                 <%= render 'shared/like_form', likeable: @talk %>
                 <% else %>
 
-                <%= link_to '', :class=> "button button-icon left", :'data-toggle'=>"modal", :'data-target'=>".login-modal", :title => "Like" do %>
-                <span class="ion-android-favorite-outline"></span>
+                <%= link_to '', :class=> 'button button-icon left', :'data-toggle'=>'modal', :'data-target'=>'.login-modal', :title => 'Like' do %>
+                <span class='ion-android-favorite-outline'></span>
                 <% end %>
 
                 <%= render 'shared/login_modal' %>
 
                 <% end %>
 
-                <span class="likes padding-top-quarter padding-bottom-quarter padding-right-one padding-left-one white-bg border-right border-top border-bottom left small">
+                <span class='likes padding-top-quarter padding-bottom-quarter padding-right-one padding-left-one white-bg border-right border-top border-bottom left small'>
                   <% if @talk.likers(Profile).count > 0 %>
-                  <%= link_to '', :class=> "", :'data-toggle'=>"modal", :'data-target'=>".likers-modal", :title => "Likers" do %>
+                  <%= link_to '', :class=> '', :'data-toggle' => 'modal', :'data-target' => '.likers-modal', :title => 'Likers' do %>
                   <%= pluralize(@talk.likers(Profile).count, '')%>
                   <% end %>
                   <%= render 'shared/likers_modal', :likers => @likers %>
@@ -85,15 +86,15 @@
                 <!-- End Like Button -->
 
                 <!-- Views Count -->
-                <span class="padding-top-quarter padding-bottom-quarter padding-right-one padding-left-one white-bg border-all small margin-left-half left ion-eye dark-gray">
-                  <span class="padding-left-quarter"><%= @talk.impressionist_count %></span>
+                <span class='padding-top-quarter padding-bottom-quarter padding-right-one padding-left-one white-bg border-all small margin-left-half left ion-eye dark-gray'>
+                  <span class='padding-left-quarter'><%= @talk.impressionist_count %></span>
                 </span>
                 <!-- / Views Count -->
 
                 <!-- Share Button -->
-                <span class="padding-top-quarter padding-bottom-quarter padding-right-one padding-left-one white-bg border-all small margin-left-half right">
-                  <a href="http://twitter.com/share?url=<%= request.original_url %>&amp;text=<%= @talk.title %>" class="" title="Share on Twitter" target="_blank">
-                    <span class="notice ion-social-twitter"></span>
+                <span class='padding-top-quarter padding-bottom-quarter padding-right-one padding-left-one white-bg border-all small margin-left-half right'>
+                  <a href='http://twitter.com/share?url=<%= request.original_url %>&amp;text=<%= @talk.title %>' class='' title='Share on Twitter' target='_blank'>
+                    <span class='notice ion-social-twitter'></span>
                   </a>
                 </span>
 
@@ -102,61 +103,58 @@
               <!-- Talk Like & views & Share -->
 
               <!-- Talk Author block -->
-              <div class="margin-bottom-one padding-bottom-one border-bottom ell">
-                <%= link_to profile_show_path_helper(@talk.profile), :class=> "block gray-bg flag" do %>
-                <div class="flag__image">
-                  <img src="<%= @talk.profile.image %>" alt="<%= @talk.profile.name %>" style="width:64px;height:64px;">
+              <div class='margin-bottom-one padding-bottom-one border-bottom ell'>
+                <%= link_to profile_url(@talk.profile), :class=> 'block gray-bg flag' do %>
+                <div class='flag__image'>
+                  <img src='<%= @talk.profile.image %>' alt='<%= @talk.profile.name %>' style='width:64px;height:64px;'>
                 </div>
-                <h4 class="margin-bottom-none flag__image">
+                <h4 class='margin-bottom-none flag__image'>
                   <%= @talk.profile.name %>
                 </h4>
                 <% end %>
               </div>
               <!-- / Talk Author block -->
+
             </div>
-          </div><!-- row -->
+          </div>
 
-          <%= link_to @talk.topic, :class=> "block gray-bg flag padding-one margin-bottom-one" do %>
-          <%= @talk.topic.name %>
-          <% end %>
-
-          <div class="margin-top-one padding-top-one border-top clearfix">
+          <div class='margin-top-one padding-top-one border-top clearfix'>
             <% if !@talk.tag_list.empty? %>
-            <h4 class="margin-bottom-one margin-top-none">Tags</h4>
+            <h4 class='margin-bottom-one margin-top-none'>Tags</h4>
             <%= raw @talk.tag_list.map { |t| link_to t, tag_path(t), class: 'tag radius' }.join('  ') %>
             <% end %>
           </div>
 
-        </div><!-- margin-bottom-one -->
+        </div>
 
         <!-- Talk Edit Button -->
         <% if @talk.profile == current_user %>
-        <%= link_to edit_talk_path(@talk), :class=> "button button-icon", :title => "Edit" do %>
-        <span class="ion-edit"></span>
+        <%= link_to edit_talk_path(@talk), :class=> 'button button-icon', :title => 'Edit' do %>
+        <span class='ion-edit'></span>
         <% end %>
         <% end %>
         <!-- / Talk Edit Button -->
 
-      </div><!-- large-3 column -->
+      </div>
 
-    </div><!-- row -->
-  </div><!-- large-10 column -->
-</div><!-- row -->
+    </div>
+  </div>
+</div>
 
 
 <!-- related talks by the current talk tags -->
 <% if Talk.tagged_with([@talk.tag_list]).length  > 1 %>
-<div class="gray-bg padding-top-two padding-bottom-one">
-  <div class="row">
-    <div class="large-10 column column--center">
+<div class='gray-bg padding-top-two padding-bottom-one'>
+  <div class='row'>
+    <div class='large-10 column column--center'>
       <h3>Related Talks</h3>
     </div>
 
-    <div class="large-10 column column--center">
-      <div class="row">
+    <div class='large-10 column column--center'>
+      <div class='row'>
         <% Talk.tagged_with([@talk.tag_list]).each do |talk| %>
         <% if talk.id != @talk.id %>
-        <%= render 'shared/talk_card', :talk => talk, classes: "large-4" %>
+        <%= render 'shared/talk_card', talk: talk, classes: 'large-4' %>
         <% end %>
         <% end %>
       </div>

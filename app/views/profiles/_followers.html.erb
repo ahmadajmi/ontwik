@@ -1,28 +1,28 @@
-<%= link_to '', :class=> "", :'data-toggle'=>"modal", :'data-target'=>".followers-modal", :title => "#{@profile.followers(Profile).count} Followers" do %>
-<strong class="block"><%= @profile.followers(Profile).count %></strong>
+<%= link_to '', :'data-toggle' => 'modal', :'data-target' => '.followers-modal', title: '#{@profile.followers(Profile).count} Followers' do %>
+<strong class='block'><%= @profile.followers(Profile).count %></strong>
 <small>Followers</small>
 <% end %>
 
-<div class="modal fade followers-modal text-left" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
+<div class='modal fade followers-modal text-left' tabindex='-1' role='dialog' aria-labelledby='mySmallModalLabel' aria-hidden='true'>
+  <div class='modal-dialog modal-sm'>
+    <div class='modal-content'>
 
-      <button type="button" class="close" data-dismiss="modal">
-        <span aria-hidden="true">&times;</span>
-        <span class="sr-only hide">Close</span>
+      <button type='button' class='close' data-dismiss='modal'>
+        <span aria-hidden='true'>&times;</span>
+        <span class='sr-only hide'>Close</span>
       </button>
 
-      <div class="modal-body">
-        <h3 class="margin-bottom-two margin-top-none"><%= pluralize(@followers.length, 'Follower') %></h3>
+      <div class='modal-body'>
+        <h3 class='margin-bottom-two margin-top-none'><%= pluralize(@followers.length, 'Follower') %></h3>
 
         <% @followers.each do |profile|%>
 
-        <div class="margin-bottom-one ell">
-          <%= link_to profile_show_path_helper(profile), :class=> "block flag" do %>
-          <div class="flag__image">
-            <img src="<%= profile.image %>" alt="<%= profile.name %>" style="width:64px;height:64px;">
+        <div class='margin-bottom-one ell'>
+          <%= link_to profile_url(profile), :class=> 'block flag' do %>
+          <div class='flag__image'>
+            <img src='<%= profile.image %>' alt='<%= profile.name %>' style='width:64px;height:64px;'>
           </div>
-          <h4 class="margin-bottom-none flag__image">
+          <h4 class='margin-bottom-none flag__image'>
             <%= profile.name %>
           </h4>
           <% end %>

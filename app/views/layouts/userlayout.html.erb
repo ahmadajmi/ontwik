@@ -1,37 +1,37 @@
 <%= render 'shared/head' %>
 
-<header class="full-height media-cover relative margin-bottom-three"
-style="background-image: url(<%= @profile.profile_banner_url if @profile.profile_banner.present? %>)">
+<header class='full-height media-cover relative margin-bottom-three'
+style='background-image: url(<%= @profile.profile_banner_url if @profile.profile_banner.present? %>)'>
 
 <%= render 'layouts/navigation' %>
-<div class="gradient gradient--hero"></div>
-<div class="container vertical-align">
-  <div class="col-sm-6 col-md-3">
-    <div class="text-center white-bg">
-      <div class="padlx padly">
+<div class='gradient gradient--hero'></div>
+<div class='container vertical-align'>
+  <div class='col-sm-6 col-md-3'>
+    <div class='text-center white-bg'>
+      <div class='padlx padly'>
 
-        <div class="text-center margin-bottom-one ">
-          <img src="<%= @profile.image if @profile.image %>">
+        <div class='text-center margin-bottom-one '>
+          <img src='<%= @profile.image if @profile.image %>'>
           <h3><%= @profile.name if @profile.name %></h3>
           <p><%= @profile.description if @profile.description %></p>
         </div>
 
-        <div class="row margin-bottom-one">
-          <div class="col-sm-4 col-md-4">
-            <strong class="block"><%= @profile.talks.count %></strong>
+        <div class='row margin-bottom-one'>
+          <div class='col-sm-4 col-md-4'>
+            <strong class='block'><%= @profile.talks.count %></strong>
             talks
           </div>
-          <div class="col-sm-4 col-md-4">
-            <strong class="block"><%= @profile.followers(Profile).count %></strong>
+          <div class='col-sm-4 col-md-4'>
+            <strong class='block'><%= @profile.followers(Profile).count %></strong>
             Followers
           </div>
-          <div class="col-sm-4 col-md-4">
-            <strong class="block"><%= @profile.followees(Profile).count %></strong>
+          <div class='col-sm-4 col-md-4'>
+            <strong class='block'><%= @profile.followees(Profile).count %></strong>
             Following
           </div>
         </div>
 
-        <div class="text-center">
+        <div class='text-center'>
           <%= render 'shared/follow_form' , profile: @profile %>
         </div>
 

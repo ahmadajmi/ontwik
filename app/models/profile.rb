@@ -1,40 +1,38 @@
-require 'file_size_validator'
-
 class Profile < ActiveRecord::Base
-  extend FriendlyId
-  friendly_id :nickname
-
-  validates :name, :presence => true, :on => :update
-
-  mount_uploader :profile_banner, ProfileBannerUploader
-
-  validates :profile_banner,
-    :file_size => {
-      :maximum => 2.megabytes.to_i
-    }
-
   has_many :talks
   has_many :comments
+
+  extend FriendlyId
+  friendly_id :nickname
 
   acts_as_follower
   acts_as_followable
   acts_as_liker
+
+  validates :name, presence: true, on: :update
+
+  validates :profile_banner,
+    file_size: {
+      maximum: 5.megabytes.to_i
+    }
+
+  mount_uploader :profile_banner, ProfileBannerUploader
 
   def self.create_with_omniauth(auth)
     create! do |profile|
       profile.provider = auth['provider']
       profile.uid = auth['uid']
       if auth['info']
-        profile.nickname       = auth["info"]["nickname"]
-        profile.name           = auth['info']['name'] || ""
-        profile.location       = auth["info"]["location"]
-        profile.description    = auth["info"]["description"]
-        profile.image          = auth["info"]["image"]
+        user.nickname       = auth['info']['nickname']
+        user.name           = auth['info']['name'] || ''
+        user.location       = auth['info']['location']
+        user.description    = auth['info']['description']
+        user.image          = auth['info']['image']
 
-        profile.website_url    = auth["info"]["urls"]["Website"]
-        profile.twitter_url    = auth["info"]["urls"]["Twitter"]
-        profile.profile_background_image_url = auth["extra"]["raw_info"]["profile_background_image_url"]
-        profile.profile_background_image_url_https = auth["extra"]["raw_info"]["profile_background_image_url_https"]
+        user.website_url    = auth['info']['urls']['Website']
+        user.twitter_url    = auth['info']['urls']['Twitter']
+        user.user_background_image_url = auth['extra']['raw_info']['profile_background_image_url']
+        user.user_background_image_url_https = auth['extra']['raw_info']['profile_background_image_url_https']
       end
     end
   end

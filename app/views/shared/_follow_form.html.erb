@@ -1,6 +1,6 @@
 <% if user_signed_in? and current_user!= profile %>
-<div class="profile-<%= profile.id %>">
-  <div id="follow_form">
+<div class='profile-<%= profile.id %>'>
+  <div id='follow_form'>
     <% if current_user.follows?(profile) %>
     <%= render 'shared/unfollow' %>
     <% else %>
@@ -11,13 +11,10 @@
 <% else %>
 
 <% unless current_user == profile %>
-<%= link_to '', :class=> "button button-icon button-primary", :'data-toggle'=>"modal", :'data-target'=>".login-modal", :title => "Follow" do %>
-<span class="ion-plus"></span>
+<%= link_to '', class: 'button button-icon button-primary', :'data-toggle' => 'modal', :'data-target' => '.login-modal', title: 'Follow' do %>
+<span class='ion-plus'></span>
 <% end %>
 <%= render 'shared/login_modal' %>
 <% end %>
 
 <% end %>
-
-
-

@@ -1,8 +1,7 @@
-<span id="like_form" class="left">
+<span id='like_form' class='left'>
   <% if current_user.likes?(likeable) %>
   <%= render 'shared/unlike', likeable: likeable %>
   <% else %>
   <%= render 'shared/like', likeable: likeable %>
   <% end %>
 </span>
-

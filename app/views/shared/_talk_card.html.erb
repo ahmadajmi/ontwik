@@ -1,18 +1,18 @@
-<div class="column <%= classes %> margin-bottom-two">
-  <div class="card">
-    <%= link_to talk, :class=> "ell block uppercase" do %>
-    <div class="media-cover flex-embed flex-embed--16by9" style="background-image: url(<%= talk.thumbnail_url %>)">
+<div class='column <%= classes %> margin-bottom-two'>
+  <div class='card'>
+    <%= link_to talk, class: 'ell block uppercase' do %>
+    <div class='media-cover flex-embed flex-embed--16by9' style='background-image: url(<%= talk.thumbnail_url %>)'>
 
-      <div class="overlay absolute pin-all"></div>
+      <div class='overlay absolute pin-all'></div>
 
-      <div class="absolute pin-bottom padding-one">
-        <small class="<%= hideAuthor if defined?(hideAuthor) %>">
-          <%= link_to profile_show_path_helper(talk.profile), :title => talk.profile.name, :class=> "ell block white" do %>
+      <div class='absolute pin-bottom padding-one'>
+        <small class='<%= hideAuthor if defined?(hideAuthor) %>'>
+          <%= link_to profile_url(talk.profile), title: talk.profile.name, class: 'ell block white' do %>
           <%= talk.profile.name %>
           <% end %>
         </small>
-        <h3 class="card-title">
-          <%= link_to talk, :class=> "ell block white", :title=> talk.title do %>
+        <h3 class='card-title'>
+          <%= link_to talk, class: 'ell block white', title: talk.title do %>
           <%= talk.title %>
           <% end %>
         </h3>
@@ -22,5 +22,3 @@
     <% end %>
   </div>
 </div>
-
-
