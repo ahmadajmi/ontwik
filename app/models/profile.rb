@@ -23,16 +23,16 @@ class Profile < ActiveRecord::Base
       profile.provider = auth['provider']
       profile.uid = auth['uid']
       if auth['info']
-        user.nickname       = auth['info']['nickname']
-        user.name           = auth['info']['name'] || ''
-        user.location       = auth['info']['location']
-        user.description    = auth['info']['description']
-        user.image          = auth['info']['image']
+        profile.nickname       = auth['info']['nickname']
+        profile.name           = auth['info']['name'] || ''
+        profile.location       = auth['info']['location']
+        profile.description    = auth['info']['description']
+        profile.image          = auth['info']['image']
 
-        user.website_url    = auth['info']['urls']['Website']
-        user.twitter_url    = auth['info']['urls']['Twitter']
-        user.user_background_image_url = auth['extra']['raw_info']['profile_background_image_url']
-        user.user_background_image_url_https = auth['extra']['raw_info']['profile_background_image_url_https']
+        profile.website_url    = auth['info']['urls']['Website']
+        profile.twitter_url    = auth['info']['urls']['Twitter']
+        profile.profile_background_image_url = auth['extra']['raw_info']['profile_background_image_url']
+        profile.profile_background_image_url_https = auth['extra']['raw_info']['profile_background_image_url_https']
       end
     end
   end
